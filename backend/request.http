@@ -1,1 +1,36 @@
-GET https://localhost:3000
+GET http://localhost:5100/
+
+### Get all users
+GET http://localhost:5100/api/user
+
+### Create a user
+POST http://localhost:5100/api/user
+Content-Type: application/json
+
+{
+    "nom": "Admin",
+    "cognom1": "1",
+    "email": "familiabooss@gmail.com",
+    "username": "admin",
+    "password": "Admin1234",
+    "rol": "admin"
+}
+
+###
+DELETE http://localhost:5100/api/user/69b81b4f14327de21cb60008
+
+### Get all permisos
+GET http://localhost:5100/api/permis
+
+### Create a permiso
+POST http://localhost:5100/api/permis
+Content-Type: application/json
+
+{
+    "empId": 123,
+    "dataInici": "2026-04-01",
+    "dataFinal": "2026-04-05",
+    "tipus": "vacances",
+    "descripcio": "Vacaciones de semana santa",
+    "estat": "pendent"
+}

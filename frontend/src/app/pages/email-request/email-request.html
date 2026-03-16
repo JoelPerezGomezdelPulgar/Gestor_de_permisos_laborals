@@ -1,0 +1,26 @@
+<div class="login-page">
+	<div class="shape s1" aria-hidden="true"></div>
+	<div class="shape s2" aria-hidden="true"></div>
+	<div class="shape s3" aria-hidden="true"></div>
+
+	<div class="card login-card fadeInUp">
+		<div class="text-center mb-3">
+			<div class="brand">Portal d'usuaris</div>
+			<h2>Recuperacio de contrasenya</h2>
+			<p>Introdueix el correu electronic per rebre la teva contrasenya</p>
+		</div>
+
+		<form [formGroup]="loginForm">
+			<div class="mb-3">
+				<label for="email" class="form-label text-white-50">Introdueix el teu correu electronic</label>
+				<input id="email" formControlName="email" name="email" type="text" class="form-control form-control-lg" placeholder="example@example.com" required>
+			</div>
+
+			<div class="d-grid mt-3">
+				<button type="button" (click)="onEmail()" class="btn btn-primary btn-lg">
+					<span>Enviar correu</span>
+				</button>
+			</div>
+		</form>
+    </div>
+</div>

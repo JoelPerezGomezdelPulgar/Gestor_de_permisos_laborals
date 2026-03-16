@@ -1,10 +1,10 @@
 import mongoose from "mongoose"
 
-const usuariosSchema = new mongoose.Schema(
+const permisosSchema = new mongoose.Schema(
     {
         empId: {
             type: Number,
-            required:true,
+            required: true,
         },
         dataInici: {
             type: Date,
@@ -22,25 +22,26 @@ const usuariosSchema = new mongoose.Schema(
         },
         descripcio: {
             type: String,
-            required:true,
+            required: true,
             trim: true,
         },
         estat: {
             type: String,
-            required:true,
+            required: true,
             trim: true,
-            enum: ['pendent', 'aprovat', 'refusat'] = 'pendent'
+            enum: ['pendent', 'aprovat', 'refusat'],
+            default: 'pendent'
         },
         refId: {
             type: Number,
-            required:false,
+            required: false,
         },
         dataTramitacio: {
             type: Date,
-            required:false,
+            required: false,
         }
     }
 )
 
 
-export default mongoose.model('usuarios', usuariosSchema)
+export default mongoose.model('permisos', permisosSchema)

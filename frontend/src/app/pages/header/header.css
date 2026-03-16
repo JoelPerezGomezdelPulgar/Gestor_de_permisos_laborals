@@ -1,0 +1,118 @@
+/* Sidebar base */
+#sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 290px;
+	background: #343a40;
+	color: #fff;
+	transition: width 0.2s ease, transform 0.2s ease;
+	overflow: hidden;
+	z-index: 1040;
+}
+
+#sidebar.collapsed {
+	width: 60px;
+}
+
+#sidebar .sidebar-header {
+	background: transparent;
+}
+
+#sidebar .nav-link {
+	border-radius: 6px;
+	color: #dcdcdc;
+	padding: 10px 12px;
+	display: flex;
+	align-items: center;
+}
+
+#sidebar .nav-link:hover, #sidebar .nav-link.active {
+	background: rgba(255,255,255,0.04);
+	color: #fff;
+	text-decoration: none;
+}
+
+/* content area */
+#content {
+	margin-left: 290px;
+	transition: margin-left 0.2s ease, padding 0.2s ease;
+	padding: 1rem;
+	padding-top: calc(1rem + 56px);
+}
+
+/* navbar should move with sidebar */
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1060;
+	transition: margin-left 0.2s ease;
+	margin-left: 60px; /* align with collapsed sidebar */
+}
+
+.navbar.shifted {
+	margin-left: 290px;
+}
+
+/* support collapsed layout */
+#sidebar.collapsed + .sidebar-overlay {}
+#sidebar.collapsed ~ #content {
+	margin-left: 60px;
+}
+
+/* hidden state: slide sidebar off-canvas and let content fill (animates) */
+#sidebar.hidden {
+	transform: translateX(-100%);
+	pointer-events: none;
+}
+#sidebar.hidden ~ #content {
+	margin-left: 0;
+}
+
+/* overlay shown on small screens when sidebar is open */
+.sidebar-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.45);
+	z-index: 1035;
+}
+
+/* icons spacing */
+	.fa {
+	width: 18px;
+	}
+
+/* ensure toggle button stays clickable above sidebar/off-canvas */
+.toggle-btn {
+	position: relative;
+	z-index: 1065;
+}
+
+/* Responsive: collapse to off-canvas on small screens */
+
+@media (max-width: 768px) {
+	#sidebar {
+		transform: translateX(-100%);
+		width: 290px;
+	}
+	#sidebar:not(.collapsed) {
+		transform: translateX(0);
+	}
+	.sidebar-overlay {
+		display: block;
+	}
+	#content {
+		margin-left: 0;
+	}
+}
+
+.boton {
+	margin-left: 10px;
+}
