@@ -6,6 +6,7 @@ import { LeaveBalance } from './pages/leave-balance/leave-balance';
 import { LeaveRequest } from './pages/leave-request/leave-request';
 import { Lobby } from './pages/lobby/lobby';
 import { EmailRequest } from './pages/email-request/email-request';
+import { Admin } from './admin/admin';
 
 export const routes: Routes = [
 
@@ -35,8 +36,8 @@ export const routes: Routes = [
                 component: LeaveBalance
             },
             {
-                path: 'leave-request',
-                component: LeaveRequest
+                path: 'admin',
+                component: Admin
             }
         ]
     }

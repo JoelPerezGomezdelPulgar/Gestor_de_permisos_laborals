@@ -4,7 +4,7 @@
             <div class="d-flex align-items-center">
                 <i class="fa fa-calendar fa-lg me-2" aria-hidden="true"></i>
                 @if(sidebarCollapsed) {
-                    <span class="brand">Leave Admin </span>
+                <span class="brand">Leave Admin </span>
                 }
 
             </div>
@@ -12,22 +12,28 @@
                 aria-label="Toggle sidebar">
                 <i class="fa fa-bars"></i>
             </button>
-            
+
         </div>
         <ul class="nav flex-column px-2">
-            @if (role == 'Hr') {
-                <li class="nav-item">
-                    <a class="nav-link text-white d-flex align-items-center" routerLink="/employee">
-                        <i class="fa fa-users me-2"></i>
-                        <span class="link-text">Employees</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white d-flex align-items-center" routerLink="/balance">
-                        <i class="fa fa-bar-chart-o me-2"></i>
-                        <span class="link-text">Leave Balance</span>
-                    </a>
-                </li>
+            @if (role == 'admin') {
+            <li class="nav-item">
+                <a class="nav-link text-white d-flex align-items-center" routerLink="/admin">
+                    <i class="fa fa-dashboard me-2"></i>
+                    <span class="link-text">Admin Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white d-flex align-items-center" routerLink="/employee">
+                    <i class="fa fa-users me-2"></i>
+                    <span class="link-text">Employees</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white d-flex align-items-center" routerLink="/balance">
+                    <i class="fa fa-bar-chart-o me-2"></i>
+                    <span class="link-text">Leave Balance</span>
+                </a>
+            </li>
             }
             <li class="nav-item">
                 <a class="nav-link text-white d-flex align-items-center" routerLink="/leave-request">

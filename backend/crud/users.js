@@ -1,4 +1,5 @@
 import usersModel from '../models/users.js'
+import { generarToken } from '../helpers/autentication.js'
 
 class usersController {
     constructor() {
@@ -60,7 +61,10 @@ class usersController {
         try {
             const data = await usersModel.login(username, password)
             if (data) {
-                res.status(200).json(data)
+                const token = generarToken(data.email)
+                const userObj = data.toObject();
+                delete userObj.password;
+                res.status(200).json({ ...userObj, token })
             } else {
                 res.status(401).json({ ok: false, msg: 'Usuari o contrasenya incorrectes' })
             }

@@ -21,8 +21,8 @@ export class Lobby implements OnInit {
     const localData = localStorage.getItem('leaveUser')
     if (localData != null) {
       const parseObj = JSON.parse(localData);
-      this.username = parseObj.userName;
-      this.role = parseObj.role;
+      this.username = parseObj.username;
+      this.role = parseObj.rol;
     }
   }
 
