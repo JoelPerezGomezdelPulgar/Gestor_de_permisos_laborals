@@ -19,10 +19,13 @@ export class Lobby implements OnInit {
   ngOnInit(): void {
     // Try common storage keys for username; fall back to 'Admin'
     const localData = localStorage.getItem('leaveUser')
+    console.log("Lobby localStorage data:", localData);
     if (localData != null) {
       const parseObj = JSON.parse(localData);
-      this.username = parseObj.username;
-      this.role = parseObj.rol;
+      console.log("Parsed Lobby data:", parseObj);
+      this.username = parseObj.username || parseObj.userName;
+      this.role = parseObj.rol || parseObj.role;
+      console.log("Current role in Lobby:", this.role);
     }
   }
 

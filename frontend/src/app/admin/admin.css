@@ -1,11 +1,16 @@
 :host {
     display: block;
-    color: #fff;
     font-family: 'Inter', sans-serif;
 }
 
 .main-dashboard-content {
-    padding: 1rem;
+    background: linear-gradient(135deg, #0f172a 0%, #0b1220 50%, #0a3a66 100%);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    margin: 1rem;
+    min-height: calc(100vh - 120px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 header {
