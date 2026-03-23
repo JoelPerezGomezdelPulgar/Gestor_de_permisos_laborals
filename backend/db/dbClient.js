@@ -5,7 +5,6 @@ import mongoose from 'mongoose'
 // Creamos la clase dbClient que se encarga de la conexión
 class dbClient {
     constructor() {
-        console.log("Funcionando")
         this.conectarBaseDatos()
     }
 

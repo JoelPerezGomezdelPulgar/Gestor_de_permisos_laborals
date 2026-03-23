@@ -4,14 +4,14 @@ import jsonwebtoken from 'jsonwebtoken'
 
 // Método que genera un token mediante el correo electrónico cada vez que un usuario inicia sesión
 export function generarToken(email) {
-    return jsonwebtoken.sign({ email }, process.env.JWT_TOKEN_SECRET, { expiresIn:'1h' })
+    return jsonwebtoken.sign({ email }, process.env.JWT_TOKEN_SECRET, { expiresIn: '1h' })
 }
 
 // Método que verifica el token para ver si el introducido coincide con el último generado
 export function verificarToken(req, res, next) {
 
     const token = req.header('Authorization')?.replace('Bearer ', '')
-    
+
     if (!token) {
         return res.status(401).json({ error: 'Token requerido' })
     }
