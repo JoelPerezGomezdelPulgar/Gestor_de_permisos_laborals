@@ -3,7 +3,8 @@ import mongoose from "mongoose"
 const permisosSchema = new mongoose.Schema(
     {
         empId: {
-            type: Number,
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'usuarios',
             required: true,
         },
         dataInici: {
@@ -40,7 +41,8 @@ const permisosSchema = new mongoose.Schema(
             type: Date,
             required: false,
         }
-    }
+    },
+    { timestamps: true }
 )
 
 

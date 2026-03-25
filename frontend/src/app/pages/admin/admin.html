@@ -1,0 +1,118 @@
+<div class="main-dashboard-content">
+    <header class="fadeInUp">
+        <div class="welcome-msg">
+            <h1>Dashboard Administratiu</h1>
+            <p>Gestió centralitzada de la plataforma.</p>
+        </div>
+
+        <div class="user-profile">
+            <div class="avatar">A</div>
+            <span>Administrador</span>
+        </div>
+    </header>
+
+    <!-- Stats Overview -->
+    <div class="stats-grid fadeInUp" style="animation-delay: 0.1s">
+        <div class="stat-card">
+            <span class="stat-label">Permisos Pendents</span>
+            <span class="stat-value" style="color: #f59e0b">{{pendingCount}}</span>
+            <div class="stat-trend trend-down">
+                <i class="fa fa-clock-o"></i> Requereix atenció
+            </div>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Permisos Aprovats</span>
+            <span class="stat-value" style="color: #10b981">{{approvedCount}}</span>
+            <div class="stat-trend trend-up">
+                <i class="fa fa-check-circle-o"></i> Gestió correcte
+            </div>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Permisos Rebutjats</span>
+            <span class="stat-value" style="color: #ef4444">{{rejectedCount}}</span>
+            <div class="stat-trend trend-down">
+                <i class="fa fa-times-circle-o"></i> Denegats recentment
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Users Section -->
+    <section class="content-section fadeInUp" style="animation-delay: 0.2s">
+        <div class="section-header">
+            <h2>Gestió d'Usuaris</h2>
+            <button class="btn-add" (click)="goToUsers()">
+                <i class="fa fa-plus"></i> Mostrar més
+            </button>
+        </div>
+
+        <div class="custom-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Rol</th>
+                        <th>Accions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.nom}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.rol}}</td>
+                        <td class="action-btns">
+                            <button class="btn-icon btn-edit"><i class="fa fa-edit"></i></button>
+                            <button class="btn-icon btn-delete"><i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Recent Permission Requests -->
+    <section class="content-section fadeInUp" style="animation-delay: 0.3s">
+        <div class="section-header">
+            <h2>Solicituds de Permís Recent</h2>
+            <button class="btn-add" (click)="goToPermissions()">
+                <i class="fa fa-plus"></i> Mostrar més
+            </button>
+        </div>
+
+        <div class="custom-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Empleat</th>
+                        <th>Tipus</th>
+                        <th>Data Inici</th>
+                        <th>Estat</th>
+                        <th>Accions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let req of permissionRequests">
+                        <td>{{req.empId?.nom || 'Usuari'}}</td>
+                        <td>{{req.tipus}}</td>
+                        <td>{{req.dataInici | date:'dd/MM/yyyy'}}</td>
+                        <td>
+                            <span class="status-badge" [ngClass]="{
+                'status-pending': req.estat === 'pendent',
+                'status-approved': req.estat === 'aprovat',
+                'status-rejected': req.estat === 'refusat'
+              }">{{req.estat}}</span>
+                        </td>
+                        <td class="action-btns">
+                            <button class="btn-icon" title="Aprovar"><i class="fa fa-check"
+                                    style="color: #10b981"></i></button>
+                            <button class="btn-icon" title="Rebutjar"><i class="fa fa-remove"
+                                    style="color: #ef4444"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

@@ -1,5 +1,5 @@
 export class UserModel {
-  id: number;
+  _id: string;
   nom: string;
   primerCognom: string;
   segonCognom: string;
@@ -10,7 +10,7 @@ export class UserModel {
   rol: string;
 
   constructor() {
-    this.id = 0;
+    this._id = "";
     this.nom = "";
     this.primerCognom = "";
     this.segonCognom = "";

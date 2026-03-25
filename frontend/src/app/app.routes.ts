@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 import { Login } from './pages/login/login';
 import { Header } from './pages/header/header';
-import { Employee } from './pages/employee/employee';
 import { LeaveBalance } from './pages/leave-balance/leave-balance';
 import { LeaveRequest } from './pages/leave-request/leave-request';
 import { Lobby } from './pages/lobby/lobby';
 import { EmailRequest } from './pages/email-request/email-request';
-import { Admin } from './admin/admin';
+import { Admin } from './pages/admin/admin';
+import { UserBasic } from './pages/user-basic/user-basic';
 
 export const routes: Routes = [
 
@@ -28,8 +28,8 @@ export const routes: Routes = [
         component: Lobby,
         children: [
             {
-                path: 'employee',
-                component: Employee
+                path: 'user',
+                component: UserBasic
             },
             {
                 path: 'balance',
