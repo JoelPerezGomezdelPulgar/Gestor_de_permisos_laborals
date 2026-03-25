@@ -24,6 +24,8 @@ export class Login {
     this.masterSrv.onLogin(formValue).subscribe({
       next: (result: any) => {
         localStorage.setItem('leaveUser', JSON.stringify(result));
+        localStorage.setItem('rol', result.rol);
+        localStorage.setItem('token', result.token);
         if (result.rol == 'admin') {
           this.router.navigateByUrl("admin")
         } else {

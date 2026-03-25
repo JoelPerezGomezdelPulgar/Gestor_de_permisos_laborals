@@ -51,6 +51,8 @@ export class Lobby implements OnInit {
   logout(): void {
     try {
       localStorage.removeItem('leaveUser');
+      this.username = '';
+      this.role = '';
     } catch (e) {
     }
     this.router.navigate(['/login']);

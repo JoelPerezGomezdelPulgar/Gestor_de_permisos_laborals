@@ -1,7 +1,6 @@
 import express from 'express'
 import cors from 'cors'
 import 'dotenv/config'
-import dbClient from './db/dbClient.js'
 import emailRoutes from './routes/email.js'
 import adminRoutes from './routes/admin.js'
 import basicoRoutes from './routes/basico.js'

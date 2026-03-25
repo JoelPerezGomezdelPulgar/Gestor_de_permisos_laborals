@@ -1,0 +1,132 @@
+<div class="user-management-container">
+    <div class="page-header">
+        <h2>Gestió d'Usuaris</h2>
+        <div class="stats">
+            <span>Total: {{usersList.length}}</span>
+        </div>
+    </div>
+
+    <!-- User Grid -->
+    <div class="user-grid">
+        @for (user of usersList; track user._id) {
+        <div class="user-card">
+            <img [src]="user.imatge || 'https://www.w3schools.com/howto/img_avatar.png'" alt="Avatar"
+                class="user-avatar">
+            <h3 class="user-name">{{user.nom}} {{user.cognom1}}</h3>
+            <span class="user-role">{{user.rol}}</span>
+
+            <div class="user-info">
+                <p><i class="fa fa-envelope-o"></i> {{user.email}}</p>
+                <p><i class="fa fa-at"></i> {{user.username}}</p>
+            </div>
+
+            <div class="card-actions">
+                <button class="btn-card btn-edit" (click)="openEditModal(user)">
+                    <i class="fa fa-pencil"></i> Editar
+                </button>
+                <button class="btn-card btn-delete" (click)="openDeleteModal(user)">
+                    <i class="fa fa-trash"></i> Borrar
+                </button>
+            </div>
+        </div>
+        }
+    </div>
+
+    <button class="fab" (click)="openCreateModal()">
+        <i class="fa fa-plus"></i>
+    </button>
+
+    <!-- Create/Edit Modal -->
+    @if (showFormModal) {
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>{{isEditMode ? 'Editar Usuari' : 'Nou Usuari'}}</h3>
+                <button class="btn-close" (click)="closeModals()">&times;</button>
+            </div>
+            <form [formGroup]="userForm" (ngSubmit)="saveUser()">
+                <div class="form-grid">
+                    <!-- Fila 1 -->
+                    <div class="form-group">
+                        <label>Nom</label>
+                        <input type="text" formControlName="nom" class="form-control" placeholder="Escriu el nom...">
+                    </div>
+                    <div class="form-group">
+                        <label>Primer Cognom</label>
+                        <input type="text" formControlName="cognom1" class="form-control">
+                    </div>
+
+                    <!-- Fila 2 -->
+                    <div class="form-group">
+                        <label>Segon Cognom</label>
+                        <input type="text" formControlName="cognom2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" formControlName="email" class="form-control">
+                    </div>
+
+                    <!-- Línia Divisòria -->
+                    <div class="form-separator"></div>
+
+                    <!-- Fila 3 -->
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" formControlName="username" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Contrasenya</label>
+                        <input type="password" formControlName="password" class="form-control"
+                            [placeholder]="isEditMode ? '(Deixar buit per no canviar)' : ''">
+                    </div>
+
+                    <!-- Fila 4 -->
+                    <div class="form-group">
+                        <label>Rol</label>
+                        <select formControlName="rol" class="form-control">
+                            <option value="admin">Administrador</option>
+                            <option value="usuari">Usuari Estàndard</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>URL Imatge</label>
+                        <input type="text" formControlName="imatge" class="form-control">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-cancel" (click)="closeModals()">Cancel·lar</button>
+                    <button type="submit" class="btn-submit" [disabled]="userForm.invalid">
+                        {{isEditMode ? 'Guardar canvis' : 'Crear Usuari'}}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    }
+    <!-- Delete Confirmation Modal -->
+    @if (showDeleteModal) {
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="color: #ef4444">Atenció! Borrar Usuari</h3>
+                <button class="btn-close" (click)="closeModals()">&times;</button>
+            </div>
+            <p>Estàs a punt de borrar a <strong>{{userToDelete?.nom}}</strong> ({{userToDelete?.username}}).</p>
+            <p>Aquesta acció <strong>no es pot desfer</strong>.</p>
+            <div class="form-group mt-3">
+                <label>Per confirmar, escriu el nom d'usuari (<strong>{{userToDelete?.username}}</strong>):</label>
+                <input type="text" [(ngModel)]="confirmUsername" class="form-control confirm-input"
+                    placeholder="Confirmar username...">
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" (click)="closeModals()">Enrere</button>
+                <button class="btn-submit" style="background: #ef4444"
+                    [disabled]="confirmUsername !== userToDelete?.username" (click)="confirmDelete()">
+                    Borrar definitivament
+                </button>
+            </div>
+        </div>
+    </div>
+    }
+</div>

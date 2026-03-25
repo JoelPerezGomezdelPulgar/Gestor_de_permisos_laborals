@@ -16,6 +16,7 @@ route.delete('/user/:id', verificarToken, userController.delete)
 route.post('/permis', verificarToken, permisController.create)
 route.put('/permis/:id', verificarToken, permisController.update)
 route.get('/permis', verificarToken, permisController.getAll)
+route.get('/dashboard', verificarToken, permisController.getDashboardData)
 route.delete('/permis/:id', verificarToken, permisController.delete)
 
 
