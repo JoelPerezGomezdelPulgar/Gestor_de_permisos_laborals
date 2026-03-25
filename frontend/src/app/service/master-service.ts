@@ -13,25 +13,5 @@ export class MasterService {
     return this.http.post<any>("http://localhost:5100/api/login", obj)
   }
 
-  onAddLeaveBalance(obj: any) {
-    return this.http.post<any>("https://api.freeprojectapi.com/api/LeaveTracker/AddLeaveBalance", obj)
-  }
-
-  getAllEmpl() {
-    return this.http.get<any[]>("https://api.freeprojectapi.com/api/LeaveTracker/getAllEmployee")
-  }
-
-  getAllLeave() {
-    return this.http.get<any[]>("https://api.freeprojectapi.com/api/LeaveTracker/GetAllBalances")
-  }
-
-  GetLeaveRequestsbyEmpId(empId: number) {
-    return this.http.get<any[]>("https://api.freeprojectapi.com/api/LeaveTracker/GetLeaveRequestsbyEmpId?empId=" + empId)
-  }
-
-  onAddLeaveRequest(obj: any) {
-    return this.http.post<any>("https://api.freeprojectapi.com/api/LeaveTracker/request", obj)
-  }
-
 
 }
