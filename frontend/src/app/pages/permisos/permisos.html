@@ -1,0 +1,141 @@
+<div class="permisos-management-container">
+    <div class="page-header">
+        <h2>Gestió de Permisos</h2>
+        <div class="stats">
+            <span>Total: {{permisosList.length}}</span>
+        </div>
+    </div>
+
+    <!-- Permisos Grid -->
+    <div class="permisos-grid">
+        @for (item of permisosList; track item._id) {
+        <div class="permisos-card">
+            <img [src]="item.empId?.imatge || 'https://www.w3schools.com/howto/img_avatar.png'" alt="Avatar"
+                class="permisos-avatar">
+            <h3 class="permisos-name">{{item.empId?.nom}} {{item.empId?.cognom1}}</h3>
+            <span class="permisos-role">{{item.tipus | titlecase}}</span>
+
+            <div class="permisos-info">
+                <p><i class="fa fa-calendar me-2"></i> {{item.dataInici | date:'dd/MM/yyyy'}} - {{item.dataFinal |
+                    date:'dd/MM/yyyy'}}</p>
+                <p><i class="fa fa-info-circle me-2"></i> {{item.descripcio }}</p>
+                <div class="mt-2">
+                    <span class="status-badge" [ngClass]="{
+                        'status-pending': item.estat === 'pendent',
+                        'status-approved': item.estat === 'aprovat',
+                        'status-rejected': item.estat === 'refusat'
+                    }">{{item.estat}}</span>
+                </div>
+            </div>
+
+            <div class="card-actions">
+                <button class="btn-card btn-edit" (click)="openEditModal(item)">
+                    <i class="fa fa-pencil"></i> Editar
+                </button>
+                <button class="btn-card btn-delete" (click)="openDeleteModal(item)">
+                    <i class="fa fa-trash"></i> Borrar
+                </button>
+            </div>
+        </div>
+        }
+    </div>
+
+    <button class="fab" (click)="openCreateModal()">
+        <i class="fa fa-plus"></i>
+    </button>
+
+    <!-- Create/Edit Modal -->
+    @if (showFormModal) {
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>{{isEditMode ? 'Editar Permís' : 'Nou Permís'}}</h3>
+                <button class="btn-close" (click)="closeModals()">&times;</button>
+            </div>
+            <form [formGroup]="permisosForm" (ngSubmit)="savePermisos()">
+                <div class="form-grid">
+                    <!-- Fila 1 -->
+                    <div class="form-group">
+                        <label>Empleat</label>
+                        <select formControlName="empId" class="form-control">
+                            <option value="" disabled selected>Selecciona un empleat...</option>
+                            <option *ngFor="let user of usersList" [value]="user._id">
+                                {{user.nom}} {{user.cognom1}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipus de Permís</label>
+                        <select formControlName="tipus" class="form-control">
+                            <option *ngFor="let t of permisosTypes" [value]="t">{{t | titlecase}}</option>
+                        </select>
+                    </div>
+
+                    <!-- Fila 2 -->
+                    <div class="form-group">
+                        <label>Data Inici</label>
+                        <input type="date" formControlName="dataInici" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Data Final</label>
+                        <input type="date" formControlName="dataFinal" class="form-control">
+                    </div>
+
+                    <!-- Línia Divisòria -->
+                    <div class="form-separator"></div>
+
+                    <!-- Fila 3 -->
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label>Descripció / Motiu</label>
+                        <textarea formControlName="descripcio" class="form-control" rows="3"
+                            placeholder="Explica el motiu del permís..."></textarea>
+                    </div>
+
+                    <!-- Fila 4 -->
+                    <div class="form-group">
+                        <label>Estat</label>
+                        <select formControlName="estat" class="form-control">
+                            <option *ngFor="let e of estatTypes" [value]="e">{{e | titlecase}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-cancel" (click)="closeModals()">Cancel·lar</button>
+                    <button type="submit" class="btn-submit" [disabled]="permisosForm.invalid">
+                        {{isEditMode ? 'Guardar canvis' : 'Crear Permís'}}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    }
+
+    <!-- Delete Confirmation Modal -->
+    @if (showDeleteModal) {
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="color: #ef4444">Atenció! Borrar Permís</h3>
+                <button class="btn-close" (click)="closeModals()">&times;</button>
+            </div>
+            <p>Estàs a punt de borrar el permís de <strong>{{permisosToDelete?.empId?.nom}}</strong>.</p>
+            <p>Aquesta acció <strong>no es pot desfer</strong>.</p>
+            <div class="form-group mt-3">
+                <label>Per confirmar, escriu el nom de l'empleat
+                    (<strong>{{permisosToDelete?.empId?.nom}}</strong>):</label>
+                <input type="text" [(ngModel)]="confirmPermisosname" class="form-control confirm-input"
+                    placeholder="Escriu el nom per confirmar...">
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" (click)="closeModals()">Enrere</button>
+                <button class="btn-submit" style="background: #ef4444"
+                    [disabled]="confirmPermisosname !== (permisosToDelete?.empId?.nom || 'CONFIRMAR')"
+                    (click)="confirmDelete()">
+                    Borrar definitivament
+                </button>
+            </div>
+        </div>
+    </div>
+    }
+</div>

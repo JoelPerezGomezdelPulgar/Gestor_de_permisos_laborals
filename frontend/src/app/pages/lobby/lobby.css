@@ -26,10 +26,12 @@
 	padding: 10px 12px;
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 
-#sidebar .nav-link:hover, #sidebar .nav-link.active {
-	background: rgba(255,255,255,0.04);
+#sidebar .nav-link:hover,
+#sidebar .nav-link.active {
+	background: rgba(255, 255, 255, 0.04);
 	color: #fff;
 	text-decoration: none;
 }
@@ -50,7 +52,8 @@
 	right: 0;
 	z-index: 1060;
 	transition: margin-left 0.2s ease;
-	margin-left: 60px; /* align with collapsed sidebar */
+	margin-left: 60px;
+	/* align with collapsed sidebar */
 }
 
 .navbar.shifted {
@@ -58,8 +61,9 @@
 }
 
 /* support collapsed layout */
-#sidebar.collapsed + .sidebar-overlay {}
-#sidebar.collapsed ~ #content {
+#sidebar.collapsed+.sidebar-overlay {}
+
+#sidebar.collapsed~#content {
 	margin-left: 60px;
 }
 
@@ -68,7 +72,8 @@
 	transform: translateX(-100%);
 	pointer-events: none;
 }
-#sidebar.hidden ~ #content {
+
+#sidebar.hidden~#content {
 	margin-left: 0;
 }
 
@@ -80,14 +85,14 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(0,0,0,0.45);
+	background: rgba(0, 0, 0, 0.45);
 	z-index: 1035;
 }
 
 /* icons spacing */
-	.fa {
+.fa {
 	width: 18px;
-	}
+}
 
 /* ensure toggle button stays clickable above sidebar/off-canvas */
 .toggle-btn {
@@ -102,12 +107,15 @@
 		transform: translateX(-100%);
 		width: 290px;
 	}
+
 	#sidebar:not(.collapsed) {
 		transform: translateX(0);
 	}
+
 	.sidebar-overlay {
 		display: block;
 	}
+
 	#content {
 		margin-left: 0;
 	}

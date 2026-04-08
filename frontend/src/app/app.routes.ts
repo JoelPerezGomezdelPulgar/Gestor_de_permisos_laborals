@@ -1,12 +1,10 @@
 import { Routes } from '@angular/router';
 import { Login } from './pages/login/login';
-import { Header } from './pages/header/header';
-import { LeaveBalance } from './pages/leave-balance/leave-balance';
-import { LeaveRequest } from './pages/leave-request/leave-request';
 import { Lobby } from './pages/lobby/lobby';
 import { EmailRequest } from './pages/email-request/email-request';
 import { Admin } from './pages/admin/admin';
 import { UserBasic } from './pages/user-basic/user-basic';
+import { Permisos } from './pages/permisos/permisos';
 
 export const routes: Routes = [
 
@@ -32,8 +30,8 @@ export const routes: Routes = [
                 component: UserBasic
             },
             {
-                path: 'balance',
-                component: LeaveBalance
+                path: 'permisos',
+                component: Permisos
             },
             {
                 path: 'admin',

@@ -36,6 +36,7 @@ const usuariosSchema = new mongoose.Schema(
             type: String,
             required: false,
             trim: true,
+            default: 'https://www.w3schools.com/howto/img_avatar.png'
         },
         rol: {
             type: String,

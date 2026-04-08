@@ -42,6 +42,22 @@ export class MasterService {
     return this.http.delete<any>(`http://localhost:5100/api/user/${id}`, this.getHeaders())
   }
 
+  getPermisos() {
+    return this.http.get<any[]>("http://localhost:5100/api/permis", this.getHeaders())
+  }
+
+  createPermisos(obj: any) {
+    return this.http.post<any>("http://localhost:5100/api/permis", obj, this.getHeaders())
+  }
+
+  updatePermisos(id: string, obj: any) {
+    return this.http.put<any>(`http://localhost:5100/api/permis/${id}`, obj, this.getHeaders())
+  }
+
+  deletePermisos(id: string) {
+    return this.http.delete<any>(`http://localhost:5100/api/permis/${id}`, this.getHeaders())
+  }
+
   getDashboardData() {
     return this.http.get<any>("http://localhost:5100/api/dashboard", this.getHeaders())
   }

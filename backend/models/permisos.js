@@ -11,7 +11,7 @@ class permisosModel {
     }
 
     async getAll() {
-        return await Permiso.find()
+        return await Permiso.find().populate('empId')
     }
 
     async delete(id) {

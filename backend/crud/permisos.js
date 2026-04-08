@@ -38,9 +38,9 @@ class permisosController {
     }
 
     async create(req, res) {
-        const { dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio } = req.body
+        const { empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio } = req.body
         try {
-            const data = await permisosModel.create({ dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio })
+            const data = await permisosModel.create({ empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio })
             res.status(201).json(data)
         } catch (e) {
             res.status(500).send(e)
@@ -58,9 +58,9 @@ class permisosController {
 
     async update(req, res) {
         const { id } = req.params
-        const { dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio } = req.body
+        const { empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio } = req.body
         try {
-            const data = await permisosModel.update(id, { dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio })
+            const data = await permisosModel.update(id, { empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio })
             res.status(200).json(data)
         } catch (e) {
             res.status(500).send(e)
