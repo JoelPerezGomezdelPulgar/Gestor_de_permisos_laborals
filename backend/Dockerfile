@@ -23,7 +23,7 @@ COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app .
 
 # Exponer el puerto que usa Express (ej. 3000)
-EXPOSE 3000
+EXPOSE 5100
 
 # Ejecutar como usuario no-root
 USER root
