@@ -3,7 +3,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-.user-management-container {
+.permisos-management-container {
     background: linear-gradient(135deg, #0f172a 0%, #0b1220 50%, #0a3a66 100%);
     color: #fff;
     padding: 2rem;
@@ -25,13 +25,13 @@
     font-weight: 700;
 }
 
-.user-grid {
+.permisos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
-.user-card {
+.permisos-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -46,12 +46,12 @@
     cursor: pointer;
 }
 
-.user-card:hover {
+.permisos-card:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.08);
 }
 
-.user-avatar {
+.permisos-avatar {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -60,13 +60,13 @@
     object-fit: cover;
 }
 
-.user-name {
+.permisos-name {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
 }
 
-.user-role {
+.permisos-role {
     font-size: 0.875rem;
     color: #2563eb;
     text-transform: uppercase;
@@ -75,14 +75,14 @@
     font-weight: 700;
 }
 
-.user-info {
+.permisos-info {
     width: 100%;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 1.5rem;
 }
 
-.user-info p {
+.permisos-info p {
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -175,7 +175,7 @@
 }
 
 .form-separator::after {
-    content: 'Dades de Compte';
+    content: 'Detall del Permís';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -186,6 +186,37 @@
     color: rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
     letter-spacing: 0.1em;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+}
+
+.status-approved {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+}
+
+.status-rejected {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
 }
 
 @keyframes slideIn {

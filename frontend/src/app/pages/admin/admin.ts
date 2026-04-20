@@ -40,11 +40,38 @@ export class Admin {
     });
   }
 
+  onDeleteUser(id: string, name: string) {
+    if (confirm(`Estàs segur que vols borrar a ${name}?`)) {
+      this.masterSrv.deleteUser(id).subscribe({
+        next: () => {
+          this.loadDashboardData();
+        },
+        error: (err) => alert("Error al eliminar usuari: " + err.message)
+      });
+    }
+  }
+
+  onUpdatePermissionStatus(permission: any, newStatus: string) {
+    const updatedPermiso = { ...permission, estat: newStatus };
+    // The API expects ID and full object (or at least the fields to change)
+    // If empId is populated, we need to send just the ID
+    if (updatedPermiso.empId && typeof updatedPermiso.empId === 'object') {
+      updatedPermiso.empId = updatedPermiso.empId._id;
+    }
+
+    this.masterSrv.updatePermisos(permission._id, updatedPermiso).subscribe({
+      next: () => {
+        this.loadDashboardData();
+      },
+      error: (err) => alert("Error al actualizar permís: " + err.message)
+    });
+  }
+
   goToUsers() {
     this.router.navigate(['/user']);
   }
 
   goToPermissions() {
-    this.router.navigate(['/balance']);
+    this.router.navigate(['/permisos']);
   }
 }

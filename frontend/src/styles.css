@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+button,
+.btn,
+a,
+.clickable,
+[role="button"] {
+    cursor: pointer !important;
+}
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"]),
+textarea,
+select {
+    cursor: text;
+}
+
+/* Ensure font awesome icons inside buttons don't block the cursor */
+button i,
+.btn i {
+    pointer-events: none;
+}

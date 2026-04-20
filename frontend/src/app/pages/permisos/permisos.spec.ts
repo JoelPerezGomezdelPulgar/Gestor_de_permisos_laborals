@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LeaveRequest } from './leave-request';
+import { Permisos } from './permisos';
 
-describe('LeaveRequest', () => {
-  let component: LeaveRequest;
-  let fixture: ComponentFixture<LeaveRequest>;
+describe('Permisos', () => {
+  let component: Permisos;
+  let fixture: ComponentFixture<Permisos>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LeaveRequest]
+      imports: [Permisos]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LeaveRequest);
+    fixture = TestBed.createComponent(Permisos);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

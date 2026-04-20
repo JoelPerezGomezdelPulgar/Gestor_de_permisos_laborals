@@ -75,6 +75,10 @@ export class UserBasic implements OnInit {
       delete userData.password;
     }
 
+    if (!userData.imatge) {
+      delete userData.imatge;
+    }
+
     if (this.isEditMode) {
       this.masterSrv.updateUser(userData._id, userData).subscribe({
         next: () => {
