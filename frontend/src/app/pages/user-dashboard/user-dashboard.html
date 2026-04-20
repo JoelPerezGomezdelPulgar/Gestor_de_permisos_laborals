@@ -1,0 +1,91 @@
+<div class="user-dashboard-content">
+    <header class="dashboard-header fadeInUp">
+        <div class="welcome-section">
+            <span class="welcome-label">Hola, {{currentUser?.nom}}! 👋</span>
+            <h1>El Teu Panell de Control</h1>
+            <p>Gestiona i consulta l'estat dels teus permisos laborals.</p>
+        </div>
+        <div class="header-actions">
+            <button class="btn-new-request" (click)="goToNewPeticio()">
+                <i class="fa fa-plus"></i> Nova Sol·licitud
+            </button>
+        </div>
+    </header>
+
+    <!-- Summary Stats -->
+    <div class="stats-grid fadeInUp" style="animation-delay: 0.1s">
+        <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(37, 99, 235, 0.1); color: #2563eb;">
+                <i class="fa fa-folder-open-o"></i>
+            </div>
+            <div class="stat-info">
+                <span class="stat-label">Total Sol·licituds</span>
+                <span class="stat-value">{{totalRequests}}</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                <i class="fa fa-check-circle-o"></i>
+            </div>
+            <div class="stat-info">
+                <span class="stat-label">Aprovades</span>
+                <span class="stat-value">{{approvedRequests}}</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                <i class="fa fa-clock-o"></i>
+            </div>
+            <div class="stat-info">
+                <span class="stat-label">Pendents</span>
+                <span class="stat-value">{{pendingRequests}}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Permissions List -->
+    <section class="requests-section fadeInUp" style="animation-delay: 0.2s">
+        <div class="section-header">
+            <h2>Les Teves Sol·licituds</h2>
+            <span class="badge-count">{{userPermissions.length}} entrades</span>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipus</th>
+                        <th>Data Inici</th>
+                        <th>Data Final</th>
+                        <th>Estat</th>
+                        <th>Detalls</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of userPermissions">
+                        <td class="type-cell">
+                            <i class="fa fa-tag"></i>
+                            {{p.tipus | titlecase}}
+                        </td>
+                        <td>{{p.dataInici | date:'dd/MM/yyyy'}}</td>
+                        <td>{{p.dataFinal | date:'dd/MM/yyyy'}}</td>
+                        <td>
+                            <span class="status-badge" [ngClass]="{
+                                'status-pending': p.estat === 'pendent',
+                                'status-approved': p.estat === 'aprovat',
+                                'status-rejected': p.estat === 'refusat'
+                            }">{{p.estat | titlecase}}</span>
+                        </td>
+                        <td class="desc-cell">{{p.descripcio}}</td>
+                    </tr>
+                    <tr *ngIf="userPermissions.length === 0">
+                        <td colspan="5" class="empty-state">
+                            <i class="fa fa-info-circle"></i>
+                            Encara no has realitzat cap sol·licitud de permís.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

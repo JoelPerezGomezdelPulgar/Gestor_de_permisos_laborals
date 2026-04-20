@@ -89,14 +89,17 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>URL Imatge</label>
-                        <input type="text" formControlName="imatge" class="form-control">
+                        <label>Imatge de Perfil</label>
+                        <input type="file" (change)="onFileSelected($event)" class="form-control" accept="image/*">
+                        <small *ngIf="uploadingImage" style="color: #3b82f6; margin-top: 5px; display: block;">
+                            <i class="fa fa-spinner fa-spin"></i> Pujant imatge a Cloudinary...
+                        </small>
                     </div>
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn-cancel" (click)="closeModals()">Cancel·lar</button>
-                    <button type="submit" class="btn-submit" [disabled]="userForm.invalid">
+                    <button type="submit" class="btn-submit" [disabled]="userForm.invalid || uploadingImage">
                         {{isEditMode ? 'Guardar canvis' : 'Crear Usuari'}}
                     </button>
                 </div>

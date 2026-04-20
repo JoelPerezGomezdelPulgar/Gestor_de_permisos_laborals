@@ -1,5 +1,6 @@
 import permisosModel from '../models/permisos.js'
 import usersModel from '../models/users.js'
+import logger from '../logger/logger.js'
 
 class permisosController {
     constructor() {
@@ -32,7 +33,7 @@ class permisosController {
                 recentPermissions
             });
         } catch (e) {
-            console.error("Dashboard error:", e);
+            logger.error(`Dashboard error: ${e.message || e}`);
             res.status(500).send(e);
         }
     }
@@ -41,8 +42,10 @@ class permisosController {
         const { empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio } = req.body
         try {
             const data = await permisosModel.create({ empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio })
+            logger.info(`Permiso created for user ${empId}`);
             res.status(201).json(data)
         } catch (e) {
+            logger.error(`Error creating permiso: ${e.message || e}`);
             res.status(500).send(e)
         }
     }
@@ -52,6 +55,7 @@ class permisosController {
             const data = await permisosModel.getAll()
             res.status(200).json(data)
         } catch (e) {
+            logger.error(`Error fetching all permisos: ${e.message || e}`);
             res.status(500).send(e)
         }
     }
@@ -61,8 +65,10 @@ class permisosController {
         const { empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio } = req.body
         try {
             const data = await permisosModel.update(id, { empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio })
+            logger.info(`Permiso ${id} updated to status ${estat || 'N/A'}`);
             res.status(200).json(data)
         } catch (e) {
+            logger.error(`Error updating permiso ${id}: ${e.message || e}`);
             res.status(500).send(e)
         }
     }
@@ -71,8 +77,10 @@ class permisosController {
         const { id } = req.params
         try {
             const data = await permisosModel.delete(id)
+            logger.info(`Permiso ${id} deleted`);
             res.status(200).json(data)
         } catch (e) {
+            logger.error(`Error deleting permiso ${id}: ${e.message || e}`);
             res.status(500).send(e)
         }
     }

@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MasterService } from '../../service/master-service';
+import { LoggerService } from '../../service/logger.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 
 @Component({
@@ -12,6 +13,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } 
 })
 export class Permisos implements OnInit {
   masterSrv = inject(MasterService);
+  loggerSrv = inject(LoggerService);
   permisosList: any[] = [];
   usersList: any[] = [];
 
@@ -45,7 +47,7 @@ export class Permisos implements OnInit {
       next: (res: any) => {
         this.usersList = res;
       },
-      error: (err) => console.error("Error loading users:", err)
+      error: (err) => this.loggerSrv.error("Error loading users", err)
     });
   }
 
@@ -54,7 +56,7 @@ export class Permisos implements OnInit {
       next: (res: any) => {
         this.permisosList = res;
       },
-      error: (err) => console.error("Error loading permisos:", err)
+      error: (err) => this.loggerSrv.error("Error loading permisos", err)
     });
   }
 

@@ -26,15 +26,19 @@ export class MasterService {
     return this.http.post<any>("http://localhost:5100/api/login", obj)
   }
 
+  onRegister(obj: FormData) {
+    return this.http.post<any>("http://localhost:5100/api/register", obj)
+  }
+
   getUsers() {
     return this.http.get<any[]>("http://localhost:5100/api/user", this.getHeaders())
   }
 
-  createUser(obj: any) {
+  createUser(obj: any | FormData) {
     return this.http.post<any>("http://localhost:5100/api/user", obj, this.getHeaders())
   }
 
-  updateUser(id: string, obj: any) {
+  updateUser(id: string, obj: any | FormData) {
     return this.http.put<any>(`http://localhost:5100/api/user/${id}`, obj, this.getHeaders())
   }
 
@@ -70,5 +74,18 @@ export class MasterService {
     return this.getUsers();
   }
 
+  async subirImagen(file: File): Promise<string> {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'GestordePermisosLaboral');
+
+    const response = await fetch('https://api.cloudinary.com/v1_1/dcknfjzss/image/upload', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await response.json();
+    return data.secure_url;
+  }
 
 }

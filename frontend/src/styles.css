@@ -19,3 +19,14 @@ button i,
 .btn i {
     pointer-events: none;
 }
+
+/* Global cursor fix to ensure it updates correctly */
+* {
+    cursor: inherit;
+}
+
+html,
+body {
+    cursor: default;
+    height: 100%;
+}

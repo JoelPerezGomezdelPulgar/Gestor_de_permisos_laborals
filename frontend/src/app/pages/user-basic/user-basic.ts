@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LoggerService } from '../../service/logger.service';
 import { MasterService } from '../../service/master-service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 
@@ -12,11 +13,14 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } 
 })
 export class UserBasic implements OnInit {
   masterSrv = inject(MasterService);
+  loggerSrv = inject(LoggerService);
   usersList: any[] = [];
 
   showFormModal = false;
   showDeleteModal = false;
   isEditMode = false;
+  uploadingImage = false;
+  selectedFile: File | null = null;
 
   userForm: FormGroup = new FormGroup({
     _id: new FormControl(''),
@@ -42,7 +46,7 @@ export class UserBasic implements OnInit {
       next: (res: any) => {
         this.usersList = res;
       },
-      error: (err) => console.error("Error loading users:", err)
+      error: (err) => this.loggerSrv.error("Error loading users", err)
     });
   }
 
@@ -59,6 +63,13 @@ export class UserBasic implements OnInit {
     this.showFormModal = true;
   }
 
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      this.selectedFile = file;
+    }
+  }
+
   closeModals() {
     this.showFormModal = false;
     this.showDeleteModal = false;
@@ -70,17 +81,21 @@ export class UserBasic implements OnInit {
     if (this.userForm.invalid) return;
 
     const userData = this.userForm.value;
+    const formData = new FormData();
 
-    if (this.isEditMode && !userData.password) {
-      delete userData.password;
-    }
+    Object.keys(userData).forEach(key => {
+      if (key === 'password' && this.isEditMode && !userData[key]) return; // Skip empty password on edit
+      if (key === 'imatge') return; // Skip imatge string definition, we append the file below
 
-    if (!userData.imatge) {
-      delete userData.imatge;
+      formData.append(key, userData[key]);
+    });
+
+    if (this.selectedFile) {
+      formData.append('imatge', this.selectedFile);
     }
 
     if (this.isEditMode) {
-      this.masterSrv.updateUser(userData._id, userData).subscribe({
+      this.masterSrv.updateUser(userData._id, formData).subscribe({
         next: () => {
           this.loadUsers();
           this.closeModals();
@@ -88,7 +103,7 @@ export class UserBasic implements OnInit {
         error: (err) => alert("Error al actualizar usuario: " + err.message)
       });
     } else {
-      this.masterSrv.createUser(userData).subscribe({
+      this.masterSrv.createUser(formData).subscribe({
         next: () => {
           this.loadUsers();
           this.closeModals();

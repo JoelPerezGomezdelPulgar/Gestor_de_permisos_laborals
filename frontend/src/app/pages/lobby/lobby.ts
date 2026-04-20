@@ -1,6 +1,6 @@
-
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet, Router, RouterLink } from '@angular/router';
+import { LoggerService } from '../../service/logger.service';
 
 @Component({
   selector: 'app-lobby',
@@ -14,18 +14,30 @@ export class Lobby implements OnInit {
   public username = '';
   public role = '';
 
-  constructor(private router: Router) { }
+  public router = inject(Router);
+  public isHome: boolean = false;
+  private loggerSrv = inject(LoggerService);
+
+  private checkHome() {
+    this.isHome = (this.router.url === '/' || this.router.url === '/lobby');
+  }
 
   ngOnInit(): void {
+    this.checkHome();
+    // Re-check on every navigation
+    this.router.events.subscribe(() => {
+      this.checkHome();
+    });
+
     // Try common storage keys for username; fall back to 'Admin'
     const localData = localStorage.getItem('leaveUser')
-    console.log("Lobby localStorage data:", localData);
+    this.loggerSrv.info("Lobby localStorage data", localData);
     if (localData != null) {
       const parseObj = JSON.parse(localData);
-      console.log("Parsed Lobby data:", parseObj);
+      this.loggerSrv.info("Parsed Lobby data", parseObj);
       this.username = parseObj.username || parseObj.userName;
       this.role = parseObj.rol || parseObj.role;
-      console.log("Current role in Lobby:", this.role);
+      this.loggerSrv.info("Current role in Lobby", this.role);
     }
   }
 
@@ -55,6 +67,6 @@ export class Lobby implements OnInit {
       this.role = '';
     } catch (e) {
     }
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
   }
 }

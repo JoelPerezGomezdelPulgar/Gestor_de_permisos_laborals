@@ -3,8 +3,8 @@ import 'dotenv/config'
 import jsonwebtoken from 'jsonwebtoken'
 
 // Método que genera un token mediante el correo electrónico cada vez que un usuario inicia sesión
-export function generarToken(email) {
-    return jsonwebtoken.sign({ email }, process.env.JWT_TOKEN_SECRET, { expiresIn: '1h' })
+export function generarToken(id, rol) {
+    return jsonwebtoken.sign({ id, rol }, process.env.JWT_TOKEN_SECRET, { expiresIn: '15m' })
 }
 
 // Método que verifica el token para ver si el introducido coincide con el último generado

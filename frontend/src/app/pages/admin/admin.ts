@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { MasterService } from '../../service/master-service';
+import { LoggerService } from '../../service/logger.service';
 
 @Component({
   selector: 'app-admin',
@@ -14,6 +15,7 @@ export class Admin {
 
   router = inject(Router);
   masterSrv = inject(MasterService);
+  loggerSrv = inject(LoggerService);
 
   // Stats counts
   pendingCount = 0;
@@ -36,7 +38,7 @@ export class Admin {
         this.users = res.recentUsers;
         this.permissionRequests = res.recentPermissions;
       },
-      error: (err) => console.error("Error loading dashboard data:", err)
+      error: (err) => this.loggerSrv.error("Error loading dashboard data", err)
     });
   }
 

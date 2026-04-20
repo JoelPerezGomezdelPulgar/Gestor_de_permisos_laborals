@@ -1,0 +1,69 @@
+<div class="register-page">
+    <div class="shape s1" aria-hidden="true"></div>
+    <div class="shape s2" aria-hidden="true"></div>
+    <div class="shape s3" aria-hidden="true"></div>
+
+    <div class="card register-card fadeInUp">
+        <div class="text-center mb-3">
+            <div class="brand">Portal d'usuaris</div>
+            <h2>Crear Compte</h2>
+            <p>Uneix-te a nosaltres per començar a gestionar les teves vacances</p>
+        </div>
+
+        <form [formGroup]="registerForm">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="nom" class="form-label text-white-50">Nom *</label>
+                    <input id="nom" formControlName="nom" type="text" class="form-control" placeholder="El teu nom">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="cognom1" class="form-label text-white-50">Primer Cognom *</label>
+                    <input id="cognom1" formControlName="cognom1" type="text" class="form-control"
+                        placeholder="El teu primer cognom">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="cognom2" class="form-label text-white-50">Segon Cognom</label>
+                    <input id="cognom2" formControlName="cognom2" type="text" class="form-control"
+                        placeholder="El teu segon cognom">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label text-white-50">Correu electrònic *</label>
+                    <input id="email" formControlName="email" type="email" class="form-control"
+                        placeholder="email@exemple.com">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="username" class="form-label text-white-50">Nom d'usuari *</label>
+                <input id="username" formControlName="username" type="text" class="form-control"
+                    placeholder="Tria un nom d'usuari">
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label text-white-50">Contrasenya *</label>
+                <input id="password" formControlName="password" type="password" class="form-control"
+                    placeholder="Tria una contrasenya segura">
+            </div>
+
+            <div class="mb-3">
+                <label for="imatge" class="form-label text-white-50">Imatge de perfil (Optional)</label>
+                <input id="imatge" type="file" (change)="onFileSelected($event)" accept="image/*" class="form-control">
+            </div>
+
+            <div class="d-grid mt-4">
+                <button type="button" (click)="onRegister()" class="btn btn-primary btn-lg" [disabled]="loading">
+                    <span *ngIf="!loading">Crear compte</span>
+                    <span *ngIf="loading"><i class="fa fa-spinner fa-spin"></i> Processant...</span>
+                </button>
+            </div>
+        </form>
+
+        <div class="text-center mt-3 text-white-50 small">
+            Ja tens compte? <a routerLink="/login" class="text-primary fw-bold"
+                style="text-decoration: none">Inicia sessió aquí</a>
+        </div>
+    </div>
+</div>

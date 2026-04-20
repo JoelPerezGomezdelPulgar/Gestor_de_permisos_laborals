@@ -34,6 +34,19 @@
                     <span class="link-text">Permisos</span>
                 </a>
             </li>
+            } @else if (role) {
+            <li class="nav-item">
+                <a class="nav-link text-white d-flex align-items-center" routerLink="/userDashboard">
+                    <i class="fa fa-dashboard me-2"></i>
+                    <span class="link-text">El Meu Panell</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white d-flex align-items-center" routerLink="/userPeticio">
+                    <i class="fa fa-calendar-plus-o me-2"></i>
+                    <span class="link-text">Nova Petició</span>
+                </a>
+            </li>
             }
         </ul>
     </nav>
@@ -59,6 +72,24 @@
             </div>
         </header>
         <main class="p-3 flex-grow-1 overflow-auto">
+            @if (!username && isHome) {
+            <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center"
+                style="color: #495057;">
+                <i class="fa fa-hand-paper-o" style="font-size: 4rem; color: #6c757d; margin-bottom: 1rem;"></i>
+                <h1 class="display-4 fw-bold">Benvingut/da</h1>
+                <p class="lead">Aquest és el teu entorn de gestió de permisos laborals.</p>
+                <p>Si us plau, <a href="javascript:void(0)" (click)="login()" class="text-primary fw-bold">inicia
+                        sessió</a> o <a routerLink="/register" class="text-info fw-bold"
+                        >registra't</a> per començar.</p>
+            </div>
+            } @else if (username && isHome) {
+            <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center"
+                style="color: #495057;">
+                <i class="fa fa-check-circle-o" style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;"></i>
+                <h1 class="display-4 fw-bold">Hola, {{username}}!</h1>
+                <p class="lead">Ja has iniciat sessió. Utilitza el menú lateral per gestionar els teus permisos.</p>
+            </div>
+            }
             <router-outlet></router-outlet>
         </main>
     </div>

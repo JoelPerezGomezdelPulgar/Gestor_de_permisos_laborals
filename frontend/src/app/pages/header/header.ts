@@ -50,6 +50,6 @@ export class Header implements OnInit {
     } catch (e) {
       // ignore
     }
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
   }
 }

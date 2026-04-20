@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { LoggerService } from '../../service/logger.service';
 import { Router } from '@angular/router';
 import { MasterService } from '../../service/master-service';
 import { EmailService } from '../../service/email-service';
@@ -19,6 +20,7 @@ export class EmailRequest {
   })
 
   masterSrv = inject(MasterService);
+  loggerSrv = inject(LoggerService);
   emailSrv = inject(EmailService);
   router = inject(Router);
 
@@ -36,14 +38,14 @@ export class EmailRequest {
 
     this.emailSrv.sendEmail(datos).subscribe({
       next: (res) => {
-        console.log('¡Correo enviado!', res);
+        this.loggerSrv.info('¡Correo enviado!', res);
         alert('Revisa la teva bústia de entrada.');
+        this.router.navigateByUrl("login");
       },
       error: (err) => {
-        console.error('Error desde el servidor:', err);
+        this.loggerSrv.error('Error desde el servidor', err);
         alert('No s\'ha pogut enviar el correu. Verifica si l\'usuari existeix.');
       }
     });
-    this.router.navigateByUrl("login")
   }
 }
