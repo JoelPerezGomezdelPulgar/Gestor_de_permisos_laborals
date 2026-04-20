@@ -10,7 +10,7 @@ const doc = {
         description: 'API para la gestión de permisos laborales y usuarios',
         version: "1.0.0"
     },
-    host: 'localhost:3000',
+    host: 'localhost:5100',
     schemes: ['http']
 }
 
