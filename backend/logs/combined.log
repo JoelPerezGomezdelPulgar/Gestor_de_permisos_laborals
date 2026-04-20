@@ -292,3 +292,4 @@
 {"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-04-20T14:19:44.725Z"}
 {"details":{"msg":"Correu enviat amb èxit","ok":true},"level":"info","message":"[FRONTEND] ¡Correo enviado!","timestamp":"2026-04-20T14:19:44.726Z"}
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-20T14:20:19.984Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-20T14:20:21.017Z"}
