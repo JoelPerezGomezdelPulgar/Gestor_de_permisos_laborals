@@ -1,18 +1,15 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('test login', async ({ page }) => {
+  // 1. Navegar a tu app (debe estar corriendo)
+  await page.goto('http://localhost:4200');
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
-
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  // 2. Interactuar (Localizar un botón por su texto y clicar)
+  await page.getByRole('button', { name: 'Sign in' }).click();
+  // 3. Verificar (Localizar un elemento por su texto y verificar que es visible)
+  await page.getByLabel('User Name').fill('Admin');
+  await page.getByLabel('Password').fill('Admin1234');
+  await page.getByRole('button', { name: 'Sign in' }).click();
+  
+  
 });
