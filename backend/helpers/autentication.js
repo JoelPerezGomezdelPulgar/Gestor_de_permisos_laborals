@@ -10,7 +10,7 @@ export function generarToken(id, rol) {
 // Método que verifica el token para ver si el introducido coincide con el último generado
 export function verificarToken(req, res, next) {
 
-    const token = req.header('Authorization')?.replace('Bearer ', '')
+    const token = req.cookies.token || req.header('Authorization')?.replace('Bearer ', '')
 
     if (!token) {
         return res.status(401).json({ error: 'Token requerido' })
@@ -18,7 +18,8 @@ export function verificarToken(req, res, next) {
 
     try {
         const dataToken = jsonwebtoken.verify(token, process.env.JWT_TOKEN_SECRET)
-        req.emailConectado = dataToken.email
+        req.userId = dataToken.id
+        req.userRole = dataToken.rol
         next()
     } catch (e) {
         console.log(e);

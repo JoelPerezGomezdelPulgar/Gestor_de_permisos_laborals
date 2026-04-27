@@ -33,6 +33,15 @@ class usersController {
                 imatge = await uploadToCloudinary(req.file.buffer, req.file.mimetype);
             }
             const data = await usersModel.create({ nom, cognom1, cognom2, email, username, password, imatge, rol })
+
+            const token = generarToken(data.id, data.rol);
+            res.cookie('token', token, {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production',
+                sameSite: 'lax',
+                maxAge: 15 * 60 * 1000 // 15 minutos
+            });
+
             logger.info(`Nuevo usuario registrado públicamente: ${username}`);
             res.status(201).json(data)
         } catch (e) {
@@ -97,10 +106,18 @@ class usersController {
             const data = await usersModel.login(username, password)
             if (data) {
                 const token = generarToken(data.id, data.rol)
+
+                res.cookie('token', token, {
+                    httpOnly: true,
+                    secure: process.env.NODE_ENV === 'production',
+                    sameSite: 'lax',
+                    maxAge: 15 * 60 * 1000 // 15 minutos
+                });
+
                 const userObj = data.toObject();
                 delete userObj.password;
                 logger.info(`Login correcto: ${username}`);
-                res.status(200).json({ ...userObj, token })
+                res.status(200).json(userObj)
             } else {
                 logger.warn(`Login fallido: credenciales incorrectas para ${username}`);
                 res.status(401).json({ ok: false, msg: 'Usuari o contrasenya incorrectes' })
@@ -108,6 +125,24 @@ class usersController {
         } catch (e) {
             logger.error(`Error en login para ${username}: ${e.message || e}`);
             res.status(500).send(e)
+        }
+    }
+
+    async logout(req, res) {
+        res.clearCookie('token');
+        res.status(200).json({ ok: true, msg: 'Sesión cerrada' });
+    }
+
+    async getMe(req, res) {
+        try {
+            const user = await usersModel.getOne(req.userId);
+            if (!user) return res.status(404).json({ msg: 'Usuario no encontrado' });
+
+            const userObj = user.toObject();
+            delete userObj.password;
+            res.status(200).json(userObj);
+        } catch (e) {
+            res.status(500).send(e);
         }
     }
 
