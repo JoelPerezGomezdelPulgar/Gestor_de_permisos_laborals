@@ -388,3 +388,4 @@
 {"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-04-27T13:06:18.268Z"}
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-27T13:06:19.356Z"}
 {"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-04-27T13:06:19.368Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-27T13:07:20.109Z"}
