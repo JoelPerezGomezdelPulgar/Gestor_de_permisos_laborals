@@ -399,3 +399,8 @@
 {"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-04-27T13:17:10.318Z"}
 {"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-04-27T13:17:10.378Z"}
 {"details":{"__v":0,"_id":"69c406ff2da8eb819efff38c","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-03-25T16:02:07.374Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://res.cloudinary.com/dcknfjzss/image/upload/v1776691271/bvcxjwv4hsfcqxvwr6v4.jpg","nom":"Joel","rol":"admin","updatedAt":"2026-04-20T13:21:11.352Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-04-27T13:17:10.380Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-04-27T13:26:58.647Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-04-27T13:26:58.825Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-04-27T13:26:58.870Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-04-27T13:26:58.925Z"}
+{"details":{"__v":0,"_id":"69c406ff2da8eb819efff38c","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-03-25T16:02:07.374Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://res.cloudinary.com/dcknfjzss/image/upload/v1776691271/bvcxjwv4hsfcqxvwr6v4.jpg","nom":"Joel","rol":"admin","updatedAt":"2026-04-20T13:21:11.352Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-04-27T13:26:58.926Z"}

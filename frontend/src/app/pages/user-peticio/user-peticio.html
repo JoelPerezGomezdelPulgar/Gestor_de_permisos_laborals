@@ -1,67 +1,69 @@
 <div class="user-peticio-container">
-    <div class="form-card fadeInUp">
-        <header class="form-header">
-            <div class="header-icon">
-                <i class="fa fa-calendar-plus-o"></i>
-            </div>
-            <div class="header-text">
-                <h2>Sol·licitud de Permís</h2>
-                <p>Emplena el formulari per sol·licitar un nou permís laboral.</p>
-            </div>
-        </header>
+  <div class="form-card fadeInUp">
+    <header class="form-header">
+      <div class="header-icon">
+        <i class="fa fa-calendar-plus-o"></i>
+      </div>
+      <div class="header-text">
+        <h2>Sol·licitud de Permís</h2>
+        <p>Emplena el formulari per sol·licitar un nou permís laboral.</p>
+      </div>
+    </header>
 
-        <form [formGroup]="peticioForm" (ngSubmit)="onSubmit()" class="peticio-form">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>Data d'Inici</label>
-                    <div class="input-wrapper">
-                        <i class="fa fa-calendar"></i>
-                        <input type="date" formControlName="dataInici" class="form-control">
-                    </div>
-                </div>
+    <form [formGroup]="peticioForm" (ngSubmit)="onSubmit()" class="peticio-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Data d'Inici</label>
+          <div class="input-wrapper">
+            <i class="fa fa-calendar"></i>
+            <input type="date" formControlName="dataInici" class="form-control">
+          </div>
+        </div>
 
-                <div class="form-group">
-                    <label>Data Final</label>
-                    <div class="input-wrapper">
-                        <i class="fa fa-calendar"></i>
-                        <input type="date" formControlName="dataFinal" class="form-control">
-                    </div>
-                </div>
+        <div class="form-group">
+          <label>Data Final</label>
+          <div class="input-wrapper">
+            <i class="fa fa-calendar"></i>
+            <input type="date" formControlName="dataFinal" class="form-control">
+          </div>
+        </div>
 
-                <div class="form-group full-width">
-                    <label>Tipus de Permís</label>
-                    <div class="input-wrapper">
-                        <i class="fa fa-tag"></i>
-                        <select formControlName="tipus" class="form-control">
-                            <option *ngFor="let t of tipusPermisos" [value]="t">{{t | titlecase}}</option>
-                        </select>
-                    </div>
-                </div>
+        <div class="form-group full-width">
+          <label>Tipus de Permís</label>
+          <div class="input-wrapper">
+            <i class="fa fa-tag"></i>
+            <select formControlName="tipus" class="form-control">
+              @for (t of tipusPermisos; track t) {
+                <option [value]="t">{{t | titlecase}}</option>
+              }
+            </select>
+          </div>
+        </div>
 
-                <div class="form-group full-width">
-                    <label>Descripció / Motiu</label>
-                    <div class="input-wrapper">
-                        <i class="fa fa-comment-o"></i>
-                        <textarea formControlName="descripcio" class="form-control" rows="4"
-                            placeholder="Descriu breument el motiu de la teva sol·licitud..."></textarea>
-                    </div>
-                </div>
-            </div>
+        <div class="form-group full-width">
+          <label>Descripció / Motiu</label>
+          <div class="input-wrapper">
+            <i class="fa fa-comment-o"></i>
+            <textarea formControlName="descripcio" class="form-control" rows="4"
+            placeholder="Descriu breument el motiu de la teva sol·licitud..."></textarea>
+          </div>
+        </div>
+      </div>
 
-            <div class="form-info">
-                <i class="fa fa-info-circle"></i>
-                <span>La petició es registrarà com a <strong>pendent</strong> d'aprovació per part de
-                    l'administrador.</span>
-            </div>
-
-            <footer class="form-footer">
-                <button type="button" class="btn-secondary" (click)="router.navigateByUrl('userDashboard')">
-                    <i class="fa fa-arrow-left"></i> Tornar
-                </button>
-                <button type="submit" class="btn-primary" [disabled]="peticioForm.invalid">
-                    <i class="fa fa-paper-plane"></i> Enviar Sol·licitud
-                </button>
-            </footer>
-        </form>
+      <div class="form-info">
+        <i class="fa fa-info-circle"></i>
+        <span>La petició es registrarà com a <strong>pendent</strong> d'aprovació per part de
+      l'administrador.</span>
     </div>
+
+    <footer class="form-footer">
+      <button type="button" class="btn-secondary" (click)="router.navigateByUrl('userDashboard')">
+        <i class="fa fa-arrow-left"></i> Tornar
+      </button>
+      <button type="submit" class="btn-primary" [disabled]="peticioForm.invalid">
+        <i class="fa fa-paper-plane"></i> Enviar Sol·licitud
+      </button>
+    </footer>
+  </form>
+</div>
 </div>
