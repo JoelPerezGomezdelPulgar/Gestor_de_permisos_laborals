@@ -501,3 +501,14 @@
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-29T14:49:02.593Z"}
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-29T14:51:11.317Z"}
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-29T14:51:12.603Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-29T14:52:43.651Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-04-29T14:56:30.893Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-04-29T14:56:31.212Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-04-29T15:10:20.098Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-04-29T15:10:20.336Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-04-29T15:10:20.362Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-04-29T15:10:20.463Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-04-29T15:10:20.501Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-04-29T15:10:20.536Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6InVzdWFyaSIsImlhdCI6MTc3NzQ3NTQyMCwiZXhwIjoxNzc4MDgwMjIwfQ.F6jhNTKfkugIH0mcmyHMFahVbKuksq1U50BgWSZVXn0","rol":"usuari","updatedAt":"2026-04-29T15:10:20.292Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-04-29T15:10:20.538Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-04-29T15:10:20.548Z"}
