@@ -7,6 +7,10 @@ export function generarToken(id, rol) {
     return jsonwebtoken.sign({ id, rol }, process.env.JWT_TOKEN_SECRET, { expiresIn: '15m' })
 }
 
+export function generarRefreshToken(id, rol) {
+    return jsonwebtoken.sign({ id, rol }, process.env.JWT_REFRESH_SECRET, { expiresIn: '7d' })
+}
+
 // Método que verifica el token para ver si el introducido coincide con el último generado
 export function verificarToken(req, res, next) {
 
@@ -26,4 +30,12 @@ export function verificarToken(req, res, next) {
         res.status(401).json({ error: 'Token no válido' })
     }
 
+}
+
+export function verificarRefreshToken(token) {
+    try {
+        return jsonwebtoken.verify(token, process.env.JWT_REFRESH_SECRET)
+    } catch (e) {
+        return null
+    }
 }

@@ -6,8 +6,8 @@ class usersModel {
         return await User.create(user)
     }
 
-    async update(id, user) {
-        return await User.findByIdAndUpdate(id, user, { new: true })
+    async update(id, info) {
+        return await User.findByIdAndUpdate(id, info, { new: true })
     }
 
     async getAll() {
@@ -22,8 +22,8 @@ class usersModel {
         return await User.findOne({ email })
     }
 
-    async login(username, password) {
-        return await User.findOne({ username, password })
+    async login(username) {
+        return await User.findOne({ username })
     }
 
     async delete(id) {

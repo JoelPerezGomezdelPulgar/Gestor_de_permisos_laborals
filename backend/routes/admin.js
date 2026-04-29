@@ -13,6 +13,7 @@ route.post('/user', verificarToken, upload.single('imatge'), userController.crea
 route.put('/user/:id', verificarToken, upload.single('imatge'), userController.update)
 route.get('/me', verificarToken, userController.getMe)
 route.post('/logout', userController.logout)
+route.post('/refresh-token', userController.renewToken)
 
 route.get('/user', verificarToken, userController.getAll)
 route.get('/user/:id', verificarToken, userController.getOne)
