@@ -1,72 +1,74 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { LoginModel } from '../models/User.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MasterService {
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) { }
-
-  private getHeaders() {
-    const localData = localStorage.getItem('leaveUser');
-    let token = '';
-    if (localData) {
-      token = JSON.parse(localData).token;
-    }
-    return {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    };
-  }
+  private readonly API_URL = "http://localhost:5100/api";
+  private readonly httpOptions = { withCredentials: true };
 
   onLogin(obj: LoginModel) {
-    return this.http.post<any>("http://localhost:5100/api/login", obj)
+    return this.http.post<any>(`${this.API_URL}/login`, obj, this.httpOptions)
   }
 
   onRegister(obj: FormData) {
-    return this.http.post<any>("http://localhost:5100/api/register", obj)
+    return this.http.post<any>(`${this.API_URL}/register`, obj, this.httpOptions)
+  }
+
+  getMe() {
+    return this.http.get<any>(`${this.API_URL}/me`, this.httpOptions)
+  }
+
+  logout() {
+    return this.http.post<any>(`${this.API_URL}/logout`, {}, this.httpOptions)
+  }
+
+  renewToken() {
+    return this.http.post<any>(`${this.API_URL}/refresh-token`, {}, this.httpOptions)
   }
 
   getUsers() {
-    return this.http.get<any[]>("http://localhost:5100/api/user", this.getHeaders())
+    return this.http.get<any[]>(`${this.API_URL}/user`, this.httpOptions)
   }
 
   createUser(obj: any | FormData) {
-    return this.http.post<any>("http://localhost:5100/api/user", obj, this.getHeaders())
+    return this.http.post<any>(`${this.API_URL}/user`, obj, this.httpOptions)
   }
 
   updateUser(id: string, obj: any | FormData) {
-    return this.http.put<any>(`http://localhost:5100/api/user/${id}`, obj, this.getHeaders())
+    return this.http.put<any>(`${this.API_URL}/user/${id}`, obj, this.httpOptions)
   }
 
   deleteUser(id: string) {
-    return this.http.delete<any>(`http://localhost:5100/api/user/${id}`, this.getHeaders())
+    return this.http.delete<any>(`${this.API_URL}/user/${id}`, this.httpOptions)
   }
 
   getPermisos() {
-    return this.http.get<any[]>("http://localhost:5100/api/permis", this.getHeaders())
+    return this.http.get<any[]>(`${this.API_URL}/permis`, this.httpOptions)
   }
 
   createPermisos(obj: any) {
-    return this.http.post<any>("http://localhost:5100/api/permis", obj, this.getHeaders())
+    return this.http.post<any>(`${this.API_URL}/permis`, obj, this.httpOptions)
   }
 
   updatePermisos(id: string, obj: any) {
-    return this.http.put<any>(`http://localhost:5100/api/permis/${id}`, obj, this.getHeaders())
+    return this.http.put<any>(`${this.API_URL}/permis/${id}`, obj, this.httpOptions)
   }
 
   deletePermisos(id: string) {
-    return this.http.delete<any>(`http://localhost:5100/api/permis/${id}`, this.getHeaders())
+    return this.http.delete<any>(`${this.API_URL}/permis/${id}`, this.httpOptions)
   }
 
   getDashboardData() {
-    return this.http.get<any>("http://localhost:5100/api/dashboard", this.getHeaders())
+    return this.http.get<any>(`${this.API_URL}/dashboard`, this.httpOptions)
   }
 
   onAddLeaveBalance(obj: any) {
+    // Note: External APIs might not support withCredentials correctly if not configured for it
     return this.http.post<any>("https://api.freeprojectapi.com/api/LeaveTracker/AddLeaveBalance", obj)
   }
 

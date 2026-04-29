@@ -1,6 +1,6 @@
-
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet, Router, RouterLink } from '@angular/router';
+import { MasterService } from '../../service/master-service';
 
 @Component({
   selector: 'app-header',
@@ -14,16 +14,16 @@ export class Header implements OnInit {
   public username = '';
   public role = '';
 
-  constructor(private router: Router) { }
+  private masterSrv = inject(MasterService);
+  private router = inject(Router);
 
   ngOnInit(): void {
-    // Try common storage keys for username; fall back to 'Admin'
-    const localData = localStorage.getItem('leaveUser')
-    if (localData != null) {
-      const parseObj = JSON.parse(localData);
-      this.username = parseObj.userName;
-      this.role = parseObj.role;
-    }
+    this.masterSrv.getMe().subscribe({
+      next: (res: any) => {
+        this.username = res.username || res.userName;
+        this.role = res.rol || res.role;
+      }
+    });
   }
 
   toggleSidebar(): void {
@@ -42,14 +42,13 @@ export class Header implements OnInit {
   }
 
   logout(): void {
-    // Clear common auth keys and redirect to login
-    try {
-      localStorage.removeItem('leaveUser');
-      // if your app uses a different key, update accordingly
-      // optionally clear everything: localStorage.clear();
-    } catch (e) {
-      // ignore
-    }
-    this.router.navigate(['']);
+    this.masterSrv.logout().subscribe({
+      next: () => {
+        this.router.navigate(['']);
+      },
+      error: () => {
+        this.router.navigate(['']);
+      }
+    });
   }
 }
