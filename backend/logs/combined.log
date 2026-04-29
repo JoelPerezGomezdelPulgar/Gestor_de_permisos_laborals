@@ -405,6 +405,7 @@
 {"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-04-27T13:26:58.925Z"}
 {"details":{"__v":0,"_id":"69c406ff2da8eb819efff38c","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-03-25T16:02:07.374Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://res.cloudinary.com/dcknfjzss/image/upload/v1776691271/bvcxjwv4hsfcqxvwr6v4.jpg","nom":"Joel","rol":"admin","updatedAt":"2026-04-20T13:21:11.352Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-04-27T13:26:58.926Z"}
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-27T13:28:43.996Z"}
+<<<<<<< HEAD
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-04-27T14:05:05.923Z"}
 {"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-04-27T14:05:36.540Z"}
 {"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-04-27T14:05:41.729Z"}
@@ -512,3 +513,5 @@
 {"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-04-29T15:10:20.536Z"}
 {"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6InVzdWFyaSIsImlhdCI6MTc3NzQ3NTQyMCwiZXhwIjoxNzc4MDgwMjIwfQ.F6jhNTKfkugIH0mcmyHMFahVbKuksq1U50BgWSZVXn0","rol":"usuari","updatedAt":"2026-04-29T15:10:20.292Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-04-29T15:10:20.538Z"}
 {"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-04-29T15:10:20.548Z"}
+=======
+>>>>>>> d2ea78a07ce5653357b096f64c94c9a9df7eb440
