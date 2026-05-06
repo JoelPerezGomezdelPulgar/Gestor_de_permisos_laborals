@@ -165,6 +165,7 @@ class usersController {
 
                 logger.info(`Login correcto: ${username}`);
                 res.status(200).json({ username: data.username, rol: data.rol })
+                console.log('-------------------------------token', token);
             } else {
                 logger.warn(`Login fallido: usuario no encontrado ${username}`);
                 res.status(401).json({ ok: false, msg: 'Usuari o contrasenya incorrectes' })

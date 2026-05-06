@@ -29,6 +29,7 @@ export class Login {
           this.router.navigateByUrl("admin")
         } else {
           this.router.navigateByUrl("userDashboard")
+          console.log("hola")
         }
       },
       error: (error: any) => {
