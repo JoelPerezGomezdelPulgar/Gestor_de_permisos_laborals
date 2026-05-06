@@ -11,7 +11,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
       // Si recibimos un 401 y no es una petición de login o de refresco
-      if (error.status === 401 && !req.url.includes('refresh-token') && !req.url.includes('login')) {
+      if (error.status === 401 && !req.url.includes('renewToken') && !req.url.includes('login')) {
         return masterSrv.renewToken().pipe(
           switchMap(() => {
             // Si el refresco fue bien, reintentamos la petición original

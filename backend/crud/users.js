@@ -144,7 +144,7 @@ class usersController {
 
                 const token = generarToken(data.id, data.rol)
                 const refreshToken = generarRefreshToken(data.id, data.rol)
-
+                
                 // Guardar refresh token en DB
                 await usersModel.update(data.id, { refreshToken });
 
@@ -152,14 +152,15 @@ class usersController {
                     httpOnly: true,
                     secure: process.env.NODE_ENV === 'production',
                     sameSite: 'lax',
-                    maxAge: 15 * 60 * 1000 // 15 minutos
+                    maxAge: 1000 // 1 segundo
                 });
 
                 res.cookie('refreshToken', refreshToken, {
                     httpOnly: true,
                     secure: process.env.NODE_ENV === 'production',
                     sameSite: 'lax',
-                    maxAge: 7 * 24 * 60 * 60 * 1000 // 7 días
+                    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 días
+                    path: '/api/renewToken'// ← Esto es para que esta cookie solo se envíe a la ruta definida
                 });
 
                 logger.info(`Login correcto: ${username}`);

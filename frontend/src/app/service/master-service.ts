@@ -28,7 +28,7 @@ export class MasterService {
   }
 
   renewToken() {
-    return this.http.post<any>(`${this.API_URL}/refresh-token`, {}, this.httpOptions)
+    return this.http.post<any>(`${this.API_URL}/renewToken`, {}, this.httpOptions)
   }
 
   getUsers() {
