@@ -1,9 +1,11 @@
 services:
   # --- BACKEND (EXPRESS) ---
   backend:
-    build:
-      context: ./backend  
-      dockerfile: Dockerfile
+    build: ./backend
+    user: "node" # Fuerza el uso del usuario node
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
     ports:
       - "5100:5100"
     env_file:

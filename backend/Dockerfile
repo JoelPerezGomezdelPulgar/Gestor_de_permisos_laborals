@@ -1,31 +1,22 @@
-# Stage 1: Build
-FROM node:20-alpine AS build
+FROM node:20-alpine
+
+# Instalamos dependencias de compilación si son necesarias
+RUN apk add --no-cache python3 make g++
 
 WORKDIR /app
 
-# Copiar archivos de dependencias
+# Copiamos archivos de dependencias
 COPY package*.json ./
 RUN npm install
 
-# Copiar el resto del código
-COPY . .
+# COPIAMOS EL CÓDIGO Y CAMBIAMOS EL DUEÑO
+# El flag --chown=node:node es la clave aquí
+COPY --chown=node:node . .
 
-# Si usas TypeScript, descomenta la siguiente línea:
-# RUN npm run build
-
-# Stage 2: Runtime
-FROM node:20-alpine
-
-WORKDIR /app
-
-# Copiar solo lo necesario del stage anterior
-COPY --from=build /app/node_modules ./node_modules
-COPY --from=build /app .
-
-# Exponer el puerto que usa Express (ej. 3000)
+# Exponer el puerto
 EXPOSE 5100
 
-# Ejecutar como usuario no-root
-USER root
+# Ahora sí, cambiamos al usuario node
+USER node
 
 CMD ["node", "--watch", "server.js"]
