@@ -152,7 +152,7 @@ class usersController {
                     httpOnly: true,
                     secure: process.env.NODE_ENV === 'production',
                     sameSite: 'lax',
-                    maxAge: 1000 // 1 segundo
+                    maxAge: 5 * 60 * 1000 // 5 minutos
                 });
 
                 res.cookie('refreshToken', refreshToken, {

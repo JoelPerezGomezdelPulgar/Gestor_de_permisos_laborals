@@ -25,7 +25,10 @@ export class Login {
     const formValue = this.loginForm.value;
     this.masterSrv.onLogin(formValue).subscribe({
       next: (result: any) => {
-        if (result.rol == 'admin') {
+        console.log(result)
+        console.log(result.rol)
+        if (result.rol === 'admin') {
+          debugger
           this.router.navigateByUrl("admin")
         } else {
           this.router.navigateByUrl("userDashboard")
