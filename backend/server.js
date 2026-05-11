@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import cookieParser from 'cookie-parser'
 import 'dotenv/config'
 import dbClient from './db/dbClient.js'
 import emailRoutes from './routes/email.js'
@@ -18,9 +19,10 @@ app.use(cors({
     origin: 'http://localhost:4200',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true 
+    credentials: true
 }));
 
+app.use(cookieParser());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(express.json());
 

@@ -25,13 +25,16 @@ export class UserDashboard implements OnInit {
   approvedRequests = 0;
 
   ngOnInit() {
-    const userData = localStorage.getItem('leaveUser');
-    if (userData) {
-      this.currentUser = JSON.parse(userData);
-      this.loadUserPermissions();
-    } else {
-      this.router.navigateByUrl('login');
-    }
+    this.masterSrv.getMe().subscribe({
+      next: (res: any) => {
+        this.currentUser = res;
+        this.loadUserPermissions();
+      },
+      error: (err) => {
+        this.loggerSrv.error("Session error in dashboard", err);
+        this.router.navigateByUrl('login');
+      }
+    });
   }
 
   loadUserPermissions() {

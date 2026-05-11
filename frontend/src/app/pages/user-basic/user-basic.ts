@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { LoggerService } from '../../service/logger.service';
 import { MasterService } from '../../service/master-service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
@@ -7,7 +7,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } 
 @Component({
   selector: 'app-user-basic',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [ReactiveFormsModule, FormsModule],
   templateUrl: './user-basic.html',
   styleUrl: './user-basic.css',
 })

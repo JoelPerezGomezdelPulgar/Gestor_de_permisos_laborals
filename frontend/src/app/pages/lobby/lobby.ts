@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet, Router, RouterLink } from '@angular/router';
 import { LoggerService } from '../../service/logger.service';
+import { MasterService } from '../../service/master-service';
 
 @Component({
   selector: 'app-lobby',
@@ -17,6 +18,7 @@ export class Lobby implements OnInit {
   public router = inject(Router);
   public isHome: boolean = false;
   private loggerSrv = inject(LoggerService);
+  private masterSrv = inject(MasterService);
 
   private checkHome() {
     this.isHome = (this.router.url === '/' || this.router.url === '/lobby');
@@ -29,16 +31,18 @@ export class Lobby implements OnInit {
       this.checkHome();
     });
 
-    // Try common storage keys for username; fall back to 'Admin'
-    const localData = localStorage.getItem('leaveUser')
-    this.loggerSrv.info("Lobby localStorage data", localData);
-    if (localData != null) {
-      const parseObj = JSON.parse(localData);
-      this.loggerSrv.info("Parsed Lobby data", parseObj);
-      this.username = parseObj.username || parseObj.userName;
-      this.role = parseObj.rol || parseObj.role;
-      this.loggerSrv.info("Current role in Lobby", this.role);
-    }
+    this.masterSrv.getMe().subscribe({
+      next: (res: any) => {
+        this.loggerSrv.info("User data from server", res);
+        this.username = res.username || res.userName;
+        this.role = res.rol || res.role;
+      },
+      error: (err) => {
+        this.loggerSrv.warn("User not logged in or session expired", err);
+        this.username = '';
+        this.role = '';
+      }
+    });
   }
 
   toggleSidebar(): void {
@@ -61,12 +65,16 @@ export class Lobby implements OnInit {
   }
 
   logout(): void {
-    try {
-      localStorage.removeItem('leaveUser');
-      this.username = '';
-      this.role = '';
-    } catch (e) {
-    }
-    this.router.navigate(['']);
+    this.masterSrv.logout().subscribe({
+      next: () => {
+        this.username = '';
+        this.role = '';
+        this.router.navigate(['']);
+      },
+      error: (e) => {
+        this.loggerSrv.error("Logout error", e);
+        this.router.navigate(['']); // Navigate anyway
+      }
+    });
   }
 }

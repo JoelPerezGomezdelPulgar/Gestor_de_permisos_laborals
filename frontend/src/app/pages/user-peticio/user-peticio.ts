@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MasterService } from '../../service/master-service';
+import { LoggerService } from '../../service/logger.service';
 
 @Component({
   selector: 'app-user-peticio',
@@ -13,6 +14,7 @@ import { MasterService } from '../../service/master-service';
 })
 export class UserPeticio implements OnInit {
   masterSrv = inject(MasterService);
+  loggerSrv = inject(LoggerService);
   router = inject(Router);
 
   peticioForm: FormGroup = new FormGroup({
@@ -26,12 +28,15 @@ export class UserPeticio implements OnInit {
   currentUser: any = null;
 
   ngOnInit() {
-    const userData = localStorage.getItem('leaveUser');
-    if (userData) {
-      this.currentUser = JSON.parse(userData);
-    } else {
-      this.router.navigateByUrl('login');
-    }
+    this.masterSrv.getMe().subscribe({
+      next: (res: any) => {
+        this.currentUser = res;
+      },
+      error: (err) => {
+        this.loggerSrv?.error("Session error in peticio", err);
+        this.router.navigateByUrl('login');
+      }
+    });
 
     const today = new Date().toISOString().split('T')[0];
     this.peticioForm.patchValue({

@@ -42,6 +42,10 @@ const usuariosSchema = new mongoose.Schema(
             type: String,
             required: true,
             enum: ['admin', 'usuari']
+        },
+        refreshToken: {
+            type: String,
+            required: false
         }
     },
     { timestamps: true }
