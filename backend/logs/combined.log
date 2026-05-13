@@ -1327,3 +1327,4 @@
 {"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:42:44.149Z"}
 {"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T14:42:44.150Z"}
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T14:44:30.827Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T14:46:56.938Z"}
