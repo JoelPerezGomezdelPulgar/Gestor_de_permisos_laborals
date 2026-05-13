@@ -902,3 +902,253 @@
 {"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-06T14:56:02.846Z"}
 {"level":"info","message":"Login correcto: joel","timestamp":"2026-05-06T14:56:03.091Z"}
 {"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-06T14:56:03.106Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-11T13:40:19.669Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:40:44.488Z"}
+{"level":"info","message":"Login correcto: joel","timestamp":"2026-05-11T13:40:44.691Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:40:44.702Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:40:50.622Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:41:07.389Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:41:07.551Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:41:07.561Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:41:33.155Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:41:33.363Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:41:33.373Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:42:25.254Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T13:42:25.277Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T13:42:25.303Z"}
+{"details":{"error":{"error":"Refresh token requerido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"warn","message":"[FRONTEND] User not logged in or session expired","timestamp":"2026-05-11T13:42:25.306Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:42:33.802Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:42:34.005Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:42:34.024Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:42:42.324Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:42:42.536Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:42:42.576Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:42:54.767Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:42:55.170Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:42:55.245Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:43:54.070Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:43:54.439Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:43:54.489Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:45:00.968Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:45:01.125Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:45:01.156Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:45:06.739Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:45:06.908Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:45:06.933Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:45:25.986Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-11T13:50:05.359Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-11T13:50:06.907Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:50:22.380Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:50:22.570Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-11T13:50:24.135Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:50:24.145Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:50:25.543Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:50:25.721Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:50:25.733Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:50:29.360Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:50:29.514Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:50:29.528Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:50:42.373Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:50:42.555Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:50:50.871Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T13:52:11.677Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T13:52:11.887Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T13:52:15.198Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:02:19.989Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:02:20.154Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:02:21.379Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"warn","message":"[FRONTEND] User not logged in or session expired","timestamp":"2026-05-11T14:02:21.381Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:02:58.725Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:02:58.845Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:03:00.408Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"warn","message":"[FRONTEND] User not logged in or session expired","timestamp":"2026-05-11T14:03:00.409Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:03:04.350Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:03:04.493Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:03:06.234Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"warn","message":"[FRONTEND] User not logged in or session expired","timestamp":"2026-05-11T14:03:06.236Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:03:09.704Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:03:09.835Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:03:11.752Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"warn","message":"[FRONTEND] User not logged in or session expired","timestamp":"2026-05-11T14:03:11.753Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:03:23.435Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:03:23.715Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:03:23.805Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"warn","message":"[FRONTEND] User not logged in or session expired","timestamp":"2026-05-11T14:03:23.806Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:03:27.389Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:03:27.433Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:03:27.472Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"warn","message":"[FRONTEND] User not logged in or session expired","timestamp":"2026-05-11T14:03:27.472Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:03:29.956Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:03:30.241Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:03:30.333Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"warn","message":"[FRONTEND] User not logged in or session expired","timestamp":"2026-05-11T14:03:30.334Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:11:15.460Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:11:15.594Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:11:17.243Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"warn","message":"[FRONTEND] User not logged in or session expired","timestamp":"2026-05-11T14:11:17.244Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-11T14:20:36.150Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T14:20:48.648Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T14:20:48.877Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:20:48.890Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:20:48.983Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T14:20:49.010Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:20:49.072Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTA5MjQ4LCJleHAiOjE3NzkxMTQwNDh9.69F3Azj2qtlMh3qlLZhZOie95y2bi_tid8pI2m1OZyQ","rol":"admin","updatedAt":"2026-05-11T14:20:48.816Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T14:20:49.073Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:20:56.704Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-11T14:20:56.784Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:20:57.474Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-11T14:20:57.571Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-11T14:21:17.573Z"}
+{"level":"info","message":"Incoming request: PUT /api/permis/69f8a05be28d906670321fcb","timestamp":"2026-05-11T14:21:41.143Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:22:36.113Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-11T14:22:56.215Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:23:12.836Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T14:23:32.964Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:46:33.337Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:46:34.904Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-11T14:46:43.969Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-11T14:46:44.119Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:46:44.129Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:46:44.211Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T14:46:44.239Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:46:44.285Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T14:46:44.286Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:55:13.692Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-11T14:55:15.404Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:55:15.455Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:55:15.571Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T14:55:15.577Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:55:15.637Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T14:55:15.637Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:55:34.095Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:55:34.645Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T14:55:34.651Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:55:34.689Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T14:55:34.690Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:56:01.693Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:56:03.261Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T14:56:03.274Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:56:03.310Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T14:56:03.311Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:57:47.198Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T14:57:49.443Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T14:57:49.457Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T14:57:49.502Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T14:57:49.503Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:00:01.248Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:00:03.174Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T15:00:03.190Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T15:00:03.282Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T15:00:03.282Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:00:11.647Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:00:12.176Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T15:00:12.184Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T15:00:12.274Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T15:00:12.274Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:02:29.266Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:02:30.445Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T15:02:30.474Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T15:02:30.517Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T15:02:30.517Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:02:32.277Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:02:33.083Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T15:02:33.099Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T15:02:33.150Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T15:02:33.150Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:02:35.204Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:02:35.811Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T15:02:35.826Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T15:02:35.859Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T15:02:35.860Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:02:41.832Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-11T15:02:42.250Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-11T15:02:42.264Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-11T15:02:42.326Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-11T15:02:42.327Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:18:06.395Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T14:18:10.336Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:18:10.827Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:18:10.907Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:18:10.916Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:18:10.997Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:18:10.998Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:19:04.765Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:19:16.322Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:19:16.328Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:19:16.480Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:19:16.480Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:25:45.843Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:25:48.112Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:25:48.127Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:25:48.285Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:25:48.285Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:29:22.110Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:29:25.326Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:29:25.340Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:29:25.546Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NTEwODA0LCJleHAiOjE3NzkxMTU2MDR9.uFZq4WPN6LiwgztoNk4CHpuqVKMlA8WzvvNrw4d7qT0","rol":"admin","updatedAt":"2026-05-11T14:46:44.080Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:29:25.550Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:29:44.523Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:29:51.843Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:29:52.168Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:29:52.320Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NjgyNTY5LCJleHAiOjE3NzkyODczNjl9.M1HNmIZe8F6eC8XXsi4UWERBRrmxmeS5DCPCbBKbIUk","rol":"admin","updatedAt":"2026-05-13T14:29:29.051Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:29:52.337Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:29:53.481Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:29:56.539Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:29:56.557Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:29:57.490Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:30:00.100Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:30:00.120Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:30:00.223Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NjgyNTY5LCJleHAiOjE3NzkyODczNjl9.M1HNmIZe8F6eC8XXsi4UWERBRrmxmeS5DCPCbBKbIUk","rol":"admin","updatedAt":"2026-05-13T14:29:29.051Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:30:00.234Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:30:46.644Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:30:49.552Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:30:49.571Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:30:49.637Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NjgyNTY5LCJleHAiOjE3NzkyODczNjl9.M1HNmIZe8F6eC8XXsi4UWERBRrmxmeS5DCPCbBKbIUk","rol":"admin","updatedAt":"2026-05-13T14:29:29.051Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:30:49.639Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:30:53.442Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:30:55.731Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:30:55.739Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:30:55.937Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NjgyNTY5LCJleHAiOjE3NzkyODczNjl9.M1HNmIZe8F6eC8XXsi4UWERBRrmxmeS5DCPCbBKbIUk","rol":"admin","updatedAt":"2026-05-13T14:29:29.051Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:30:55.939Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:31:18.081Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:31:20.616Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:31:20.632Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:31:20.666Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NjgyNTY5LCJleHAiOjE3NzkyODczNjl9.M1HNmIZe8F6eC8XXsi4UWERBRrmxmeS5DCPCbBKbIUk","rol":"admin","updatedAt":"2026-05-13T14:29:29.051Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:31:20.666Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:32:04.069Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:32:05.855Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:32:05.864Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:32:05.927Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NjgyNTY5LCJleHAiOjE3NzkyODczNjl9.M1HNmIZe8F6eC8XXsi4UWERBRrmxmeS5DCPCbBKbIUk","rol":"admin","updatedAt":"2026-05-13T14:29:29.051Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:32:05.928Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:32:45.884Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:32:51.745Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:32:51.748Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:32:52.314Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:32:53.405Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:32:53.417Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:32:53.482Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NjgyNTY5LCJleHAiOjE3NzkyODczNjl9.M1HNmIZe8F6eC8XXsi4UWERBRrmxmeS5DCPCbBKbIUk","rol":"admin","updatedAt":"2026-05-13T14:29:29.051Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:32:53.483Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:35:57.479Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T14:36:01.615Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:36:02.127Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T14:36:02.674Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T14:39:17.834Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T14:39:19.526Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:39:19.549Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T14:39:19.871Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T14:39:20.092Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T14:39:20.280Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:39:20.519Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:39:20.521Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:39:23.918Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NjgzMTU4LCJleHAiOjE3NzkyODc5NTh9.JioL03E1D8h1WMr0z3t4ksYISag9qkJWVSC53_r-YVc","rol":"admin","updatedAt":"2026-05-13T14:39:18.790Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:39:23.918Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T14:39:25.074Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T14:39:37.470Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T14:39:37.473Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:40:02.335Z"}
+{"level":"info","message":"Incoming request: GET /api/me","timestamp":"2026-05-13T14:40:04.597Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:40:04.606Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:40:06.128Z"}
+{"details":{"__v":0,"_id":"69f217fa54bb8f0edf9bbbbe","cognom1":"Perez","cognom2":"Gomez del Pulgar","createdAt":"2026-04-29T14:38:50.179Z","email":"adaw24jperez@inslaferreria.cat","imatge":"https://www.w3schools.com/howto/img_avatar.png","nom":"Joel","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjIxN2ZhNTRiYjhmMGVkZjliYmJiZSIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzc4NjgzMTc3LCJleHAiOjE3NzkyODc5Nzd9.QKtQz2p63qmR80MKutqIr43eeexCPZnk0MKWa1r_62s","rol":"admin","updatedAt":"2026-05-13T14:39:37.060Z","username":"Miniboo"},"level":"info","message":"[FRONTEND] User data from server","timestamp":"2026-05-13T14:40:06.129Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T14:47:15.620Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T14:47:15.775Z"}

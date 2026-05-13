@@ -1,7 +1,8 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { AfterViewChecked, Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet, Router, RouterLink } from '@angular/router';
 import { LoggerService } from '../../service/logger.service';
 import { MasterService } from '../../service/master-service';
+
 
 @Component({
   selector: 'app-lobby',
@@ -9,7 +10,7 @@ import { MasterService } from '../../service/master-service';
   templateUrl: './lobby.html',
   styleUrl: './lobby.css'
 })
-export class Lobby implements OnInit {
+export class Lobby implements OnInit, AfterViewChecked {
   public sidebarCollapsed = false;
   public sidebarHidden = false;
   public username = '';
@@ -23,13 +24,17 @@ export class Lobby implements OnInit {
   private checkHome() {
     this.isHome = (this.router.url === '/' || this.router.url === '/lobby');
   }
+  ngAfterViewChecked(): void {
+    
+  }
 
   ngOnInit(): void {
     this.checkHome();
     // Re-check on every navigation
     this.router.events.subscribe(() => {
       this.checkHome();
-    });
+  });
+
 
     this.masterSrv.getMe().subscribe({
       next: (res: any) => {
