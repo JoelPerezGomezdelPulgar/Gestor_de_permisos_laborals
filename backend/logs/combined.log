@@ -2191,3 +2191,6 @@
 {"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T17:14:23.915Z"}
 {"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T17:14:23.924Z"}
 {"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:14:25.541Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:16:19.768Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:16:23.148Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:16:28.098Z"}
