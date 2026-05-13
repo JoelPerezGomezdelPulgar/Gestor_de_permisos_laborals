@@ -18,12 +18,8 @@ export class Header implements OnInit {
   private router = inject(Router);
 
   ngOnInit(): void {
-    this.masterSrv.getMe().subscribe({
-      next: (res: any) => {
-        this.username = res.username || res.userName;
-        this.role = res.rol || res.role;
-      }
-    });
+    this.username = localStorage.getItem('username') || '';
+    this.role = localStorage.getItem('rol') || '';
   }
 
   toggleSidebar(): void {

@@ -25,11 +25,13 @@ export class Login {
     const formValue = this.loginForm.value;
     this.masterSrv.onLogin(formValue).subscribe({
       next: (result: any) => {
-        console.log(result)
-        console.log(result.rol)
+        localStorage.setItem('username', result.username);
+        localStorage.setItem('rol', result.rol);
+        console.log(result.id)
+        localStorage.setItem('id', result.id);
         if (result.rol === 'admin') {
-          debugger
           this.router.navigateByUrl("admin")
+          console.log("Viaje fallido")
         } else {
           this.router.navigateByUrl("userDashboard")
           console.log("hola")

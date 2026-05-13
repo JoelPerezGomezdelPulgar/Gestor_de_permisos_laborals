@@ -12,7 +12,7 @@ route.post('/register', isAdmin, upload.single('imatge'), userController.registe
 // Si usamos upload, multer procesará el multipart/form-data y pondrá el archivo en req.file antes de que userController.create lo maneje
 route.post('/user', verificarToken, isAdmin, upload.single('imatge'), userController.create)
 route.put('/user/:id', verificarToken, isAdmin, upload.single('imatge'), userController.update)
-route.get('/me', verificarToken, isAdmin, userController.getMe)
+route.get('/me', verificarToken, userController.getMe)
 route.post('/logout', userController.logout)
 route.post('/renewToken', userController.renewToken)
 
@@ -22,8 +22,9 @@ route.delete('/user/:id', verificarToken, isAdmin, userController.delete)
 
 route.post('/permis', verificarToken, permisController.create)
 route.put('/permis/:id', verificarToken, isAdmin, permisController.update)
-route.get('/permis', verificarToken, permisController.getAll)
-route.get('/dashboard', verificarToken, isAdmin, permisController.getDashboardData)
+route.get('/permis/:id', verificarToken, permisController.getAllByUserName)
+route.get('/permis', verificarToken, isAdmin, permisController.getAll)
+route.get('/dashboard', verificarToken, permisController.getDashboardDataPermis)
 route.delete('/permis/:id', verificarToken, isAdmin, permisController.delete)
 
 

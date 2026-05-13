@@ -31,18 +31,9 @@ export class Lobby implements OnInit {
       this.checkHome();
     });
 
-    this.masterSrv.getMe().subscribe({
-      next: (res: any) => {
-        this.loggerSrv.info("User data from server", res);
-        this.username = res.username || res.userName;
-        this.role = res.rol || res.role;
-      },
-      error: (err) => {
-        this.loggerSrv.warn("User not logged in or session expired", err);
-        this.username = '';
-        this.role = '';
-      }
-    });
+    
+    this.username = localStorage.getItem('username') || '';
+    this.role = localStorage.getItem('rol') || '';
   }
 
   toggleSidebar(): void {

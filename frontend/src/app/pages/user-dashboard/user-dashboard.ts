@@ -16,8 +16,9 @@ export class UserDashboard implements OnInit {
   loggerSrv = inject(LoggerService);
   router = inject(Router);
 
-  currentUser: any = null;
   userPermissions: any[] = [];
+  userId: string | null = null;
+  userName: string | null = null;
 
   // Stats
   totalRequests = 0;
@@ -25,24 +26,17 @@ export class UserDashboard implements OnInit {
   approvedRequests = 0;
 
   ngOnInit() {
-    this.masterSrv.getMe().subscribe({
-      next: (res: any) => {
-        this.currentUser = res;
-        this.loadUserPermissions();
-      },
-      error: (err) => {
-        this.loggerSrv.error("Session error in dashboard", err);
-        this.router.navigateByUrl('login');
-      }
-    });
+    this.userName = localStorage.getItem('username');
+    this.loadUserPermissions();
   }
 
   loadUserPermissions() {
-    this.masterSrv.getPermisos().subscribe({
+    this.masterSrv.getPermisosByUserName(this.userName!).subscribe({
       next: (res: any[]) => {
         // Filter permissions for the current user
         // Note: res is populated with empId object
-        this.userPermissions = res.filter(p => p.empId?._id === this.currentUser._id);
+        console.log(res)
+        this.userPermissions = res;
         this.calculateStats();
       },
       error: (err) => this.loggerSrv.error("Error loading permissions", err)
