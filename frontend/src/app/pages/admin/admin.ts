@@ -48,7 +48,7 @@ export class Admin implements OnInit {
         this.permissionRequests = res.recentPermissions;
 
         // ¡ESTA ES LA CLAVE! Renderizamos solo cuando tenemos los números
-        //this.renderChart();
+        this.renderChart();
       },
       error: (err) => this.loggerSrv.error("Error loading dashboard data", err)
     });
@@ -63,7 +63,6 @@ export class Admin implements OnInit {
     if (this.myChart) {
       this.myChart.destroy();
     }
-    console.log("Renderizando gráfico con datos:", [this.pendingCount, this.approvedCount, this.rejectedCount])
     this.myChart = new Chart(ctx, {
 
       type: 'bar',
@@ -71,9 +70,9 @@ export class Admin implements OnInit {
         labels: ['Pendents', 'Aprovats', 'Rebutjats'],
         datasets: [{
           label: 'Permisos laborals',
-          data: [2, 3, 6],
+          data: [this.pendingCount, this.approvedCount, this.rejectedCount],
           // Colores que peguen con tu diseño oscuro
-          backgroundColor: ['#d1e3ff', '#10b981', '#ef4444'], 
+          backgroundColor: ['#f59e0b', '#10b981', '#ef4444'], 
           borderRadius: 8
         }]
       },
@@ -89,7 +88,6 @@ export class Admin implements OnInit {
         }
       }
     });
-    console.log("Gráfico renderizado con datos:", [this.pendingCount, this.approvedCount, this.rejectedCount])
   }
   
   ngAfterViewInit() {
