@@ -28,15 +28,7 @@ export class UserPeticio implements OnInit {
   currentUser: any = null;
 
   ngOnInit() {
-    this.masterSrv.getMe().subscribe({
-      next: (res: any) => {
-        this.currentUser = res;
-      },
-      error: (err) => {
-        this.loggerSrv?.error("Session error in peticio", err);
-        this.router.navigateByUrl('login');
-      }
-    });
+    this.currentUser = localStorage.getItem('id') || '';
 
     const today = new Date().toISOString().split('T')[0];
     this.peticioForm.patchValue({
@@ -51,7 +43,7 @@ export class UserPeticio implements OnInit {
     const formValue = this.peticioForm.value;
     const peticioData = {
       ...formValue,
-      empId: this.currentUser._id,
+      empId: this.currentUser,
       estat: 'pendent'
     };
 

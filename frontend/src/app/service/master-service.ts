@@ -51,6 +51,10 @@ export class MasterService {
     return this.http.get<any[]>(`${this.API_URL}/permis`, this.httpOptions)
   }
 
+  getPermisosByUserName(userName: string) {
+    return this.http.get<any[]>(`${this.API_URL}/permis/${userName}`, this.httpOptions)
+  }
+
   createPermisos(obj: any) {
     return this.http.post<any>(`${this.API_URL}/permis`, obj, this.httpOptions)
   }

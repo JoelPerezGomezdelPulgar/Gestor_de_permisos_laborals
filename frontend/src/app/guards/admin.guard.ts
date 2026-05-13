@@ -6,6 +6,7 @@ import { map, catchError, of } from 'rxjs';
 export const adminGuard: CanActivateFn = (route, state) => {
     const router = inject(Router);
     const masterSrv = inject(MasterService);
+    debugger
 
     return masterSrv.getMe().pipe(
         map(res => {

@@ -37,27 +37,22 @@ export const routes: Routes = [
             {
                 path: 'user',
                 component: UserBasic,
-                canActivate: [adminGuard]
             },
             {
                 path: 'permisos',
                 component: Permisos,
-                canActivate: [adminGuard]
             },
             {
                 path: 'admin',
                 component: Admin,
-                canActivate: [adminGuard]
             },
             {
                 path: 'userPeticio',
                 component: UserPeticio,
-                canActivate: [authGuard]
             },
             {
                 path: 'userDashboard',
                 component: UserDashboard,
-                canActivate: [authGuard]
             }
         ]
     }

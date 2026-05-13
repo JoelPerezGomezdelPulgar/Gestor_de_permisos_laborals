@@ -7,7 +7,7 @@ class permisosController {
 
     }
 
-    async getDashboardData(req, res) {
+    async getDashboardDataPermis(req, res) {
         try {
             // 1. Get stats
             const allPermisos = await permisosModel.getAll();
@@ -17,21 +17,7 @@ class permisosController {
                 refusat: allPermisos.filter(p => p.estat === 'refusat').length
             };
 
-            // 2. Get 3 most recent users
-            const allUsers = await usersModel.getAll();
-            // Assuming we want the last 3 based on the array order or createdAt if available
-            // Since I just added timestamps, let's try to sort if possible, or just slice the last 3
-            const recentUsers = allUsers.slice(-3).reverse();
-
-            // 3. Get 3 most recent permissions
-            // We should populate the user info if possible
-            const recentPermissions = allPermisos.slice(-3).reverse();
-
-            res.status(200).json({
-                stats,
-                recentUsers,
-                recentPermissions
-            });
+            res.status(200).json({stats});
         } catch (e) {
             logger.error(`Dashboard error: ${e.message || e}`);
             res.status(500).send(e);
@@ -56,6 +42,17 @@ class permisosController {
             res.status(200).json(data)
         } catch (e) {
             logger.error(`Error fetching all permisos: ${e.message || e}`);
+            res.status(500).send(e)
+        }
+    }
+
+    async getAllByUserName(req, res) {
+        try {
+            const { userName } = req.params;
+            const data = await permisosModel.getAllByUserName(userName);
+            res.status(200).json(data);
+        } catch (e) {
+            logger.error(`Error fetching permisos for user ${userName}: ${e.message || e}`);
             res.status(500).send(e)
         }
     }
