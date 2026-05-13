@@ -1591,3 +1591,603 @@
 {"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:49:10.451Z"}
 {"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T14:49:10.631Z"}
 {"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:49:12.444Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T14:50:55.033Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T14:51:28.026Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T14:51:39.341Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T14:51:39.647Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:51:39.756Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T14:54:23.736Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T14:55:27.711Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T14:55:32.784Z"}
+{"level":"info","message":"Login correcto: joel","timestamp":"2026-05-13T14:55:33.067Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T14:55:33.169Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T14:55:40.672Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:00:02.245Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:00:02.509Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:00:02.549Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:00:03.582Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:00:03.585Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:04:50.204Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:04:50.258Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:04:50.259Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:04:50.341Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:05:50.988Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:05:51.036Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/user: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/user"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:05:51.037Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:05:53.710Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:05:56.204Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:06:07.746Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:10:48.911Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:10:52.629Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:10:52.661Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T15:10:52.766Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T15:10:52.783Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:10:52.911Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:10:52.913Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:10:52.915Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:10:52.915Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:10:56.576Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:10:56.839Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:10:56.887Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:10:58.111Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:10:58.114Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:12:12.689Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:12:12.693Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:12:23.577Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:12:23.742Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:12:23.743Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:12:23.746Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/user: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/user"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:12:23.747Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:12:30.744Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:12:30.790Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:12:30.832Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:12:48.017Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:12:48.230Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/user: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/user"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:12:48.232Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:12:48.237Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:12:48.237Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:12:58.312Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:12:58.669Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:12:58.687Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:13:09.721Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:13:09.930Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:13:09.931Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:13:09.934Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/user: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/user"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:13:09.934Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:13:13.684Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:13:13.693Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:13:18.046Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:13:18.072Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/user: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/user"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:13:18.074Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:13:18.077Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:13:18.077Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:13:23.502Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:13:23.515Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:13:23.761Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:13:32.512Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:13:32.563Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/user: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/user"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:13:32.564Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:13:32.571Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:13:32.572Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:13:46.894Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:13:46.932Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:13:56.423Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:13:56.430Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:14:07.039Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:14:07.095Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:14:07.096Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:14:07.099Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/user: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/user"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:14:07.099Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:14:16.042Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:14:16.048Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:14:17.927Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:14:17.932Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:14:19.040Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:14:19.046Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:14:36.975Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:14:36.984Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:14:41.035Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:14:41.038Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:14:44.126Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:14:44.128Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:14:46.531Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:14:46.536Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:15:33.763Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:15:33.791Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/user: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/user"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:15:33.793Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:15:33.796Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:15:33.796Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:15:34.690Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:15:43.821Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:15:51.861Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:15:51.880Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:15:53.038Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:15:53.041Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:16:06.831Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:16:06.999Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:16:07.001Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:16:07.006Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/user: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/user"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-13T15:16:07.009Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:16:07.877Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:16:12.245Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:16:16.218Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:16:22.007Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:16:41.551Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:16:46.677Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:17:00.849Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:17:01.717Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:17:01.728Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T15:17:01.871Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T15:17:01.880Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:17:01.944Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:17:01.955Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:17:18.309Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:17:18.493Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:17:26.120Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:17:26.272Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:17:26.273Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:17:44.999Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:17:45.309Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:17:45.417Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:18:21.903Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:18:24.348Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:18:33.432Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:18:33.747Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:18:33.843Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:18:54.875Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:18:54.905Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:18:58.926Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:19:00.225Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:19:06.491Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:19:06.876Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:19:13.416Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:19:13.469Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:19:26.968Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:21:25.343Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:21:35.944Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:21:36.181Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:21:56.230Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:26:49.912Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:26:59.299Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T15:26:59.432Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:26:59.506Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:27:04.596Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:27:09.744Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:27:09.989Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:27:30.043Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:29:04.271Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:29:05.596Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-13T15:29:05.598Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:29:06.768Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:29:11.239Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:29:11.516Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:29:11.581Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:30:05.071Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:30:19.842Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:30:20.121Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:30:39.973Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:30:40.156Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:30:40.181Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:30:50.047Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:30:50.171Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/dashboard: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/dashboard"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T15:30:50.172Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:30:50.178Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/dashboard: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/dashboard"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T15:30:50.180Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:30:55.012Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:30:57.070Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:31:00.419Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:31:02.828Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:31:05.583Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:31:11.684Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:31:13.358Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:31:15.904Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:31:23.642Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:31:28.382Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:31:28.683Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:31:28.742Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:31:54.361Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:31:56.393Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:32:10.043Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:32:10.324Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:32:30.386Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:34:59.451Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:34:59.539Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/dashboard: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/dashboard"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T15:34:59.540Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:34:59.544Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/dashboard: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/dashboard"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T15:34:59.544Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:01.048Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:04.440Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:35:07.389Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:35:14.660Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:35:14.963Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:35:15.036Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:29.104Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:35:29.130Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:31.387Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:35:31.500Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/dashboard: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/dashboard"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T15:35:31.501Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:34.364Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:39.636Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:41.069Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:43.156Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:44.737Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:46.774Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:48.076Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:51.453Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:53.719Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:55.013Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:35:57.242Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:35:57.385Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:36:04.364Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:36:04.671Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:36:04.727Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:36:20.331Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:36:20.347Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:36:21.632Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:36:21.667Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/dashboard: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/dashboard"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T15:36:21.670Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:36:22.809Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:37:18.892Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:37:25.134Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:37:33.851Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:37:36.976Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:37:40.239Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:37:46.778Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:37:52.132Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:37:52.428Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:37:52.498Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:37:58.825Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:37:58.880Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/dashboard: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/dashboard"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T15:37:58.881Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:38:00.093Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:38:37.155Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:38:37.216Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/logout: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/logout"},"level":"error","message":"[FRONTEND] Logout error","timestamp":"2026-05-13T15:38:37.217Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:38:39.719Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:38:46.166Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:38:46.485Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:38:46.563Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T15:38:46.608Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:38:46.666Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:38:46.729Z"}
+{"details":{"error":{"message":"Token no válido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/dashboard: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/dashboard"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T15:38:46.734Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:40:47.226Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:40:53.296Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:40:54.074Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:40:59.210Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:40:59.553Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:40:59.614Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:41:08.440Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:41:10.843Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:41:11.705Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:41:16.004Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:41:16.317Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:41:16.387Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:43:16.987Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:43:17.171Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/dashboard: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/dashboard"},"level":"error","message":"[FRONTEND] Error loading dashboard data","timestamp":"2026-05-13T15:43:17.172Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:44:27.722Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:44:27.928Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:44:35.385Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:44:35.711Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:44:35.785Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:44:37.349Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:44:37.357Z"}
+{"level":"error","message":"Error fetching all permisos: permiso is not defined","timestamp":"2026-05-13T15:44:37.471Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:44:37.481Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:44:37.483Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:44:38.203Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:44:41.611Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:44:41.618Z"}
+{"level":"error","message":"Error fetching all permisos: permiso is not defined","timestamp":"2026-05-13T15:44:41.694Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:44:41.705Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:44:41.706Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:46:10.254Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:46:13.644Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:46:19.207Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:46:19.502Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:46:19.576Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:46:20.427Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:46:20.432Z"}
+{"level":"error","message":"Error fetching all permisos: Cannot read properties of null (reading 'username')","timestamp":"2026-05-13T15:46:20.540Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:46:20.562Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:46:20.564Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:47:57.062Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:48:01.988Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:48:06.422Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:48:06.432Z"}
+{"level":"error","message":"Error fetching all permisos: Cannot read properties of null (reading 'username')","timestamp":"2026-05-13T15:48:06.550Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:48:06.636Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:48:06.638Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:48:43.203Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:48:44.844Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:48:47.794Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:48:53.744Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:48:58.576Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:49:03.943Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:49:04.275Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:49:04.338Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:49:13.262Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:49:13.268Z"}
+{"level":"error","message":"Error fetching all permisos: Cannot read properties of null (reading 'username')","timestamp":"2026-05-13T15:49:13.372Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:49:13.400Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:49:13.402Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:49:30.178Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T15:49:30.485Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T15:49:35.314Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T15:49:35.586Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T15:49:35.624Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:49:36.707Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:49:36.715Z"}
+{"level":"error","message":"Error fetching all permisos: Cannot read properties of null (reading 'username')","timestamp":"2026-05-13T15:49:36.828Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:49:36.845Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:49:36.847Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:49:48.030Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:49:49.475Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:49:51.019Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:49:52.571Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:49:57.950Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:49:59.833Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:49:59.841Z"}
+{"level":"error","message":"Error fetching all permisos: Cannot read properties of null (reading 'username')","timestamp":"2026-05-13T15:49:59.958Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:50:00.086Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:50:00.087Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:50:29.040Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:50:33.452Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:50:36.439Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:50:36.605Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:50:36.894Z"}
+{"level":"error","message":"Error fetching all permisos: Cannot read properties of null (reading 'username')","timestamp":"2026-05-13T15:50:37.109Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:50:37.136Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T15:50:37.167Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis"},"level":"error","message":"[FRONTEND] Error loading permisos","timestamp":"2026-05-13T15:50:37.167Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:51:43.951Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:51:44.659Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:51:44.664Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:52:26.068Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:52:29.394Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:52:32.770Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:52:32.780Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:53:45.690Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:53:47.338Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:53:56.518Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:54:14.737Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:54:18.372Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:54:18.915Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:54:18.922Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:54:33.950Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:54:47.368Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:54:49.911Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T15:54:49.975Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:54:50.068Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:54:50.881Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:54:50.896Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:55:47.342Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:55:50.059Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:55:50.739Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:55:50.748Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:56:05.994Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T15:56:15.867Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:57:14.786Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:57:14.804Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T15:57:30.327Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T15:57:30.334Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:06:54.874Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:25:02.162Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:25:03.153Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T16:31:44.775Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T16:31:44.897Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T16:31:44.983Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:31:46.123Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T16:31:46.245Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T16:32:02.823Z"}
+{"level":"info","message":"Login correcto: joel","timestamp":"2026-05-13T16:32:03.143Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:32:03.219Z"}
+{"level":"info","message":"Incoming request: POST /api/permis","timestamp":"2026-05-13T16:32:27.710Z"}
+{"level":"info","message":"Permiso created for user 69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T16:32:27.774Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:32:32.507Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:33:04.233Z"}
+{"level":"info","message":"Incoming request: POST /api/permis","timestamp":"2026-05-13T16:33:11.409Z"}
+{"level":"info","message":"Permiso created for user 69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T16:33:11.543Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:33:13.876Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:33:29.588Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:35:27.137Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:36:07.394Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:36:11.779Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:36:13.321Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:36:22.167Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:53:50.372Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:53:56.047Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T16:53:56.150Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:53:56.231Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:54:31.995Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:54:35.031Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:54:38.718Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:55:32.639Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:55:50.417Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:55:53.069Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:55:54.509Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:55:55.769Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:55:59.587Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:56:06.520Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:56:08.357Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:56:56.643Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T16:56:56.753Z"}
+{"details":{"error":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>ReferenceError: userId is not defined<br> &nbsp; &nbsp;at getAllByUserName (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/crud/permisos.js:63:62)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at verificarToken (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/helpers/autentication.js:27:9)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at Route.dispatch (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:117:3)<br> &nbsp; &nbsp;at handle (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:435:11)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:295:15</pre>\n</body>\n</html>\n","headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T16:56:56.755Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:57:16.127Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:57:17.976Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:57:25.614Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T16:57:25.832Z"}
+{"details":{"error":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>ReferenceError: userId is not defined<br> &nbsp; &nbsp;at getAllByUserName (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/crud/permisos.js:64:62)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at verificarToken (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/helpers/autentication.js:27:9)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at Route.dispatch (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:117:3)<br> &nbsp; &nbsp;at handle (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:435:11)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:295:15</pre>\n</body>\n</html>\n","headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T16:57:25.835Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:57:51.265Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T16:57:51.368Z"}
+{"details":{"error":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>ReferenceError: userId is not defined<br> &nbsp; &nbsp;at getAllByUserName (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/crud/permisos.js:64:62)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at verificarToken (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/helpers/autentication.js:27:9)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at Route.dispatch (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:117:3)<br> &nbsp; &nbsp;at handle (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:435:11)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:295:15</pre>\n</body>\n</html>\n","headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T16:57:51.369Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:58:06.569Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T16:58:06.735Z"}
+{"details":{"error":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>ReferenceError: userId is not defined<br> &nbsp; &nbsp;at getAllByUserName (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/crud/permisos.js:64:62)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at verificarToken (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/helpers/autentication.js:27:9)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at Route.dispatch (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:117:3)<br> &nbsp; &nbsp;at handle (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:435:11)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:295:15</pre>\n</body>\n</html>\n","headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T16:58:06.736Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:58:10.244Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:58:12.107Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T16:58:12.261Z"}
+{"details":{"error":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>ReferenceError: userId is not defined<br> &nbsp; &nbsp;at getAllByUserName (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/crud/permisos.js:64:62)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at verificarToken (file:///C:/2%20DAW/Projectos/Gestor_de_permisos_laborals/backend/helpers/autentication.js:27:9)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at next (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:157:13)<br> &nbsp; &nbsp;at Route.dispatch (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\route.js:117:3)<br> &nbsp; &nbsp;at handle (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:435:11)<br> &nbsp; &nbsp;at Layer.handleRequest (C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\lib\\layer.js:152:17)<br> &nbsp; &nbsp;at C:\\2 DAW\\Projectos\\Gestor_de_permisos_laborals\\backend\\node_modules\\router\\index.js:295:15</pre>\n</body>\n</html>\n","headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T16:58:12.286Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:58:50.244Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:58:52.151Z"}
+{"level":"error","message":"Error fetching permisos for user : jwt is not defined","timestamp":"2026-05-13T16:58:52.167Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T16:58:52.325Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T16:58:52.327Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:59:07.145Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:59:08.519Z"}
+{"level":"error","message":"Error fetching permisos for user : jwt is not defined","timestamp":"2026-05-13T16:59:08.532Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T16:59:08.648Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T16:59:08.649Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:59:17.533Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:59:25.461Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:59:27.290Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:59:28.923Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:59:32.031Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T16:59:35.072Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T16:59:37.734Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"joel\" (type string) at path \"empId\" for model \"permisos\"","timestamp":"2026-05-13T16:59:37.764Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T16:59:37.836Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"joel\" (type string) at path \"empId\" for model \"permisos\"","name":"CastError","path":"empId","reason":{},"stringValue":"\"joel\"","value":"joel","valueType":"string"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T16:59:37.838Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:00:11.641Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"joel\" (type string) at path \"empId\" for model \"permisos\"","name":"CastError","path":"empId","reason":{},"stringValue":"\"joel\"","value":"joel","valueType":"string"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:00:11.642Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T17:00:18.789Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"joel\" (type string) at path \"empId\" for model \"permisos\"","timestamp":"2026-05-13T17:00:18.795Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:00:18.860Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"joel\" (type string) at path \"empId\" for model \"permisos\"","name":"CastError","path":"empId","reason":{},"stringValue":"\"joel\"","value":"joel","valueType":"string"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:00:18.865Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:02:48.137Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:02:59.484Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:03:09.791Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:03:13.025Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T17:03:21.314Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:03:21.381Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:03:21.437Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ username: 'joel' }\"","value":{"username":"joel"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:03:21.441Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T17:03:27.096Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:03:27.102Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:03:27.190Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ username: 'joel' }\"","value":{"username":"joel"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:03:27.193Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T17:03:32.195Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:03:32.198Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:03:32.240Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ username: 'joel' }\"","value":{"username":"joel"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:03:32.241Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T17:03:35.189Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T17:03:40.378Z"}
+{"level":"info","message":"Login correcto: joel","timestamp":"2026-05-13T17:03:40.706Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T17:03:40.797Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:03:40.799Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:03:40.872Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ username: 'joel' }\"","value":{"username":"joel"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:03:40.872Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:03:50.871Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T17:03:51.877Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T17:03:58.686Z"}
+{"level":"info","message":"Login correcto: joel","timestamp":"2026-05-13T17:03:58.993Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T17:03:59.075Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:03:59.080Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:03:59.178Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ username: 'joel' }\"","value":{"username":"joel"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:03:59.179Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:04:12.660Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:04:14.912Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T17:04:15.886Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:04:15.898Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:04:16.005Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ username: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ username: 'joel' }\"","value":{"username":"joel"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:04:16.006Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:04:31.769Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:04:33.829Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:04:37.535Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:04:39.494Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:04:51.398Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:05:05.035Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:05:59.959Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T17:06:06.528Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ id: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:06:06.543Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:06:06.609Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ id: 'joel' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ id: 'joel' }\"","value":{"id":"joel"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:06:06.611Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T17:07:10.179Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:07:10.183Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:07:10.277Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ id: '69fb50e433e6323e7080c7f0' }\"","value":{"id":"69fb50e433e6323e7080c7f0"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:07:10.278Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:07:11.922Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T17:07:27.672Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:07:27.691Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:07:27.910Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ id: '69fb50e433e6323e7080c7f0' }\"","value":{"id":"69fb50e433e6323e7080c7f0"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:07:27.911Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:07:49.159Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:07:53.291Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T17:07:59.163Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:07:59.182Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:07:59.254Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ id: '69fb50e433e6323e7080c7f0' }\"","value":{"id":"69fb50e433e6323e7080c7f0"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:07:59.255Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:08:39.589Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:08:40.908Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:08:42.836Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T17:08:44.590Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:08:44.599Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:08:44.655Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ id: '69fb50e433e6323e7080c7f0' }\"","value":{"id":"69fb50e433e6323e7080c7f0"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:08:44.657Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:09:05.982Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:09:06.171Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:09:06.172Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T17:09:07.053Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-13T17:09:07.084Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T17:09:07.163Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:09:07.171Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:09:07.213Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ id: '69fb50e433e6323e7080c7f0' }\"","value":{"id":"69fb50e433e6323e7080c7f0"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:09:07.217Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T17:09:12.699Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T17:09:13.067Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:09:13.174Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T17:09:16.534Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T17:09:20.182Z"}
+{"level":"info","message":"Login correcto: joel","timestamp":"2026-05-13T17:09:20.463Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T17:09:20.537Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:09:20.541Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:09:20.601Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ id: '69fb50e433e6323e7080c7f0' }\" (type Object) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ id: '69fb50e433e6323e7080c7f0' }\"","value":{"id":"69fb50e433e6323e7080c7f0"},"valueType":"Object"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:09:20.602Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:09:51.454Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/joel","timestamp":"2026-05-13T17:09:55.225Z"}
+{"level":"error","message":"Error fetching permisos for user : Cast to ObjectId failed for value \"joel\" (type string) at path \"_id\" for model \"usuarios\"","timestamp":"2026-05-13T17:09:55.242Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-13T17:09:55.310Z"}
+{"details":{"error":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"joel\" (type string) at path \"_id\" for model \"usuarios\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"joel\"","value":"joel","valueType":"string"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/joel: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/permis/joel"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-05-13T17:09:55.312Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-05-13T17:10:05.118Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-13T17:10:14.624Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T17:11:18.534Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T17:11:23.367Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T17:11:23.786Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:11:23.884Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T17:11:25.469Z"}
+{"level":"info","message":"Incoming request: POST /api/user","timestamp":"2026-05-13T17:12:01.081Z"}
+{"level":"info","message":"Usuario creado: Racso","timestamp":"2026-05-13T17:12:02.809Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T17:12:02.821Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T17:12:25.051Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T17:12:31.873Z"}
+{"level":"info","message":"Login correcto: Racso","timestamp":"2026-05-13T17:12:32.171Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/6a04b0e2d0555a1a11c52130","timestamp":"2026-05-13T17:12:32.243Z"}
+{"level":"info","message":"Incoming request: POST /api/permis","timestamp":"2026-05-13T17:13:12.830Z"}
+{"level":"info","message":"Permiso created for user 6a04b0e2d0555a1a11c52130","timestamp":"2026-05-13T17:13:12.876Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/6a04b0e2d0555a1a11c52130","timestamp":"2026-05-13T17:13:14.582Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T17:13:19.740Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T17:13:24.718Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T17:13:25.035Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:13:25.114Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T17:13:27.554Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T17:13:27.558Z"}
+{"level":"info","message":"Incoming request: PUT /api/permis/6a04b128d0555a1a11c52137","timestamp":"2026-05-13T17:13:34.744Z"}
+{"level":"info","message":"Permiso 6a04b128d0555a1a11c52137 updated to status aprovat","timestamp":"2026-05-13T17:13:34.788Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T17:13:34.800Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T17:13:36.335Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T17:13:44.435Z"}
+{"level":"info","message":"Login correcto: Racso","timestamp":"2026-05-13T17:13:44.744Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/6a04b0e2d0555a1a11c52130","timestamp":"2026-05-13T17:13:44.810Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-13T17:13:55.755Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-13T17:13:59.731Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-13T17:14:00.025Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:14:00.092Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T17:14:14.071Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T17:14:14.075Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:14:16.950Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T17:14:20.124Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:14:22.494Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T17:14:23.915Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-13T17:14:23.924Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:14:25.541Z"}

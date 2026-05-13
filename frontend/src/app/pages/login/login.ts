@@ -31,7 +31,6 @@ export class Login {
         localStorage.setItem('id', result.id);
         if (result.rol === 'admin') {
           this.router.navigateByUrl("admin")
-          console.log("Viaje fallido")
         } else {
           this.router.navigateByUrl("userDashboard")
           console.log("hola")

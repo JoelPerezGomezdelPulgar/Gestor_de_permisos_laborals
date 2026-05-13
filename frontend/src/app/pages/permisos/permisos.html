@@ -12,7 +12,7 @@
       <div class="permisos-card">
         <img [src]="item.empId?.imatge || 'https://www.w3schools.com/howto/img_avatar.png'" alt="Avatar"
           class="permisos-avatar">
-          <h3 class="permisos-name">{{item.empId?.nom}} {{item.empId?.cognom1}}</h3>
+          <h3 class="permisos-name">{{item.empId?.nom}} {{item.empId?.cognom1}} {{item.empId?.cognom2}}</h3>
           <span class="permisos-role">{{item.tipus | titlecase}}</span>
 
           <div class="permisos-info">
@@ -61,7 +61,7 @@
                 <option value="" disabled selected>Selecciona un empleat...</option>
                 @for (user of usersList; track user) {
                   <option [value]="user._id">
-                    {{user.nom}} {{user.cognom1}}
+                    {{user.nom}} {{user.cognom1}} {{user.cognom2}}
                   </option>
                 }
               </select>

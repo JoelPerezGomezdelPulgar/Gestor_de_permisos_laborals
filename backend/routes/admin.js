@@ -24,7 +24,7 @@ route.post('/permis', verificarToken, permisController.create)
 route.put('/permis/:id', verificarToken, isAdmin, permisController.update)
 route.get('/permis/:id', verificarToken, permisController.getAllByUserName)
 route.get('/permis', verificarToken, isAdmin, permisController.getAll)
-route.get('/dashboard', verificarToken, permisController.getDashboardDataPermis)
+route.get('/dashboard', verificarToken, isAdmin, permisController.getDashboardDataPermis)
 route.delete('/permis/:id', verificarToken, isAdmin, permisController.delete)
 
 

@@ -26,12 +26,12 @@ export class UserDashboard implements OnInit {
   approvedRequests = 0;
 
   ngOnInit() {
-    this.userName = localStorage.getItem('username');
+    this.userId = localStorage.getItem('id');
     this.loadUserPermissions();
   }
 
   loadUserPermissions() {
-    this.masterSrv.getPermisosByUserName(this.userName!).subscribe({
+    this.masterSrv.getPermisosByUserId(this.userId!).subscribe({
       next: (res: any[]) => {
         // Filter permissions for the current user
         // Note: res is populated with empId object
