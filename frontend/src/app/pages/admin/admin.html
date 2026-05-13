@@ -13,6 +13,7 @@
 
   <!-- Stats Overview -->
   <div class="stats-grid fadeInUp" style="animation-delay: 0.1s">
+    
     <div class="stat-card">
       <span class="stat-label">Permisos Pendents</span>
       <span class="stat-value" style="color: #f59e0b">{{pendingCount}}</span>
@@ -38,12 +39,24 @@
 
   <!-- Recent Users Section -->
   <section class="content-section fadeInUp" style="animation-delay: 0.2s">
+    <div class="card shadow-sm border-0 h-100">
+      <div class="card-header bg-white border-0 pt-3">
+          <h5 class="card-title fw-bold">Distribució de Peticions</h5>
+      </div>
+      <div class="card-body">
+          <div style="min-height: 250px;">
+              <canvas id="miGrafico"></canvas>
+          </div>
+      </div>
+    </div>
     <div class="section-header">
       <h2>Gestió d'Usuaris</h2>
       <button class="btn-add" (click)="goToUsers()">
         <i class="fa fa-plus"></i> Mostrar més
       </button>
     </div>
+
+    
 
     <div class="custom-table-container">
       <table>
