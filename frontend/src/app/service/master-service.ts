@@ -19,10 +19,6 @@ export class MasterService {
     return this.http.post<any>(`${this.API_URL}/register`, obj, this.httpOptions)
   }
 
-  getMe() {
-    return this.http.get<any>(`${this.API_URL}/me`, this.httpOptions)
-  }
-
   logout() {
     return this.http.post<any>(`${this.API_URL}/logout`, {}, this.httpOptions)
   }
@@ -48,7 +44,6 @@ export class MasterService {
   }
 
   getPermisos() {
-    console.log("Hola")
     return this.http.get<any[]>(`${this.API_URL}/permis`, this.httpOptions)
   }
 

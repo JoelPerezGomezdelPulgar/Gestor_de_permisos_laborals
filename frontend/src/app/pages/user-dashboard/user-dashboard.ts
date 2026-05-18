@@ -35,7 +35,6 @@ export class UserDashboard implements OnInit {
       next: (res: any[]) => {
         // Filter permissions for the current user
         // Note: res is populated with empId object
-        console.log(res)
         this.userPermissions = res;
         this.calculateStats();
       },

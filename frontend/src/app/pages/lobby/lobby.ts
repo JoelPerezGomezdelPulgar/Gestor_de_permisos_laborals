@@ -63,14 +63,22 @@ export class Lobby implements OnInit, AfterViewChecked {
   logout(): void {
     this.masterSrv.logout().subscribe({
       next: () => {
-        this.username = '';
-        this.role = '';
-        this.router.navigate(['']);
+        this.finalizarSesionLocal();
       },
-      error: (e) => {
-        this.loggerSrv.error("Logout error", e);
-        this.router.navigate(['']); // Navigate anyway
+      error: (err) => {
+        console.error('Error al tancar sessió:', err);
       }
     });
+  }
+  private finalizarSesionLocal(): void {
+    // Limpia datos guardados en el navegador (preferencias, estados temporales, etc.)
+    localStorage.clear();
+    sessionStorage.clear();
+
+    // Si utilizas Signals en Angular 20 para el usuario, lo reseteas aquí:
+    // this.masterSrv.currentUser.set(null);
+
+    // Redirección final segura
+    this.router.navigate(['/login']);
   }
 }

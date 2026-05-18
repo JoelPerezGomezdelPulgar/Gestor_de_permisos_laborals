@@ -27,17 +27,16 @@ export class Login {
       next: (result: any) => {
         localStorage.setItem('username', result.username);
         localStorage.setItem('rol', result.rol);
-        console.log(result.id)
         localStorage.setItem('id', result.id);
         if (result.rol === 'admin') {
-          this.router.navigateByUrl("admin")
+          this.router.navigateByUrl("/admin")
         } else {
-          this.router.navigateByUrl("userDashboard")
-          console.log("hola")
+          this.router.navigateByUrl("/userDashboard")
         }
       },
       error: (error: any) => {
-        alert(error.error.message)
+        const errorMessage = error.error?.msg || error.error?.message || 'Error en el login';
+        alert(errorMessage);
         this.loggerSrv.error('Login error', error);
       }
     })

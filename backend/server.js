@@ -5,7 +5,6 @@ import 'dotenv/config'
 import dbClient from './db/dbClient.js'
 import emailRoutes from './routes/email.js'
 import adminRoutes from './routes/admin.js'
-import basicoRoutes from './routes/basico.js'
 import logsRoutes from './routes/logs.js'
 import swaggerUi from 'swagger-ui-express'
 import logger from './logger/logger.js'
@@ -34,7 +33,6 @@ app.use((req, res, next) => {
 
 app.use('/api', emailRoutes);
 app.use('/api', adminRoutes);
-app.use('/api', basicoRoutes);
 app.use('/api', logsRoutes);
 
 app.get('/', (req, res) => {

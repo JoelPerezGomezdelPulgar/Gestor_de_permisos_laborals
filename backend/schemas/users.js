@@ -46,6 +46,10 @@ const usuariosSchema = new mongoose.Schema(
         refreshToken: {
             type: String,
             required: false
+        },
+        intentos_fallidos: {
+            type: Number,
+            default: 0
         }
     },
     { timestamps: true }

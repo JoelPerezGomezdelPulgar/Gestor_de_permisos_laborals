@@ -44,7 +44,7 @@ class usersController {
             const passwordEncryptada = await bcrypt.hash(password, 10);
 
             const data = await usersModel.create({ nom, cognom1, cognom2, email, username, password: passwordEncryptada, imatge, rol })
- 
+
             const token = generarToken(data.id, data.rol);
             const refreshToken = generarRefreshToken(data.id, data.rol);
 
@@ -135,18 +135,30 @@ class usersController {
             // Buscamos el usuario por username
             const data = await usersModel.login(username)
             if (data) {
+                if (data.intentos_fallidos >= 3) {
+                    logger.warn(`Intento de login en cuenta bloqueada: ${username}`);
+                    return res.status(423).json({
+                        ok: false,
+                        msg: 'Cuenta bloqueada temporalmente por demasiados intentos fallidos.'
+                    });
+                }
                 // Comparamos la contraseña encriptada
                 const passwordValida = await bcrypt.compare(password, data.password)
                 if (!passwordValida) {
+                    const usuarioActualizado = await usersModel.getOne(data.id);
+                    const intentosActuales = usuarioActualizado ? (usuarioActualizado.intentos_fallidos || 0) : (data.intentos_fallidos || 0);
+                    const nuevosIntentos = intentosActuales + 1;
+                    await usersModel.update(data.id, { intentos_fallidos: nuevosIntentos });
                     logger.warn(`Login fallido: contraseña incorrecta para ${username}`);
-                    return res.status(401).json({ ok: false, msg: `Usuari o contrasenya incorrectes, ${passwordValida}` })
+                    const intentosRestantes = 3 - nuevosIntentos;
+                    return res.status(401).json({ ok: false, intentosRestantes: intentosRestantes, msg: `Usuari o contrasenya incorrectes, queden ${intentosRestantes < 0 ? 0 : intentosRestantes} intents` })
                 }
 
                 const token = generarToken(data.id, data.rol)
                 const refreshToken = generarRefreshToken(data.id, data.rol)
-                
+
                 // Guardar refresh token en DB
-                await usersModel.update(data.id, { refreshToken });
+                await usersModel.update(data.id, { refreshToken, intentos_fallidos: 0 });
 
                 res.cookie('token', token, {
                     httpOnly: true,
@@ -165,10 +177,9 @@ class usersController {
 
                 logger.info(`Login correcto: ${username}`);
                 res.status(200).json({ username: data.username, rol: data.rol, id: data.id })
-                console.log('-------------------------------token', token);
             } else {
                 logger.warn(`Login fallido: usuario no encontrado ${username}`);
-                res.status(401).json({ ok: false, msg: 'Usuari o contrasenya incorrectes' })
+                res.status(401).json({ ok: false, msg:`Usuari o contrasenya incorrectes` })
             }
         } catch (e) {
             logger.error(`Error en login para ${username}: ${e.message || e}`);
@@ -177,22 +188,34 @@ class usersController {
     }
 
     async logout(req, res) {
-        res.clearCookie('token');
-        res.clearCookie('refreshToken');
-        res.status(200).json({ ok: true, msg: 'Sesión cerrada' });
-    }
-
-    async getMe(req, res) {
         try {
-            const user = await usersModel.getOne(req.userId);
-            if (!user) return res.status(404).json({ msg: 'Usuario no encontrado' });
 
-            const userObj = user.toObject();
-            delete userObj.password;
-            res.status(200).json(userObj);
+            res.clearCookie('token', {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production',
+                sameSite: 'lax'
+            });
+
+            res.clearCookie('refreshToken', {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production',
+                sameSite: 'lax',
+                path: '/api/renewToken' // <-- Clave para que el navegador la borre con éxito
+            });
+
+            const refreshToken = req.cookies?.refreshToken;
+            if (refreshToken) {
+                const dataToken = verificarRefreshToken(refreshToken);
+                if (dataToken && dataToken.id) {
+                    await usersModel.update(dataToken.id, { refreshToken: null });
+                    logger.info(`Refresh token eliminado de la DB para el usuario: ${dataToken.id}`);
+                }
+            }
+
+            return res.status(200).json({ ok: true, msg: 'Sesión cerrada correctamente' });
         } catch (e) {
-            console.error("Error en getMe:", e);
-            return res.status(500).json({ msg: 'Error interno del servidor' });
+            logger.error(`Error en logout: ${e.message || e}`);
+            return res.status(500).json({ ok: false, msg: 'Error al cerrar sesión' });
         }
     }
 
