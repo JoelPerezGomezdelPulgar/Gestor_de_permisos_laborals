@@ -11,15 +11,15 @@ import { LoggerService } from '../../service/logger.service';
   styleUrl: './login.css',
 })
 export class Login {
-
   loginForm: FormGroup = new FormGroup({
-    username: new FormControl(""),
-    password: new FormControl(""),
-  })
+    username: new FormControl(''),
+    password: new FormControl(''),
+  });
 
   masterSrv = inject(MasterService);
   loggerSrv = inject(LoggerService);
   router = inject(Router);
+  errorMessage: string = '';
 
   onLogin() {
     const formValue = this.loginForm.value;
@@ -27,21 +27,21 @@ export class Login {
       next: (result: any) => {
         localStorage.setItem('username', result.username);
         localStorage.setItem('rol', result.rol);
-        console.log(result.id)
+        console.log(result.id);
         localStorage.setItem('id', result.id);
         if (result.rol === 'admin') {
-          this.router.navigateByUrl("admin")
-          console.log("Viaje fallido")
+          this.router.navigateByUrl('admin');
+          console.log('Viaje fallido');
         } else {
-          this.router.navigateByUrl("userDashboard")
-          console.log("hola")
+          this.router.navigateByUrl('userDashboard');
+          console.log('hola');
         }
       },
       error: (error: any) => {
-        alert(error.error.message)
+        this.errorMessage = error.message;
         this.loggerSrv.error('Login error', error);
-      }
-    })
+      },
+    });
   }
 
   onRegister() {

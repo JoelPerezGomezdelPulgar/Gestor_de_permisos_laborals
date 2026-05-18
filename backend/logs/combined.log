@@ -1636,3 +1636,50 @@
 {"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T17:33:19.996Z"}
 {"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-13T17:33:30.894Z"}
 {"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-13T17:33:32.330Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-18T13:13:49.425Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-18T13:13:49.653Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-18T13:13:59.568Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-18T13:13:59.658Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T13:15:34.156Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T13:15:36.113Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T13:16:08.881Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T13:16:11.413Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T13:16:12.027Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T13:16:12.028Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T13:16:15.094Z"}
+{"level":"error","message":"Error en login para Miniboo: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-05-18T13:16:25.112Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T13:16:28.984Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T13:16:28.985Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T13:16:36.514Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T13:16:43.869Z"}
+{"level":"error","message":"Error en login para Miniboo: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-05-18T13:16:46.527Z"}
+{"level":"error","message":"Error en login para Miniboo: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-05-18T13:16:53.873Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T13:17:37.256Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T13:17:37.257Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T13:17:38.055Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T13:17:38.078Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T13:17:40.963Z"}
+{"level":"error","message":"Error en login para Miniboo: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-05-18T13:17:50.965Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T13:17:57.187Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T13:17:57.187Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T13:18:34.050Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T13:20:28.727Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T13:20:34.855Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-18T13:20:35.079Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-18T13:20:35.205Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-18T13:22:08.925Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-18T13:22:08.929Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-18T13:22:18.434Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-18T13:22:30.400Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-18T13:22:31.123Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-05-18T13:22:31.139Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-18T13:23:40.195Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-18T13:39:36.286Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-05-18T13:39:36.328Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T13:39:36.411Z"}
+{"details":{"error":{"error":"Token de actualización revocado o inválido"},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/renewToken: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/renewToken"},"level":"error","message":"[FRONTEND] Error loading users","timestamp":"2026-05-18T13:39:36.414Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T13:39:45.217Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-18T13:39:45.395Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-18T13:39:45.473Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-18T13:39:49.280Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T13:48:56.616Z"}
