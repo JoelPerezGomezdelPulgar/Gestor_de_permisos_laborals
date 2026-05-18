@@ -2425,3 +2425,4 @@
 {"level":"warn","message":"Intento de login en cuenta bloqueada: Miniboo","timestamp":"2026-05-18T14:49:34.195Z"}
 {"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T14:49:41.106Z"}
 {"details":{"error":{"msg":"Cuenta bloqueada temporalmente por demasiados intentos fallidos.","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 423 Locked","name":"HttpErrorResponse","ok":false,"status":423,"statusText":"Locked","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T14:49:41.107Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T14:50:18.183Z"}
