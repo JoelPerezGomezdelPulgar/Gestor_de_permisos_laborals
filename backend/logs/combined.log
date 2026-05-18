@@ -1683,3 +1683,23 @@
 {"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-18T13:39:45.473Z"}
 {"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-05-18T13:39:49.280Z"}
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T13:48:56.616Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T13:48:58.838Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-18T13:49:15.766Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T13:52:48.575Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado Hola","timestamp":"2026-05-18T13:52:48.614Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T13:52:48.625Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T13:52:48.626Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T14:05:31.668Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado Hola","timestamp":"2026-05-18T14:05:31.699Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T14:05:31.715Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T14:05:31.716Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T14:05:41.072Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-05-18T14:05:41.289Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-05-18T14:05:41.395Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-18T14:05:43.701Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T14:05:50.616Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para Miniboo","timestamp":"2026-05-18T14:05:50.747Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T14:05:50.757Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes, false","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T14:05:50.759Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-18T14:08:34.822Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-05-18T14:28:46.688Z"}
