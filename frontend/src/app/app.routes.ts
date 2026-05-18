@@ -8,8 +8,6 @@ import { Permisos } from './pages/permisos/permisos';
 import { UserPeticio } from './pages/user-peticio/user-peticio';
 import { UserDashboard } from './pages/user-dashboard/user-dashboard';
 import { Register } from './pages/register/register';
-import { adminGuard } from './guards/admin.guard';
-import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
 

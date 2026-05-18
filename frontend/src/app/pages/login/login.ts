@@ -27,6 +27,7 @@ export class Login {
       next: (result: any) => {
         localStorage.setItem('username', result.username);
         localStorage.setItem('rol', result.rol);
+<<<<<<< HEAD
         console.log(result.id);
         localStorage.setItem('id', result.id);
         if (result.rol === 'admin') {
@@ -39,6 +40,18 @@ export class Login {
       },
       error: (error: any) => {
         this.errorMessage = error.message;
+=======
+        localStorage.setItem('id', result.id);
+        if (result.rol === 'admin') {
+          this.router.navigateByUrl("/admin")
+        } else {
+          this.router.navigateByUrl("/userDashboard")
+        }
+      },
+      error: (error: any) => {
+        const errorMessage = error.error?.msg || error.error?.message || 'Error en el login';
+        alert(errorMessage);
+>>>>>>> a9a9a7936e0c00ed670b7fb3c32f95d0500d4e68
         this.loggerSrv.error('Login error', error);
       },
     });

@@ -39,7 +39,13 @@ class permisosController {
     async getAll(req, res) {
         try {
             const data = await permisosModel.getAll()
-            res.status(200).json(data)
+            const newData = []
+            for (const permiso of data) {
+                const user = await usersModel.getOne(permiso.empId)
+                permiso.empId = user.username
+                newData.push(permiso)
+            }
+            res.status(200).json(newData)
         } catch (e) {
             logger.error(`Error fetching all permisos: ${e.message || e}`);
             res.status(500).send(e)
@@ -48,11 +54,13 @@ class permisosController {
 
     async getAllByUserName(req, res) {
         try {
-            const { userName } = req.params;
-            const data = await permisosModel.getAllByUserName(userName);
+            const userId = req.params.id;
+            console.log(`------------------------------------ ${userId}`);
+            const user = await usersModel.getOne(userId);
+            const data = await permisosModel.getAllByUserId(user._id);
             res.status(200).json(data);
         } catch (e) {
-            logger.error(`Error fetching permisos for user ${userName}: ${e.message || e}`);
+            logger.error(`Error fetching permisos for user : ${e.message || e}`);
             res.status(500).send(e)
         }
     }

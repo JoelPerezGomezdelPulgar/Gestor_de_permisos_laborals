@@ -19,10 +19,6 @@ export class MasterService {
     return this.http.post<any>(`${this.API_URL}/register`, obj, this.httpOptions)
   }
 
-  getMe() {
-    return this.http.get<any>(`${this.API_URL}/me`, this.httpOptions)
-  }
-
   logout() {
     return this.http.post<any>(`${this.API_URL}/logout`, {}, this.httpOptions)
   }
@@ -51,8 +47,8 @@ export class MasterService {
     return this.http.get<any[]>(`${this.API_URL}/permis`, this.httpOptions)
   }
 
-  getPermisosByUserName(userName: string) {
-    return this.http.get<any[]>(`${this.API_URL}/permis/${userName}`, this.httpOptions)
+  getPermisosByUserId(userId: string) {
+    return this.http.get<any[]>(`${this.API_URL}/permis/${userId}`, this.httpOptions)
   }
 
   createPermisos(obj: any) {

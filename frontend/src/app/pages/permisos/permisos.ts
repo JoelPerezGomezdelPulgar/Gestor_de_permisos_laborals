@@ -41,6 +41,15 @@ export class Permisos implements OnInit {
     this.loadUsers();
     this.loadPermisos();
   }
+  
+  loadPermisos() {
+    this.masterSrv.getPermisos().subscribe({
+      next: (res: any) => {
+        this.permisosList = res;
+      },
+      error: (err) => this.loggerSrv.error("Error loading permisos", err)
+    });
+  }
 
   loadUsers() {
     this.masterSrv.getUsers().subscribe({
@@ -48,15 +57,6 @@ export class Permisos implements OnInit {
         this.usersList = res;
       },
       error: (err) => this.loggerSrv.error("Error loading users", err)
-    });
-  }
-
-  loadPermisos() {
-    this.masterSrv.getPermisos().subscribe({
-      next: (res: any) => {
-        this.permisosList = res;
-      },
-      error: (err) => this.loggerSrv.error("Error loading permisos", err)
     });
   }
 

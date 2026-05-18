@@ -14,9 +14,9 @@ class permisosModel {
         return await Permiso.find().populate('empId')
     }
 
-    async getAllByUserName(userName) {
-        console.log(`Fetching permisos for user: ${userName}`);
-        return await Permiso.find({ empId: userName }).populate('empId')
+    async getAllByUserId(userId) {
+        console.log(`Fetching permisos for user: ${userId}`);
+        return await Permiso.find({ empId: userId }).populate('empId')
     }
 
     async delete(id) {
