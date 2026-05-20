@@ -2542,3 +2542,8 @@
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T14:50:18.183Z"}
 >>>>>>> a9a9a7936e0c00ed670b7fb3c32f95d0500d4e68
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T14:51:38.100Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-05-18T14:56:39.195Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para Miniboo","timestamp":"2026-05-18T14:56:39.380Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T14:56:39.392Z"}
+{"details":{"error":{"intentosRestantes":2,"msg":"Usuari o contrasenya incorrectes, queden 2 intents","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T14:56:39.393Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T14:56:40.932Z"}
