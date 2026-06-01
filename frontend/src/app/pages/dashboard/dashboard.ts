@@ -1,8 +1,10 @@
-import {Component, inject, OnInit } from '@angular/core';
+import {Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { MasterService } from '../../service/master-service';
 import { LoggerService } from '../../service/logger.service';
+import { SocketService } from '../../service/socket.service';
+import { Subscription } from 'rxjs';
 import {Chart, registerables} from "chart.js";
 
 Chart.register(...registerables);
@@ -15,12 +17,14 @@ Chart.register(...registerables);
   styleUrl: './dashboard.css',
 })
 
-export class Dashboard implements OnInit {
+export class Dashboard implements OnInit, OnDestroy {
   router = inject(Router);
   masterSrv = inject(MasterService);
   loggerSrv = inject(LoggerService);
+  socketSrv = inject(SocketService);
 
   role = '';
+  private socketSub?: Subscription;
 
   // Admin-specific
   pendingCount = 0;
@@ -49,9 +53,21 @@ export class Dashboard implements OnInit {
     } else {
       this.loadUserStats();
     }
+
+    this.socketSub = this.socketSrv.onPermisoChanged().subscribe(() => {
+      if (this.role === 'admin') {
+        this.loadDashboardData();
+      } else {
+        this.loadUserStats();
+      }
+    });
   }
 
   // ── Admin methods ──
+
+  ngOnDestroy() {
+    this.socketSub?.unsubscribe();
+  }
 
   loadDashboardData() {
     this.masterSrv.getDashboardData().subscribe({

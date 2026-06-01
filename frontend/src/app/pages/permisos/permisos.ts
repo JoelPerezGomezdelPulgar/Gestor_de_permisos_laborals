@@ -1,8 +1,10 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { MasterService } from '../../service/master-service';
 import { LoggerService } from '../../service/logger.service';
+import { SocketService } from '../../service/socket.service';
+import { Subscription } from 'rxjs';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 
 @Component({
@@ -12,13 +14,15 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } 
   templateUrl: './permisos.html',
   styleUrl: './permisos.css',
 })
-export class Permisos implements OnInit {
+export class Permisos implements OnInit, OnDestroy {
   masterSrv = inject(MasterService);
   loggerSrv = inject(LoggerService);
   router = inject(Router);
+  socketSrv = inject(SocketService);
 
   role = '';
   userId: string | null = null;
+  private socketSub?: Subscription;
 
   permisosList: any[] = [];
   usersList: any[] = [];
@@ -61,6 +65,14 @@ export class Permisos implements OnInit {
     } else {
       this.loadUserPermisos();
     }
+
+    this.socketSub = this.socketSrv.onPermisoChanged().subscribe(() => {
+      if (this.role === 'admin') {
+        this.loadPermisos();
+      } else {
+        this.loadUserPermisos();
+      }
+    });
   }
 
   get filteredPermisos() {
@@ -139,6 +151,10 @@ export class Permisos implements OnInit {
     this.filterEstat = '';
     this.filterDateFrom = '';
     this.filterDateTo = '';
+  }
+
+  ngOnDestroy() {
+    this.socketSub?.unsubscribe();
   }
 
   loadUserPermisos() {
