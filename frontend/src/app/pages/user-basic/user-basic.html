@@ -2,13 +2,55 @@
   <div class="page-header">
     <h2>Gestió d'Usuaris</h2>
     <div class="stats">
-      <span>Total: {{usersList.length}}</span>
+      <span>Total: {{filteredUsers.length}} / {{usersList.length}}</span>
     </div>
   </div>
 
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <div class="filter-row">
+      <div class="filter-group search-group">
+        <i class="fa fa-search"></i>
+        <input type="text" [(ngModel)]="searchText" class="filter-input" placeholder="Cerca per nom, usuari o email...">
+      </div>
+      <div class="filter-group">
+        <label>Rol</label>
+        <select [(ngModel)]="filterRol" class="filter-select">
+          <option value="">Tots</option>
+          <option value="admin">Administrador</option>
+          <option value="usuari">Usuari</option>
+        </select>
+      </div>
+      <div class="filter-group sort-group">
+        <label>Ordena</label>
+        <div class="sort-btns">
+          <button class="btn-sort" [class.active]="sortBy === 'name'" (click)="toggleSort('name')">
+            <i class="fa fa-sort-alpha-{{sortBy === 'name' ? (sortDir === 'asc' ? 'asc' : 'desc') : 'asc'}}"></i> A-Z
+          </button>
+          <button class="btn-sort" [class.active]="sortBy === 'date'" (click)="toggleSort('date')">
+            <i class="fa fa-sort-numeric-{{sortBy === 'date' ? (sortDir === 'asc' ? 'asc' : 'desc') : 'asc'}}"></i> Data
+          </button>
+        </div>
+      </div>
+      <button class="btn-filter-clear" (click)="clearFilters()" [class.has-filters]="searchText || filterRol">
+        <i class="fa fa-eraser"></i> Neteja
+      </button>
+    </div>
+  </div>
+
+  @if (filteredUsers.length === 0) {
+    <div class="empty-state">
+      <i class="fa fa-filter"></i>
+      <p>No s'han trobat usuaris amb els filtres actuals.</p>
+      @if (searchText || filterRol) {
+        <button class="btn-link" (click)="clearFilters()">Neteja els filtres</button>
+      }
+    </div>
+  }
+
   <!-- User Grid -->
   <div class="user-grid">
-    @for (user of usersList; track user._id) {
+    @for (user of filteredUsers; track user._id) {
       <div class="user-card">
         <img [src]="user.imatge || 'https://www.w3schools.com/howto/img_avatar.png'" alt="Avatar"
           class="user-avatar">
@@ -74,11 +116,19 @@
                 <label>Username</label>
                 <input type="text" formControlName="username" class="form-control">
               </div>
-              <div class="form-group">
-                <label>Contrasenya</label>
-                <input type="password" formControlName="password" class="form-control"
-                  [placeholder]="isEditMode ? '(Deixar buit per no canviar)' : ''">
+              @if (isEditMode) {
+                <div class="form-group">
+                  <label>Contrasenya</label>
+                  <input type="password" formControlName="password" class="form-control"
+                    placeholder="(Deixar buit per no canviar)">
+                  <small style="color: rgba(255,255,255,0.5);">Si escrius algo aquí, es generarà una nova contrasenya automàticament</small>
                 </div>
+              } @else {
+                <div class="form-group">
+                  <label>Contrasenya</label>
+                  <input type="text" class="form-control" value="Es generarà automàticament" disabled>
+                </div>
+              }
 
                 <!-- Fila 4 -->
                 <div class="form-group">

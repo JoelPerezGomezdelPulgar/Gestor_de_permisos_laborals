@@ -11,7 +11,8 @@ import * as auth from '../helpers/autentication.js';
 vi.mock('../models/users.js', () => ({
     default: {
         login: vi.fn(),
-        update: vi.fn()
+        update: vi.fn(),
+        getOne: vi.fn()
     }
 }));
 
@@ -44,7 +45,8 @@ describe('POST /api/login', () => {
             id: '12345',
             username: 'testuser',
             password: 'hashedpassword',
-            rol: 'admin'
+            rol: 'admin',
+            mustChangePassword: false
         };
 
         // Configuramos los mocks
@@ -63,7 +65,7 @@ describe('POST /api/login', () => {
 
         // Verificaciones
         expect(response.status).toBe(200);
-        expect(response.body).toEqual({ username: 'testuser', rol: 'admin' });
+        expect(response.body).toEqual({ username: 'testuser', rol: 'admin', id: '12345', mustChangePassword: false });
         expect(usersModel.login).toHaveBeenCalledWith('testuser');
         expect(bcrypt.compare).toHaveBeenCalledWith('password123', 'hashedpassword');
         expect(auth.generarToken).toHaveBeenCalledWith('12345', 'admin');
@@ -98,12 +100,16 @@ describe('POST /api/login', () => {
             id: '12345',
             username: 'testuser',
             password: 'hashedpassword',
-            rol: 'admin'
+            rol: 'admin',
+            intentos_fallidos: 0,
+            bloqueado_hasta: null
         };
 
         // Configuramos los mocks (usuario existe pero la contraseña no coincide)
         usersModel.login.mockResolvedValue(mockUser);
         bcrypt.compare.mockResolvedValue(false);
+        usersModel.getOne.mockResolvedValue(mockUser);
+        usersModel.update.mockResolvedValue(true);
 
         const response = await request(app)
             .post('/api/login')
@@ -114,8 +120,7 @@ describe('POST /api/login', () => {
 
         expect(response.status).toBe(401);
         expect(response.body.ok).toBe(false);
-        // El controller devuelve el booleano en el mensaje, simulamos la respuesta exacta
-        expect(response.body.msg).toBe('Usuari o contrasenya incorrectes, false');
+        expect(response.body.msg).toBe('Usuari o contrasenya incorrectes, queden 2 intents');
         expect(usersModel.login).toHaveBeenCalledWith('testuser');
         expect(bcrypt.compare).toHaveBeenCalledWith('wrongpassword', 'hashedpassword');
         expect(auth.generarToken).not.toHaveBeenCalled();

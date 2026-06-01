@@ -29,6 +29,8 @@ class permisosController {
         try {
             const data = await permisosModel.create({ empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio })
             logger.info(`Permiso created for user ${empId}`);
+            const io = req.app.get('io');
+            io.emit('permiso:changed');
             res.status(201).json(data)
         } catch (e) {
             logger.error(`Error creating permiso: ${e.message || e}`);
@@ -71,6 +73,8 @@ class permisosController {
         try {
             const data = await permisosModel.update(id, { empId, dataInici, dataFinal, tipus, descripcio, estat, refId, dataTramitacio })
             logger.info(`Permiso ${id} updated to status ${estat || 'N/A'}`);
+            const io = req.app.get('io');
+            io.emit('permiso:changed');
             res.status(200).json(data)
         } catch (e) {
             logger.error(`Error updating permiso ${id}: ${e.message || e}`);
@@ -83,6 +87,8 @@ class permisosController {
         try {
             const data = await permisosModel.delete(id)
             logger.info(`Permiso ${id} deleted`);
+            const io = req.app.get('io');
+            io.emit('permiso:changed');
             res.status(200).json(data)
         } catch (e) {
             logger.error(`Error deleting permiso ${id}: ${e.message || e}`);

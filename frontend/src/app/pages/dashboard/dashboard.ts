@@ -8,36 +8,51 @@ import {Chart, registerables} from "chart.js";
 Chart.register(...registerables);
 
 @Component({
-  selector: 'app-admin',
+  selector: 'app-dashboard',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './admin.html',
-  styleUrl: './admin.css',
+  templateUrl: './dashboard.html',
+  styleUrl: './dashboard.css',
 })
 
-
-export class Admin implements OnInit {
+export class Dashboard implements OnInit {
   router = inject(Router);
   masterSrv = inject(MasterService);
   loggerSrv = inject(LoggerService);
 
-  // Stats counts
+  role = '';
+
+  // Admin-specific
   pendingCount = 0;
   approvedCount = 0;
   rejectedCount = 0;
-
   users: any[] = [];
   permissionRequests: any[] = [];
-  
-  // Guardamos la instancia del chart para poder destruirlo si actualizamos datos
   myChart: any;
 
+  // User-specific (stats only)
+  userId: string | null = null;
+  userName: string | null = null;
+  totalUserRequests = 0;
+  pendingUserRequests = 0;
+  approvedUserRequests = 0;
+  rejectedUserRequests = 0;
+  myChartUser: any;
+
   ngOnInit() {
-    this.loadDashboardData();
+    this.role = localStorage.getItem('rol') || '';
+    this.userId = localStorage.getItem('id');
+    this.userName = localStorage.getItem('username');
+
+    if (this.role === 'admin') {
+      this.loadDashboardData();
+    } else {
+      this.loadUserStats();
+    }
   }
 
-  // Eliminamos ngAfterViewInit porque vamos a renderizar cuando lleguen los datos
-  
+  // ── Admin methods ──
+
   loadDashboardData() {
     this.masterSrv.getDashboardData().subscribe({
       next: (res: any) => {
@@ -46,8 +61,6 @@ export class Admin implements OnInit {
         this.rejectedCount = res.stats.refusat;
         this.users = res.recentUsers;
         this.permissionRequests = res.recentPermissions;
-
-        // ¡ESTA ES LA CLAVE! Renderizamos solo cuando tenemos los números
         this.renderChart();
       },
       error: (err) => this.loggerSrv.error("Error loading dashboard data", err)
@@ -58,30 +71,26 @@ export class Admin implements OnInit {
     const ctx = document.getElementById('miGrafico') as HTMLCanvasElement;
     if (!ctx) return;
 
-    // Si ya existía un gráfico, lo destruimos antes de crear uno nuevo 
-    // (si no, verás errores en la consola al borrar usuarios o actualizar)
     if (this.myChart) {
       this.myChart.destroy();
     }
     this.myChart = new Chart(ctx, {
-
       type: 'bar',
       data: {
         labels: ['Pendents', 'Aprovats', 'Rebutjats'],
         datasets: [{
           label: 'Permisos laborals',
           data: [this.pendingCount, this.approvedCount, this.rejectedCount],
-          // Colores que peguen con tu diseño oscuro
-          backgroundColor: ['#f59e0b', '#10b981', '#ef4444'], 
+          backgroundColor: ['#f59e0b', '#10b981', '#ef4444'],
           borderRadius: 8
         }]
       },
       options: {
-        indexAxis: 'y', // <--- ESTO LO HACE HORIZONTAL
+        indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { display: false } // Menos ruido visual
+          legend: { display: false }
         },
         scales: {
           x: { beginAtZero: true }
@@ -89,14 +98,9 @@ export class Admin implements OnInit {
       }
     });
   }
-  
-  ngAfterViewInit() {
-    this.renderChart();
-  }
 
   onDeleteUser(id: string, name: string): void {
     if (confirm(`Estàs segur que vols borrar a ${name}?`)) {
-      // Usamos el operador opcional ?. o aseguramos que existe
       this.masterSrv?.deleteUser(id).subscribe({
         next: () => {
           this.loadDashboardData();
@@ -117,7 +121,7 @@ export class Admin implements OnInit {
       next: () => {
         this.loadDashboardData();
       },
-      error: (err: any) => alert("Error al actualizar permís: " + err.message)
+      error: (err: any) => alert("Error al actualitzar permís: " + err.message)
     });
   }
 
@@ -129,4 +133,49 @@ export class Admin implements OnInit {
     this.router?.navigate(['/permisos']);
   }
 
+  // ── User methods (stats only) ──
+
+  loadUserStats() {
+    this.masterSrv.getPermisosByUserId(this.userId!).subscribe({
+      next: (res: any[]) => {
+        this.totalUserRequests = res.length;
+        this.pendingUserRequests = res.filter(p => p.estat === 'pendent').length;
+        this.approvedUserRequests = res.filter(p => p.estat === 'aprovat').length;
+        this.rejectedUserRequests = res.filter(p => p.estat === 'refusat').length;
+        setTimeout(() => this.renderUserChart(), 0);
+      },
+      error: (err) => this.loggerSrv.error("Error loading permissions", err)
+    });
+  }
+
+  renderUserChart() {
+    const ctx = document.getElementById('miGraficoUser') as HTMLCanvasElement;
+    if (!ctx) return;
+    if (this.myChartUser) {
+      this.myChartUser.destroy();
+    }
+    this.myChartUser = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Pendents', 'Aprovats', 'Rebutjats'],
+        datasets: [{
+          label: 'Els meus permisos',
+          data: [this.pendingUserRequests, this.approvedUserRequests, this.rejectedUserRequests],
+          backgroundColor: ['#f59e0b', '#10b981', '#ef4444'],
+          borderRadius: 8
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { beginAtZero: true }
+        }
+      }
+    });
+  }
 }

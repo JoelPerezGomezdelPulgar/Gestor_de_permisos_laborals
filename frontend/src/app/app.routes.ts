@@ -2,12 +2,10 @@ import { Routes } from '@angular/router';
 import { Login } from './pages/login/login';
 import { Lobby } from './pages/lobby/lobby';
 import { EmailRequest } from './pages/email-request/email-request';
-import { Admin } from './pages/admin/admin';
+import { Dashboard } from './pages/dashboard/dashboard';
 import { UserBasic } from './pages/user-basic/user-basic';
 import { Permisos } from './pages/permisos/permisos';
 import { UserPeticio } from './pages/user-peticio/user-peticio';
-import { UserDashboard } from './pages/user-dashboard/user-dashboard';
-import { Register } from './pages/register/register';
 
 export const routes: Routes = [
 
@@ -25,10 +23,6 @@ export const routes: Routes = [
         component: EmailRequest
     },
     {
-        path: 'register',
-        component: Register
-    },
-    {
         path: '',
         component: Lobby,
         children: [
@@ -42,7 +36,7 @@ export const routes: Routes = [
             },
             {
                 path: 'admin',
-                component: Admin,
+                component: Dashboard,
             },
             {
                 path: 'userPeticio',
@@ -50,7 +44,7 @@ export const routes: Routes = [
             },
             {
                 path: 'userDashboard',
-                component: UserDashboard,
+                component: Dashboard,
             }
         ]
     }

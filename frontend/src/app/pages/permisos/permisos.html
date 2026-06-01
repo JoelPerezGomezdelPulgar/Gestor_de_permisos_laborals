@@ -1,33 +1,105 @@
 <div class="permisos-management-container">
   <div class="page-header">
-    <h2>Gestió de Permisos</h2>
+    <h2>{{role === 'admin' ? 'Gestió de Permisos' : 'Els Meus Permisos'}}</h2>
     <div class="stats">
-      <span>Total: {{permisosList.length}}</span>
+      <span>Total: {{filteredPermisos.length}} / {{permisosList.length}}</span>
     </div>
   </div>
 
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <div class="filter-row">
+      <div class="filter-group search-group">
+        <i class="fa fa-search"></i>
+        <input type="text" [(ngModel)]="searchText" class="filter-input"
+          placeholder="{{role === 'admin' ? 'Cerca per empleat, tipus o descripció...' : 'Cerca per tipus o descripció...'}}">
+      </div>
+      <button class="btn-filter-clear" (click)="clearFilters()" [class.has-filters]="searchText || filterTipus || filterEstat || filterDateFrom || filterDateTo">
+        <i class="fa fa-eraser"></i> Neteja
+      </button>
+    </div>
+    <div class="filter-row">
+      <div class="filter-group">
+        <label>Tipus</label>
+        <select [(ngModel)]="filterTipus" class="filter-select">
+          <option value="">Tots</option>
+          @for (t of permisosTypes; track t._id) {
+            <option [value]="t.nom">{{t.descripcio || (t.nom | titlecase)}}</option>
+          }
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Estat</label>
+        <select [(ngModel)]="filterEstat" class="filter-select">
+          <option value="">Tots</option>
+          @for (e of estatTypes; track e) {
+            <option [value]="e">{{e | titlecase}}</option>
+          }
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Data inici (des de)</label>
+        <input type="date" [(ngModel)]="filterDateFrom" class="filter-input">
+      </div>
+      <div class="filter-group">
+        <label>Data inici (fins a)</label>
+        <input type="date" [(ngModel)]="filterDateTo" class="filter-input">
+      </div>
+      <div class="filter-group sort-group">
+        <label>Ordena</label>
+        <div class="sort-btns">
+          @if (role === 'admin') {
+            <button class="btn-sort" [class.active]="sortBy === 'name'" (click)="toggleSort('name')">
+              <i class="fa fa-sort-alpha-{{sortBy === 'name' ? (sortDir === 'asc' ? 'asc' : 'desc') : 'asc'}}"></i> A-Z
+            </button>
+          } @else {
+            <button class="btn-sort" [class.active]="sortBy === 'type'" (click)="toggleSort('type')">
+              <i class="fa fa-sort-alpha-{{sortBy === 'type' ? (sortDir === 'asc' ? 'asc' : 'desc') : 'asc'}}"></i> Tipus
+            </button>
+          }
+          <button class="btn-sort" [class.active]="sortBy === 'date'" (click)="toggleSort('date')">
+            <i class="fa fa-sort-numeric-{{sortBy === 'date' ? (sortDir === 'asc' ? 'asc' : 'desc') : 'asc'}}"></i> Data
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @if (filteredPermisos.length === 0) {
+    <div class="empty-state">
+      <i class="fa fa-filter"></i>
+      <p>No s'han trobat permisos amb els filtres actuals.</p>
+      @if (searchText || filterTipus || filterEstat || filterDateFrom || filterDateTo) {
+        <button class="btn-link" (click)="clearFilters()">Neteja els filtres</button>
+      }
+    </div>
+  }
+
   <!-- Permisos Grid -->
   <div class="permisos-grid">
-    @for (item of permisosList; track item._id) {
+    @for (item of filteredPermisos; track item._id) {
       <div class="permisos-card">
-        <img [src]="item.empId?.imatge || 'https://www.w3schools.com/howto/img_avatar.png'" alt="Avatar"
-          class="permisos-avatar">
+        @if (role === 'admin') {
+          <img [src]="item.empId?.imatge || 'https://www.w3schools.com/howto/img_avatar.png'" alt="Avatar"
+            class="permisos-avatar">
           <h3 class="permisos-name">{{item.empId?.nom}} {{item.empId?.cognom1}} {{item.empId?.cognom2}}</h3>
-          <span class="permisos-role">{{item.tipus | titlecase}}</span>
+        }
+        <span class="permisos-role">{{item.tipus | titlecase}}</span>
 
-          <div class="permisos-info">
-            <p><i class="fa fa-calendar me-2"></i> {{item.dataInici | date:'dd/MM/yyyy'}} - {{item.dataFinal |
-          date:'dd/MM/yyyy'}}</p>
-          <p><i class="fa fa-info-circle me-2"></i> {{item.descripcio }}</p>
-          <div class="mt-2">
-                    <span class="status-badge" [ngClass]="{
-                        'status-pending': item.estat === 'pendent',
-                        'status-approved': item.estat === 'aprovat',
-                        'status-rejected': item.estat === 'refusat'
-                    }">{{item.estat}}</span>
-          </div>
+        <div class="permisos-info">
+          <p><i class="fa fa-calendar me-2"></i> {{item.dataInici | date:'dd/MM/yyyy'}} - {{item.dataFinal |
+        date:'dd/MM/yyyy'}}</p>
+        <p><i class="fa fa-info-circle me-2"></i> {{item.descripcio }}</p>
+        <div class="mt-2">
+                  <span class="status-badge" [ngClass]="{
+                      'status-pending': item.estat === 'pendent',
+                      'status-approved': item.estat === 'aprovat',
+                      'status-rejected': item.estat === 'refusat'
+                  }">{{item.estat}}</span>
         </div>
+      </div>
 
+      @if (role === 'admin') {
         <div class="card-actions">
           <button class="btn-card btn-edit" (click)="openEditModal(item)">
             <i class="fa fa-pencil"></i> Editar
@@ -36,7 +108,8 @@
             <i class="fa fa-trash"></i> Borrar
           </button>
         </div>
-      </div>
+      }
+    </div>
     }
   </div>
 
@@ -55,6 +128,7 @@
         <form [formGroup]="permisosForm" (ngSubmit)="savePermisos()">
           <div class="form-grid">
             <!-- Fila 1 -->
+            @if (role === 'admin') {
             <div class="form-group">
               <label>Empleat</label>
               <select formControlName="empId" class="form-control">
@@ -66,11 +140,12 @@
                 }
               </select>
             </div>
+            }
             <div class="form-group">
               <label>Tipus de Permís</label>
               <select formControlName="tipus" class="form-control">
-                @for (t of permisosTypes; track t) {
-                  <option [value]="t">{{t | titlecase}}</option>
+                @for (t of permisosTypes; track t._id) {
+                  <option [value]="t.nom">{{t.descripcio || (t.nom | titlecase)}}</option>
                 }
               </select>
             </div>
@@ -96,6 +171,7 @@
             </div>
 
             <!-- Fila 4 -->
+            @if (role === 'admin') {
             <div class="form-group">
               <label>Estat</label>
               <select formControlName="estat" class="form-control">
@@ -104,6 +180,7 @@
                 }
               </select>
             </div>
+            }
           </div>
 
           <div class="modal-footer">
@@ -118,7 +195,7 @@
   }
 
   <!-- Delete Confirmation Modal -->
-  @if (showDeleteModal) {
+  @if (role === 'admin' && showDeleteModal) {
     <div class="modal-overlay">
       <div class="modal-content">
         <div class="modal-header">

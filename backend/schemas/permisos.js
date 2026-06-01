@@ -19,7 +19,6 @@ const permisosSchema = new mongoose.Schema(
             type: String,
             required: true,
             trim: true,
-            enum: ['hospitalitzacio', 'matrimoni', 'trasllat', 'malaltia', 'naixement', 'vacances', 'altres']
         },
         descripcio: {
             type: String,

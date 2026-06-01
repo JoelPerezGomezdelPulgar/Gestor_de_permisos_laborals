@@ -19,6 +19,10 @@ export class MasterService {
     return this.http.post<any>(`${this.API_URL}/register`, obj, this.httpOptions)
   }
 
+  changePassword(newPassword: string) {
+    return this.http.post<any>(`${this.API_URL}/changePassword`, { newPassword }, this.httpOptions)
+  }
+
   logout() {
     return this.http.post<any>(`${this.API_URL}/logout`, {}, this.httpOptions)
   }
@@ -61,6 +65,10 @@ export class MasterService {
 
   deletePermisos(id: string) {
     return this.http.delete<any>(`${this.API_URL}/permis/${id}`, this.httpOptions)
+  }
+
+  getTipusPermisos() {
+    return this.http.get<any[]>(`${this.API_URL}/tipusPermisos`, this.httpOptions)
   }
 
   getDashboardData() {

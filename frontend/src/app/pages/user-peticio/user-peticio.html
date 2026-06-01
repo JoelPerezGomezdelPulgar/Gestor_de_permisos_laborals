@@ -33,8 +33,8 @@
           <div class="input-wrapper">
             <i class="fa fa-tag"></i>
             <select formControlName="tipus" class="form-control">
-              @for (t of tipusPermisos; track t) {
-                <option [value]="t">{{t | titlecase}}</option>
+              @for (t of tipusPermisos; track t._id) {
+                <option [value]="t.nom">{{t.descripcio || (t.nom | titlecase)}}</option>
               }
             </select>
           </div>

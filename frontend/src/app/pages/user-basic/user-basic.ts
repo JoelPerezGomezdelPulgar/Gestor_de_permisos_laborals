@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 import { LoggerService } from '../../service/logger.service';
 import { MasterService } from '../../service/master-service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
@@ -7,7 +7,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } 
 @Component({
   selector: 'app-user-basic',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   templateUrl: './user-basic.html',
   styleUrl: './user-basic.css',
 })
@@ -15,6 +15,11 @@ export class UserBasic implements OnInit {
   masterSrv = inject(MasterService);
   loggerSrv = inject(LoggerService);
   usersList: any[] = [];
+
+  searchText = '';
+  sortBy = '';
+  sortDir: 'asc' | 'desc' = 'asc';
+  filterRol = '';
 
   showFormModal = false;
   showDeleteModal = false;
@@ -39,6 +44,53 @@ export class UserBasic implements OnInit {
 
   ngOnInit() {
     this.loadUsers();
+  }
+
+  get filteredUsers() {
+    let list = [...this.usersList];
+
+    if (this.searchText) {
+      const q = this.searchText.toLowerCase();
+      list = list.filter(u =>
+        `${u.nom} ${u.cognom1} ${u.cognom2 || ''} ${u.username} ${u.email}`.toLowerCase().includes(q)
+      );
+    }
+
+    if (this.filterRol) {
+      list = list.filter(u => u.rol === this.filterRol);
+    }
+
+    if (this.sortBy === 'name') {
+      list.sort((a, b) => {
+        const aName = `${a.nom} ${a.cognom1}`.toLowerCase();
+        const bName = `${b.nom} ${b.cognom1}`.toLowerCase();
+        return this.sortDir === 'asc' ? aName.localeCompare(bName) : bName.localeCompare(aName);
+      });
+    } else if (this.sortBy === 'date') {
+      list.sort((a, b) => {
+        const aDate = new Date(a.createdAt).getTime();
+        const bDate = new Date(b.createdAt).getTime();
+        return this.sortDir === 'asc' ? aDate - bDate : bDate - aDate;
+      });
+    }
+
+    return list;
+  }
+
+  toggleSort(field: string) {
+    if (this.sortBy === field) {
+      this.sortDir = this.sortDir === 'asc' ? 'desc' : 'asc';
+    } else {
+      this.sortBy = field;
+      this.sortDir = 'asc';
+    }
+  }
+
+  clearFilters() {
+    this.searchText = '';
+    this.sortBy = '';
+    this.sortDir = 'asc';
+    this.filterRol = '';
   }
 
   loadUsers() {
@@ -96,17 +148,21 @@ export class UserBasic implements OnInit {
 
     if (this.isEditMode) {
       this.masterSrv.updateUser(userData._id, formData).subscribe({
-        next: () => {
+        next: (res: any) => {
           this.loadUsers();
           this.closeModals();
+          if (res.generatedPassword) {
+            alert(`Nova contrasenya generada: ${res.generatedPassword}`);
+          }
         },
         error: (err) => alert("Error al actualizar usuario: " + err.message)
       });
     } else {
       this.masterSrv.createUser(formData).subscribe({
-        next: () => {
+        next: (res: any) => {
           this.loadUsers();
           this.closeModals();
+          alert(`Usuari creat. Contrasenya generada: ${res.generatedPassword}`);
         },
         error: (err) => alert("Error al crear usuario: " + err.message)
       });

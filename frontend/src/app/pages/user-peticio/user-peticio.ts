@@ -24,16 +24,26 @@ export class UserPeticio implements OnInit {
     descripcio: new FormControl('', [Validators.required])
   });
 
-  tipusPermisos = ['hospitalitzacio', 'matrimoni', 'trasllat', 'malaltia', 'naixement', 'vacances', 'altres'];
+  tipusPermisos: any[] = [];
   currentUser: any = null;
 
   ngOnInit() {
     this.currentUser = localStorage.getItem('id') || '';
+    this.loadTipusPermisos();
 
     const today = new Date().toISOString().split('T')[0];
     this.peticioForm.patchValue({
       dataInici: today,
       dataFinal: today
+    });
+  }
+
+  loadTipusPermisos() {
+    this.masterSrv.getTipusPermisos().subscribe({
+      next: (res: any) => {
+        this.tipusPermisos = res;
+      },
+      error: (err) => this.loggerSrv.error("Error loading tipus permisos", err)
     });
   }
 

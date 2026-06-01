@@ -3,6 +3,7 @@ import { generarToken, generarRefreshToken, verificarRefreshToken } from '../hel
 import logger from '../logger/logger.js'
 import { uploadToCloudinary } from '../helpers/cloudinaryUpload.js'
 import bcrypt from 'bcryptjs'
+import crypto from 'crypto'
 
 class usersController {
     constructor() {
@@ -10,22 +11,20 @@ class usersController {
     }
 
     async create(req, res) {
-        const { nom, cognom1, cognom2, email, username, password, rol } = req.body
+        const { nom, cognom1, cognom2, email, username, rol } = req.body
         let imatge = req.body.imatge;
         try {
             if (req.file) {
                 imatge = await uploadToCloudinary(req.file.buffer, req.file.mimetype);
             }
 
-            // Hashing password for admin-created users
-            let hashedPassword = password;
-            if (password) {
-                hashedPassword = await bcrypt.hash(password, 10);
-            }
+            const generatedPassword = crypto.randomBytes(4).toString('hex');
+            const hashedPassword = await bcrypt.hash(generatedPassword, 10);
 
-            const data = await usersModel.create({ nom, cognom1, cognom2, email, username, password: hashedPassword, imatge, rol })
+            const data = await usersModel.create({ nom, cognom1, cognom2, email, username, password: hashedPassword, imatge, rol, mustChangePassword: true })
             logger.info(`Usuario creado: ${username}`);
-            res.status(201).json(data)
+            const { password, ...safeData } = data.toObject();
+            res.status(201).json({ ...safeData, generatedPassword })
         } catch (e) {
             logger.error(`Error creando usuario: ${e.message || e}`);
             res.status(500).send(e)
@@ -43,7 +42,7 @@ class usersController {
 
             const passwordEncryptada = await bcrypt.hash(password, 10);
 
-            const data = await usersModel.create({ nom, cognom1, cognom2, email, username, password: passwordEncryptada, imatge, rol })
+            const data = await usersModel.create({ nom, cognom1, cognom2, email, username, password: passwordEncryptada, imatge, rol, mustChangePassword: false })
 
             const token = generarToken(data.id, data.rol);
             const refreshToken = generarRefreshToken(data.id, data.rol);
@@ -93,13 +92,17 @@ class usersController {
             }
 
             let updatedData = { nom, cognom1, cognom2, email, username, imatge, rol };
+            let generatedPassword = null;
             if (password) {
-                updatedData.password = await bcrypt.hash(password, 10);
+                generatedPassword = crypto.randomBytes(4).toString('hex');
+                updatedData.password = await bcrypt.hash(generatedPassword, 10);
+                updatedData.mustChangePassword = true;
             }
 
             const data = await usersModel.update(id, updatedData)
             logger.info(`Usuario actualizado: ${id}`);
-            res.status(200).json(data)
+            const { password: pwd, ...safeData } = data.toObject();
+            res.status(200).json({ ...safeData, generatedPassword })
         } catch (e) {
             logger.error(`Error actualizando usuario ${id}: ${e.message || e}`);
             res.status(500).send(e)
@@ -135,30 +138,47 @@ class usersController {
             // Buscamos el usuario por username
             const data = await usersModel.login(username)
             if (data) {
-                if (data.intentos_fallidos >= 3) {
-                    logger.warn(`Intento de login en cuenta bloqueada: ${username}`);
+                // Verificamos el temporizador de bloqueo
+                if (data.bloqueado_hasta && data.bloqueado_hasta > new Date()) {
+                    const tiempoRestante = Math.ceil((data.bloqueado_hasta - new Date()) / 60000); // minutos restantes
+                    logger.warn(`Intento de login en cuenta bloqueada temporalmente: ${username}`);
                     return res.status(423).json({
                         ok: false,
-                        msg: 'Cuenta bloqueada temporalmente por demasiados intentos fallidos.'
+                        msg: `La cuenta está bloqueada temporalmente. Inténtalo de nuevo en ${tiempoRestante} minutos.`
                     });
                 }
+
                 // Comparamos la contraseña encriptada
                 const passwordValida = await bcrypt.compare(password, data.password)
                 if (!passwordValida) {
                     const usuarioActualizado = await usersModel.getOne(data.id);
-                    const intentosActuales = usuarioActualizado ? (usuarioActualizado.intentos_fallidos || 0) : (data.intentos_fallidos || 0);
+                    // Si el bloqueo ha expirado, los intentos actuales parten desde 0
+                    const expirado = usuarioActualizado && usuarioActualizado.bloqueado_hasta && usuarioActualizado.bloqueado_hasta <= new Date();
+                    const intentosActuales = expirado ? 0 : (usuarioActualizado ? (usuarioActualizado.intentos_fallidos || 0) : (data.intentos_fallidos || 0));
+                    
                     const nuevosIntentos = intentosActuales + 1;
-                    await usersModel.update(data.id, { intentos_fallidos: nuevosIntentos });
+                    let bloqueado_hasta = null;
+                    
+                    if (nuevosIntentos >= 3) {
+                        bloqueado_hasta = new Date(Date.now() + 15 * 60 * 1000); // Bloqueo de 15 minutos
+                    }
+                    
+                    await usersModel.update(data.id, { intentos_fallidos: nuevosIntentos, bloqueado_hasta });
                     logger.warn(`Login fallido: contraseña incorrecta para ${username}`);
-                    const intentosRestantes = 3 - nuevosIntentos;
-                    return res.status(401).json({ ok: false, intentosRestantes: intentosRestantes, msg: `Usuari o contrasenya incorrectes, queden ${intentosRestantes < 0 ? 0 : intentosRestantes} intents` })
+                    
+                    if (nuevosIntentos >= 3) {
+                        return res.status(423).json({ ok: false, msg: `Has fallado demasiadas veces. Cuenta bloqueada por 15 minutos.` });
+                    } else {
+                        const intentosRestantes = 3 - nuevosIntentos;
+                        return res.status(401).json({ ok: false, msg: `Usuari o contrasenya incorrectes, queden ${intentosRestantes} intents` })
+                    }
                 }
 
                 const token = generarToken(data.id, data.rol)
                 const refreshToken = generarRefreshToken(data.id, data.rol)
 
-                // Guardar refresh token en DB
-                await usersModel.update(data.id, { refreshToken, intentos_fallidos: 0 });
+                // Guardar refresh token en DB y limpiar bloqueos
+                await usersModel.update(data.id, { refreshToken, intentos_fallidos: 0, bloqueado_hasta: null });
 
                 res.cookie('token', token, {
                     httpOnly: true,
@@ -176,7 +196,7 @@ class usersController {
                 });
 
                 logger.info(`Login correcto: ${username}`);
-                res.status(200).json({ username: data.username, rol: data.rol, id: data.id })
+                res.status(200).json({ username: data.username, rol: data.rol, id: data.id, mustChangePassword: data.mustChangePassword })
             } else {
                 logger.warn(`Login fallido: usuario no encontrado ${username}`);
                 res.status(401).json({ ok: false, msg:`Usuari o contrasenya incorrectes` })
@@ -216,6 +236,25 @@ class usersController {
         } catch (e) {
             logger.error(`Error en logout: ${e.message || e}`);
             return res.status(500).json({ ok: false, msg: 'Error al cerrar sesión' });
+        }
+    }
+
+    async changePassword(req, res) {
+        const { newPassword } = req.body
+        const userId = req.userId
+        try {
+            if (!newPassword || newPassword.length < 6) {
+                return res.status(400).json({ ok: false, msg: 'La contrasenya ha de tenir almenys 6 caràcters' });
+            }
+
+            const hashedPassword = await bcrypt.hash(newPassword, 10);
+            await usersModel.update(userId, { password: hashedPassword, mustChangePassword: false });
+
+            logger.info(`Contrasenya canviada per usuari: ${userId}`);
+            res.status(200).json({ ok: true, msg: 'Contrasenya canviada correctament' });
+        } catch (e) {
+            logger.error(`Error canviant contrasenya per ${userId}: ${e.message || e}`);
+            res.status(500).json({ ok: false, msg: 'Error al canviar la contrasenya' });
         }
     }
 
