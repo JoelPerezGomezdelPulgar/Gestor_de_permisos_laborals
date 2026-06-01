@@ -2547,3 +2547,19 @@
 {"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-05-18T14:56:39.392Z"}
 {"details":{"error":{"intentosRestantes":2,"msg":"Usuari o contrasenya incorrectes, queden 2 intents","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-05-18T14:56:39.393Z"}
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-05-18T14:56:40.932Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-01T14:32:55.409Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-01T14:40:07.502Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-01T14:43:25.821Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para Miniboo","timestamp":"2026-06-01T14:43:26.093Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-01T14:43:26.116Z"}
+{"details":{"error":{"intentosRestantes":2,"msg":"Usuari o contrasenya incorrectes, queden 2 intents","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-01T14:43:26.119Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-01T14:45:49.097Z"}
+{"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:49:09.259Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:49:09.289Z"}
+{"level":"error","message":"Error en login para testuser: __vite_ssr_import_0__.default.getOne is not a function","timestamp":"2026-06-01T14:49:09.297Z"}
+{"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:50:50.962Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:50:50.981Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para testuser","timestamp":"2026-06-01T14:50:50.988Z"}
+{"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:55:10.282Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:55:10.297Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para testuser","timestamp":"2026-06-01T14:55:10.304Z"}

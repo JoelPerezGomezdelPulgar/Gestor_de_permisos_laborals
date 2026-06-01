@@ -15,10 +15,6 @@ export class MasterService {
     return this.http.post<any>(`${this.API_URL}/login`, obj, this.httpOptions)
   }
 
-  onRegister(obj: FormData) {
-    return this.http.post<any>(`${this.API_URL}/register`, obj, this.httpOptions)
-  }
-
   logout() {
     return this.http.post<any>(`${this.API_URL}/logout`, {}, this.httpOptions)
   }

@@ -7,13 +7,19 @@ import { UserBasic } from './pages/user-basic/user-basic';
 import { Permisos } from './pages/permisos/permisos';
 import { UserPeticio } from './pages/user-peticio/user-peticio';
 import { UserDashboard } from './pages/user-dashboard/user-dashboard';
-import { Register } from './pages/register/register';
+
+import { Home } from './pages/home/home';
 
 export const routes: Routes = [
 
     {
         path: '',
-        redirectTo: 'lobby',
+        component: Home,
+        pathMatch: 'full'
+    },
+    {
+        path: 'lobby',
+        redirectTo: '',
         pathMatch: 'full'
     },
     {
@@ -23,10 +29,6 @@ export const routes: Routes = [
     {
         path: 'email-request',
         component: EmailRequest
-    },
-    {
-        path: 'register',
-        component: Register
     },
     {
         path: '',

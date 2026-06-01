@@ -11,7 +11,8 @@ import * as auth from '../helpers/autentication.js';
 vi.mock('../models/users.js', () => ({
     default: {
         login: vi.fn(),
-        update: vi.fn()
+        update: vi.fn(),
+        getOne: vi.fn()
     }
 }));
 
@@ -63,7 +64,7 @@ describe('POST /api/login', () => {
 
         // Verificaciones
         expect(response.status).toBe(200);
-        expect(response.body).toEqual({ username: 'testuser', rol: 'admin' });
+        expect(response.body).toEqual({ username: 'testuser', rol: 'admin', id: '12345' });
         expect(usersModel.login).toHaveBeenCalledWith('testuser');
         expect(bcrypt.compare).toHaveBeenCalledWith('password123', 'hashedpassword');
         expect(auth.generarToken).toHaveBeenCalledWith('12345', 'admin');
@@ -101,8 +102,18 @@ describe('POST /api/login', () => {
             rol: 'admin'
         };
 
+        const mockUserWithAttempts = {
+            id: '12345',
+            username: 'testuser',
+            password: 'hashedpassword',
+            rol: 'admin',
+            intentos_fallidos: 0
+        };
+
         // Configuramos los mocks (usuario existe pero la contraseña no coincide)
         usersModel.login.mockResolvedValue(mockUser);
+        usersModel.getOne.mockResolvedValue(mockUserWithAttempts);
+        usersModel.update.mockResolvedValue(true);
         bcrypt.compare.mockResolvedValue(false);
 
         const response = await request(app)
@@ -114,10 +125,12 @@ describe('POST /api/login', () => {
 
         expect(response.status).toBe(401);
         expect(response.body.ok).toBe(false);
-        // El controller devuelve el booleano en el mensaje, simulamos la respuesta exacta
-        expect(response.body.msg).toBe('Usuari o contrasenya incorrectes, false');
+        expect(response.body.msg).toBe('Usuari o contrasenya incorrectes, queden 2 intents');
+        expect(response.body.intentosRestantes).toBe(2);
         expect(usersModel.login).toHaveBeenCalledWith('testuser');
         expect(bcrypt.compare).toHaveBeenCalledWith('wrongpassword', 'hashedpassword');
+        expect(usersModel.getOne).toHaveBeenCalledWith('12345');
+        expect(usersModel.update).toHaveBeenCalledWith('12345', { intentos_fallidos: 1 });
         expect(auth.generarToken).not.toHaveBeenCalled();
     });
 });
