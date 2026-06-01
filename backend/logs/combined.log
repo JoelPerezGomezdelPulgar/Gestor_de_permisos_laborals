@@ -2893,3 +2893,9 @@
 >>>>>>> 4f1416048133267b74f61e7a4b5905e081d8a251
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-01T14:50:07.665Z"}
 {"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-01T14:50:48.221Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-01T14:50:49.459Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-01T14:50:49.499Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-01T14:50:49.500Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-01T14:50:49.990Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-06-01T14:50:50.232Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-06-01T14:50:50.287Z"}
