@@ -2921,3 +2921,15 @@
 {"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:56:26.898Z"}
 {"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:56:26.929Z"}
 {"level":"warn","message":"Login fallido: contraseña incorrecta para testuser","timestamp":"2026-06-01T14:56:26.941Z"}
+{"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:58:29.236Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:58:29.267Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para testuser","timestamp":"2026-06-01T14:58:29.277Z"}
+{"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:58:46.133Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:58:46.165Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para testuser","timestamp":"2026-06-01T14:58:46.175Z"}
+{"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:58:48.381Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:58:48.401Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para testuser","timestamp":"2026-06-01T14:58:48.410Z"}
+{"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:59:03.800Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:59:03.817Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para testuser","timestamp":"2026-06-01T14:59:03.822Z"}

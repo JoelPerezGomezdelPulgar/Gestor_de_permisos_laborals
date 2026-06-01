@@ -6,7 +6,6 @@ import { Dashboard } from './pages/dashboard/dashboard';
 import { UserBasic } from './pages/user-basic/user-basic';
 import { Permisos } from './pages/permisos/permisos';
 import { UserPeticio } from './pages/user-peticio/user-peticio';
-import { UserDashboard } from './pages/user-dashboard/user-dashboard';
 
 import { Home } from './pages/home/home';
 

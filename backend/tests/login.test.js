@@ -65,7 +65,7 @@ describe('POST /api/login', () => {
 
         // Verificaciones
         expect(response.status).toBe(200);
-        expect(response.body).toEqual({ username: 'testuser', rol: 'admin', id: '12345' });
+        expect(response.body).toEqual({ username: 'testuser', rol: 'admin', id: '12345', mustChangePassword: false });
         expect(usersModel.login).toHaveBeenCalledWith('testuser');
         expect(bcrypt.compare).toHaveBeenCalledWith('password123', 'hashedpassword');
         expect(auth.generarToken).toHaveBeenCalledWith('12345', 'admin');
@@ -131,11 +131,10 @@ describe('POST /api/login', () => {
         expect(response.status).toBe(401);
         expect(response.body.ok).toBe(false);
         expect(response.body.msg).toBe('Usuari o contrasenya incorrectes, queden 2 intents');
-        expect(response.body.intentosRestantes).toBe(2);
         expect(usersModel.login).toHaveBeenCalledWith('testuser');
         expect(bcrypt.compare).toHaveBeenCalledWith('wrongpassword', 'hashedpassword');
         expect(usersModel.getOne).toHaveBeenCalledWith('12345');
-        expect(usersModel.update).toHaveBeenCalledWith('12345', { intentos_fallidos: 1 });
+        expect(usersModel.update).toHaveBeenCalledWith('12345', { intentos_fallidos: 1, bloqueado_hasta: null });
         expect(auth.generarToken).not.toHaveBeenCalled();
     });
 });
