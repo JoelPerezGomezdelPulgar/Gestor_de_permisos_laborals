@@ -50,6 +50,14 @@ const usuariosSchema = new mongoose.Schema(
         intentos_fallidos: {
             type: Number,
             default: 0
+        },
+        bloqueado_hasta: {
+            type: Date,
+            default: null
+        },
+        mustChangePassword: {
+            type: Boolean,
+            default: true
         }
     },
     { timestamps: true }

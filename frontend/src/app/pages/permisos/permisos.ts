@@ -1,7 +1,10 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { MasterService } from '../../service/master-service';
 import { LoggerService } from '../../service/logger.service';
+import { SocketService } from '../../service/socket.service';
+import { Subscription } from 'rxjs';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,9 +14,16 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormsModule } 
   templateUrl: './permisos.html',
   styleUrl: './permisos.css',
 })
-export class Permisos implements OnInit {
+export class Permisos implements OnInit, OnDestroy {
   masterSrv = inject(MasterService);
   loggerSrv = inject(LoggerService);
+  router = inject(Router);
+  socketSrv = inject(SocketService);
+
+  role = '';
+  userId: string | null = null;
+  private socketSub?: Subscription;
+
   permisosList: any[] = [];
   usersList: any[] = [];
 
@@ -31,15 +41,138 @@ export class Permisos implements OnInit {
     estat: new FormControl('pendent', [Validators.required]),
   });
 
-  permisosTypes = ['hospitalitzacio', 'matrimoni', 'trasllat', 'malaltia', 'naixement', 'vacances', 'altres'];
+  permisosTypes: any[] = [];
   estatTypes = ['pendent', 'aprovat', 'refusat'];
 
+  searchText = '';
+  sortBy = '';
+  sortDir: 'asc' | 'desc' = 'asc';
+  filterTipus = '';
+  filterEstat = '';
+  filterDateFrom = '';
+  filterDateTo = '';
+
   permisosToDelete: any = null;
-  confirmPermisosname = ''; // We'll use this for confirming the employee name or something else
+  confirmPermisosname = '';
 
   ngOnInit() {
-    this.loadUsers();
-    this.loadPermisos();
+    this.role = localStorage.getItem('rol') || '';
+    this.userId = localStorage.getItem('id');
+    this.loadTipusPermisos();
+    if (this.role === 'admin') {
+      this.loadUsers();
+      this.loadPermisos();
+    } else {
+      this.loadUserPermisos();
+    }
+
+    this.socketSub = this.socketSrv.onPermisoChanged().subscribe(() => {
+      if (this.role === 'admin') {
+        this.loadPermisos();
+      } else {
+        this.loadUserPermisos();
+      }
+    });
+  }
+
+  get filteredPermisos() {
+    let list = [...this.permisosList];
+
+    if (this.searchText) {
+      const q = this.searchText.toLowerCase();
+      if (this.role === 'admin') {
+        list = list.filter(p =>
+          `${p.empId?.nom} ${p.empId?.cognom1} ${p.empId?.cognom2}`.toLowerCase().includes(q) ||
+          p.tipus?.toLowerCase().includes(q) ||
+          p.descripcio?.toLowerCase().includes(q)
+        );
+      } else {
+        list = list.filter(p =>
+          p.tipus?.toLowerCase().includes(q) ||
+          p.descripcio?.toLowerCase().includes(q)
+        );
+      }
+    }
+
+    if (this.filterTipus) {
+      list = list.filter(p => p.tipus === this.filterTipus);
+    }
+
+    if (this.filterEstat) {
+      list = list.filter(p => p.estat === this.filterEstat);
+    }
+
+    if (this.filterDateFrom) {
+      const from = new Date(this.filterDateFrom);
+      list = list.filter(p => new Date(p.dataInici) >= from);
+    }
+    if (this.filterDateTo) {
+      const to = new Date(this.filterDateTo);
+      list = list.filter(p => new Date(p.dataInici) <= to);
+    }
+
+    if (this.role === 'admin' && this.sortBy === 'name') {
+      list.sort((a, b) => {
+        const aName = `${a.empId?.nom} ${a.empId?.cognom1}`.toLowerCase();
+        const bName = `${b.empId?.nom} ${b.empId?.cognom1}`.toLowerCase();
+        return this.sortDir === 'asc' ? aName.localeCompare(bName) : bName.localeCompare(aName);
+      });
+    } else if (this.sortBy === 'type') {
+      list.sort((a, b) => {
+        return this.sortDir === 'asc'
+          ? a.tipus?.localeCompare(b.tipus)
+          : b.tipus?.localeCompare(a.tipus);
+      });
+    } else if (this.sortBy === 'date') {
+      list.sort((a, b) => {
+        const aDate = new Date(a.createdAt || a.dataInici).getTime();
+        const bDate = new Date(b.createdAt || b.dataInici).getTime();
+        return this.sortDir === 'asc' ? aDate - bDate : bDate - aDate;
+      });
+    }
+
+    return list;
+  }
+
+  toggleSort(field: string) {
+    if (this.sortBy === field) {
+      this.sortDir = this.sortDir === 'asc' ? 'desc' : 'asc';
+    } else {
+      this.sortBy = field;
+      this.sortDir = 'asc';
+    }
+  }
+
+  clearFilters() {
+    this.searchText = '';
+    this.sortBy = '';
+    this.sortDir = 'asc';
+    this.filterTipus = '';
+    this.filterEstat = '';
+    this.filterDateFrom = '';
+    this.filterDateTo = '';
+  }
+
+  ngOnDestroy() {
+    this.socketSub?.unsubscribe();
+  }
+
+  loadUserPermisos() {
+    this.masterSrv.getPermisosByUserId(this.userId!).subscribe({
+      next: (res: any[]) => {
+        this.permisosList = res;
+      },
+      error: (err) => this.loggerSrv.error("Error loading permissions", err)
+    });
+  }
+
+  loadTipusPermisos() {
+    this.masterSrv.getTipusPermisos().subscribe({
+      next: (res: any) => {
+        this.permisosTypes = res;
+      },
+      error: (err) => this.loggerSrv.error("Error loading tipus permisos", err)
+    });
   }
   
   loadPermisos() {
@@ -68,6 +201,9 @@ export class Permisos implements OnInit {
       dataInici: new Date().toISOString().split('T')[0],
       dataFinal: new Date().toISOString().split('T')[0]
     });
+    if (this.role !== 'admin') {
+      this.permisosForm.patchValue({ empId: this.userId });
+    }
     this.showFormModal = true;
   }
 
@@ -99,7 +235,7 @@ export class Permisos implements OnInit {
     if (this.isEditMode) {
       this.masterSrv.updatePermisos(data._id, data).subscribe({
         next: () => {
-          this.loadPermisos();
+          this.reloadPermisos();
           this.closeModals();
         },
         error: (err) => alert("Error al actualizar el permiso: " + err.message)
@@ -107,11 +243,19 @@ export class Permisos implements OnInit {
     } else {
       this.masterSrv.createPermisos(data).subscribe({
         next: () => {
-          this.loadPermisos();
+          this.reloadPermisos();
           this.closeModals();
         },
         error: (err) => alert("Error al crear el permiso: " + err.message)
       });
+    }
+  }
+
+  private reloadPermisos() {
+    if (this.role === 'admin') {
+      this.loadPermisos();
+    } else {
+      this.loadUserPermisos();
     }
   }
 

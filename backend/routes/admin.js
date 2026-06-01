@@ -1,6 +1,7 @@
 import express from 'express'
 import userController from '../crud/users.js'
 import permisController from '../crud/permisos.js'
+import tipusPermisosController from '../crud/tipusPermisos.js'
 import { verificarToken } from '../helpers/autentication.js'
 import { upload } from '../helpers/cloudinaryUpload.js'
 import { isAdmin } from '../helpers/administrator.js'
@@ -12,12 +13,15 @@ route.post('/register', isAdmin, upload.single('imatge'), userController.registe
 // Si usamos upload, multer procesará el multipart/form-data y pondrá el archivo en req.file antes de que userController.create lo maneje
 route.post('/logout', userController.logout)
 route.post('/renewToken', userController.renewToken)
+route.post('/changePassword', verificarToken, userController.changePassword)
 
 route.post('/user', verificarToken, isAdmin, upload.single('imatge'), userController.create)
 route.put('/user/:id', verificarToken, isAdmin, upload.single('imatge'), userController.update)
 route.get('/user', verificarToken, isAdmin, userController.getAll)
 route.get('/user/:id', verificarToken, isAdmin, userController.getOne)
 route.delete('/user/:id', verificarToken, isAdmin, userController.delete)
+
+route.get('/tipusPermisos', tipusPermisosController.getAll)
 
 route.post('/permis', verificarToken, permisController.create)
 route.put('/permis/:id', verificarToken, isAdmin, permisController.update)

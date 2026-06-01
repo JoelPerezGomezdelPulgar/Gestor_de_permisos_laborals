@@ -45,7 +45,8 @@ describe('POST /api/login', () => {
             id: '12345',
             username: 'testuser',
             password: 'hashedpassword',
-            rol: 'admin'
+            rol: 'admin',
+            mustChangePassword: false
         };
 
         // Configuramos los mocks
@@ -99,7 +100,9 @@ describe('POST /api/login', () => {
             id: '12345',
             username: 'testuser',
             password: 'hashedpassword',
-            rol: 'admin'
+            rol: 'admin',
+            intentos_fallidos: 0,
+            bloqueado_hasta: null
         };
 
         const mockUserWithAttempts = {
@@ -115,6 +118,8 @@ describe('POST /api/login', () => {
         usersModel.getOne.mockResolvedValue(mockUserWithAttempts);
         usersModel.update.mockResolvedValue(true);
         bcrypt.compare.mockResolvedValue(false);
+        usersModel.getOne.mockResolvedValue(mockUser);
+        usersModel.update.mockResolvedValue(true);
 
         const response = await request(app)
             .post('/api/login')
