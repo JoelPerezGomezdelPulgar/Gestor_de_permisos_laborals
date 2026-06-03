@@ -2933,3 +2933,149 @@
 {"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:59:03.800Z"}
 {"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:59:03.817Z"}
 {"level":"warn","message":"Login fallido: contraseña incorrecta para testuser","timestamp":"2026-06-01T14:59:03.822Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T13:14:26.599Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T13:14:52.161Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T13:14:52.230Z"}
+{"level":"error","message":"Error en login para Joel: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03T13:15:02.220Z"}
+{"level":"error","message":"Error en login para Joel: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03T13:15:02.242Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T13:15:05.703Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T13:15:08.060Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T13:15:13.214Z"}
+{"level":"error","message":"Error en login para Joel: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03T13:15:15.706Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T13:15:15.742Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T13:15:15.747Z"}
+{"level":"error","message":"Error en login para Joel: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03T13:15:18.063Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T13:15:18.156Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T13:15:18.168Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T13:15:18.803Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T13:15:20.352Z"}
+{"level":"error","message":"Error en login para Joel: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03T13:15:23.220Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T13:15:23.253Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T13:15:23.254Z"}
+{"level":"error","message":"Error en login para Joel: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03T13:15:28.809Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T13:15:28.840Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T13:15:28.841Z"}
+{"level":"error","message":"Error en login para Joel: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03T13:15:30.358Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T13:15:30.393Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T13:15:30.393Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T13:15:33.216Z"}
+{"level":"error","message":"Error en login para Joel: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03T13:15:43.219Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T13:15:43.291Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T13:15:43.292Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:05:42.250Z"}
+{"level":"error","message":"Error en login para Joel: Operation `usuarios.findOne()` buffering timed out after 10000ms","timestamp":"2026-06-03T14:05:52.267Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:05:52.321Z"}
+{"details":{"error":{},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 500 Internal Server Error","name":"HttpErrorResponse","ok":false,"status":500,"statusText":"Internal Server Error","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:05:52.321Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T14:08:38.624Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:08:45.743Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado Joel","timestamp":"2026-06-03T14:08:45.790Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:08:45.821Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:08:45.823Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:09:00.168Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado Joel","timestamp":"2026-06-03T14:09:00.212Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:09:00.243Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:09:00.249Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:09:08.158Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado Joel","timestamp":"2026-06-03T14:09:08.193Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:09:08.215Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:09:08.216Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:09:11.923Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado Joel","timestamp":"2026-06-03T14:09:11.963Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:09:11.985Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:09:11.987Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:09:51.511Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado Joel","timestamp":"2026-06-03T14:09:51.640Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:09:51.686Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:09:51.687Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:10:01.512Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para Miniboo","timestamp":"2026-06-03T14:10:01.975Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:10:01.999Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes, queden 2 intents","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:10:02.000Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T14:14:10.717Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:14:15.482Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado Joel","timestamp":"2026-06-03T14:14:15.523Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:14:15.553Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:14:15.560Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:14:23.483Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para Miniboo","timestamp":"2026-06-03T14:14:23.739Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:14:23.760Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes, queden 1 intents","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:14:23.763Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:15:27.738Z"}
+{"level":"info","message":"Login correcto: Racso","timestamp":"2026-06-03T14:15:27.902Z"}
+{"level":"info","message":"Incoming request: POST /api/changePassword","timestamp":"2026-06-03T14:15:42.317Z"}
+{"level":"info","message":"Contrasenya canviada per usuari: 6a04b0e2d0555a1a11c52130","timestamp":"2026-06-03T14:15:42.450Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-06-03T14:15:42.515Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:21:39.158Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-06-03T14:21:39.184Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:21:39.234Z"}
+{"level":"info","message":"Incoming request: GET /api/tipusPermisos","timestamp":"2026-06-03T14:21:46.568Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:21:46.583Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:21:46.592Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-06-03T14:21:48.349Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T14:31:16.374Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:31:41.715Z"}
+{"level":"info","message":"Login correcto: Racso","timestamp":"2026-06-03T14:31:41.948Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-06-03T14:31:42.031Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T14:32:37.125Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:33:21.894Z"}
+{"level":"info","message":"Login correcto: Racso","timestamp":"2026-06-03T14:33:22.105Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-06-03T14:33:22.160Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:33:35.991Z"}
+{"level":"info","message":"Incoming request: GET /api/tipusPermisos","timestamp":"2026-06-03T14:33:52.125Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:33:52.133Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:33:52.148Z"}
+{"level":"info","message":"Incoming request: PUT /api/permis/6a04a7c7326ec346d5481967","timestamp":"2026-06-03T14:34:30.864Z"}
+{"level":"info","message":"Permiso 6a04a7c7326ec346d5481967 updated to status refusat","timestamp":"2026-06-03T14:34:30.918Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:34:30.931Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:34:31.305Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:34:41.827Z"}
+{"level":"info","message":"Incoming request: PUT /api/user/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:35:52.158Z"}
+{"level":"info","message":"Usuario actualizado: 69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:35:53.484Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:35:53.493Z"}
+{"level":"info","message":"Incoming request: GET /api/tipusPermisos","timestamp":"2026-06-03T14:36:11.584Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:36:11.589Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:36:11.607Z"}
+{"level":"info","message":"Incoming request: PUT /api/permis/6a01e8b2553b31345ed02844","timestamp":"2026-06-03T14:36:30.512Z"}
+{"level":"info","message":"Permiso 6a01e8b2553b31345ed02844 updated to status refusat","timestamp":"2026-06-03T14:36:30.560Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:36:30.572Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:36:30.951Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-06-03T14:37:15.617Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:37:57.426Z"}
+{"level":"info","message":"Login correcto: Racso","timestamp":"2026-06-03T14:37:57.619Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-06-03T14:37:57.667Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:40:31.158Z"}
+{"level":"info","message":"Incoming request: GET /api/tipusPermisos","timestamp":"2026-06-03T14:41:17.932Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:41:17.944Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:41:17.961Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-06-03T14:44:08.457Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:44:58.379Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado Joel","timestamp":"2026-06-03T14:44:58.413Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:44:58.423Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:44:58.425Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:45:06.515Z"}
+{"level":"info","message":"Login correcto: joel","timestamp":"2026-06-03T14:45:06.702Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:45:06.771Z"}
+{"level":"info","message":"Incoming request: GET /api/tipusPermisos","timestamp":"2026-06-03T14:45:17.186Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:45:17.190Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:45:20.987Z"}
+{"level":"info","message":"Incoming request: GET /api/tipusPermisos","timestamp":"2026-06-03T14:45:26.601Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:45:26.608Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:45:35.817Z"}
+{"level":"info","message":"Incoming request: GET /api/tipusPermisos","timestamp":"2026-06-03T14:45:37.380Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:45:37.385Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:45:53.446Z"}
+{"level":"warn","message":"Login fallido: usuario no encontrado joel","timestamp":"2026-06-03T14:45:53.477Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:45:53.493Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:45:53.493Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:46:02.060Z"}
+{"level":"info","message":"Login correcto: Joel","timestamp":"2026-06-03T14:46:02.236Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:46:02.274Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-06-03T14:46:31.440Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:46:37.019Z"}
+{"level":"warn","message":"Login fallido: contraseña incorrecta para Racso","timestamp":"2026-06-03T14:46:37.215Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:46:37.231Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes, queden 2 intents","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:46:37.232Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:46:39.564Z"}
+{"level":"info","message":"Login correcto: Racso","timestamp":"2026-06-03T14:46:39.719Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-06-03T14:46:39.759Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:46:45.197Z"}
