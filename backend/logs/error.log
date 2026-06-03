@@ -241,3 +241,5 @@
 =======
 >>>>>>> 4f1416048133267b74f61e7a4b5905e081d8a251
 >>>>>>> 24af91f7e0487cf5d9ed6847ba1c8d6c00ccd6c8
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes, queden 2 intents","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:44:52.430Z"}
+{"details":{"error":{"msg":"Usuari o contrasenya incorrectes, queden 2 intents","ok":false},"headers":{"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/login: 401 Unauthorized","name":"HttpErrorResponse","ok":false,"status":401,"statusText":"Unauthorized","url":"http://localhost:5100/api/login"},"level":"error","message":"[FRONTEND] Login error","timestamp":"2026-06-03T14:47:12.603Z"}

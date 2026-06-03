@@ -2933,3 +2933,11 @@
 {"level":"info","message":"Login correcto: testuser","timestamp":"2026-06-01T14:59:03.800Z"}
 {"level":"warn","message":"Login fallido: usuario no encontrado nonexistent","timestamp":"2026-06-01T14:59:03.817Z"}
 {"level":"warn","message":"Login fallido: contraseña incorrecta para testuser","timestamp":"2026-06-01T14:59:03.822Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T14:24:48.766Z"}
+{"level":"info","message":"Incoming request: GET /api/tipusPermisos","timestamp":"2026-06-03T14:24:48.839Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:24:48.880Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:24:48.884Z"}
+{"level":"info","message":"Incoming request: GET /api/tipusPermisos","timestamp":"2026-06-03T14:28:15.294Z"}
+{"level":"info","message":"Incoming request: GET /api/user","timestamp":"2026-06-03T14:28:15.297Z"}
+{"level":"info","message":"Incoming request: GET /api/permis","timestamp":"2026-06-03T14:28:15.307Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-06-03T14:28:16.424Z"}
