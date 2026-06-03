@@ -3004,3 +3004,29 @@
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T14:49:13.100Z"}
 {"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T14:49:34.574Z"}
 {"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:49:51.496Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:53.372Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:52:53.500Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-06-03T14:52:53.502Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:55.274Z"}
+{"level":"info","message":"Incoming request: POST /api/renewToken","timestamp":"2026-06-03T14:52:55.301Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:55.352Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:55.944Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:56.602Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:57.289Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:57.855Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:58.505Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:59.138Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:52:59.763Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:00.362Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:01.056Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:01.693Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:02.356Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:05.949Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:06.558Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:07.153Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:07.725Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:08.463Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:10.266Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:10.865Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:11.373Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:12.059Z"}
