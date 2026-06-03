@@ -2995,3 +2995,10 @@
 {"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:47:20.025Z"}
 {"level":"info","message":"Login correcto: Joel","timestamp":"2026-06-03T14:47:20.215Z"}
 {"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:47:20.257Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:48:10.455Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:48:10.608Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-06-03T14:48:10.609Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:48:31.809Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:48:32.047Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-06-03T14:48:32.048Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T14:49:13.100Z"}

@@ -8,7 +8,7 @@ import { LoginModel } from '../models/User.model';
 export class MasterService {
   private http = inject(HttpClient);
 
-  private readonly API_URL = "http://localhost:5100/api";
+  private readonly API_URL = `http://${window.location.hostname}:5100/api`;
   private readonly httpOptions = { withCredentials: true };
 
   onLogin(obj: LoginModel) {
