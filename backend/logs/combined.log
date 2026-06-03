@@ -3030,3 +3030,13 @@
 {"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:10.865Z"}
 {"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:11.373Z"}
 {"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:12.059Z"}
+{"level":"info","message":"Servidor corriendose en el puerto 5100","timestamp":"2026-06-03T14:53:37.671Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:56.305Z"}
+{"level":"info","message":"Incoming request: POST /api/logs","timestamp":"2026-06-03T14:53:56.521Z"}
+{"details":{"error":{"isTrusted":true},"headers":{"headers":{},"lazyUpdate":null,"normalizedNames":{}},"message":"Http failure response for http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0: 0 Unknown Error","name":"HttpErrorResponse","ok":false,"status":0,"statusText":"Unknown Error","url":"http://localhost:5100/api/permis/69fb50e433e6323e7080c7f0"},"level":"error","message":"[FRONTEND] Error loading permissions","timestamp":"2026-06-03T14:53:56.523Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:53:57.461Z"}
+{"level":"info","message":"Incoming request: GET /api/permis/69fb50e433e6323e7080c7f0","timestamp":"2026-06-03T14:54:00.325Z"}
+{"level":"info","message":"Incoming request: POST /api/logout","timestamp":"2026-06-03T14:54:05.545Z"}
+{"level":"info","message":"Incoming request: POST /api/login","timestamp":"2026-06-03T14:54:11.492Z"}
+{"level":"info","message":"Login correcto: Miniboo","timestamp":"2026-06-03T14:54:11.821Z"}
+{"level":"info","message":"Incoming request: GET /api/dashboard","timestamp":"2026-06-03T14:54:11.902Z"}
