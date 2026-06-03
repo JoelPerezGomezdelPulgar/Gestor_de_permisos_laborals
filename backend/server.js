@@ -12,7 +12,14 @@ import swaggerUi from 'swagger-ui-express'
 import logger from './logger/logger.js'
 
 import { readFile } from 'fs/promises';
-const swaggerDocument = JSON.parse(await readFile(new URL('./swagger.json', import.meta.url)));
+
+let swaggerDocument;
+try {
+  swaggerDocument = JSON.parse(await readFile(new URL('./swagger.json', import.meta.url)));
+} catch (e) {
+  logger.error('No se pudo cargar swagger.json:', e.message);
+  swaggerDocument = { info: { title: 'API', version: '1.0.0' } };
+}
 
 const app = express();
 const httpServer = createServer(app);
@@ -51,7 +58,19 @@ app.get('/', (req, res) => {
     res.send('Servidor corriendo');
 });
 
+app.use((err, req, res, next) => {
+    logger.error(`Error no controlado: ${err.message || err}`);
+    res.status(500).json({ ok: false, msg: 'Error interno del servidor' });
+});
+
 const PORT = process.env.PORT || 5100;
+
+try {
+    await dbClient.waitForConnection();
+} catch (e) {
+    logger.error('Error crítico conectando a la base de datos:', e.message);
+    process.exit(1);
+}
 
 httpServer.listen(PORT, () => {
     logger.info(`Servidor corriendose en el puerto ${PORT}`);

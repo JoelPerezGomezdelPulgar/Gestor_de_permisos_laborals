@@ -43,7 +43,7 @@ export class Login {
         }
       },
       error: (error: any) => {
-        this.errorMessage = error.message;
+        this.errorMessage = error.error?.msg || 'Error desconegut';
         this.loggerSrv.error('Login error', error);
       },
     });

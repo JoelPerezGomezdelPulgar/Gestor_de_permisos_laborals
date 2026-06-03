@@ -5,7 +5,11 @@ import mongoose from "mongoose";
 // Creamos la clase dbClient que se encarga de la conexión
 class dbClient {
     constructor() {
-        this.conectarBaseDatos()
+        this.connectionPromise = this.conectarBaseDatos()
+    }
+
+    async waitForConnection() {
+        return this.connectionPromise
     }
 
     // Método para conectar a la base de datos
@@ -25,6 +29,7 @@ class dbClient {
             } else {
                 console.error("  ", e.message);
             }
+            throw e
         }
     }
 

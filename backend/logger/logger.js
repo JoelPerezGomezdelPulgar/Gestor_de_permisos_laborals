@@ -1,35 +1,31 @@
 import { createLogger, format, transports } from 'winston';
-const { combine, timestamp, json, prettyPrint } = format;
+const { combine, timestamp, json } = format;
 import fs from 'fs';
 import path from 'path';
 
-let dir = process.env.LOG_DIR ?? "logs";
+const dir = process.env.LOG_DIR || path.resolve('logs');
 
-if (!dir) dir = path.resolve('logs');
-
-// Crear el directorio de logs si no existe
-if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });
+try {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+} catch (e) {
+  console.error(`No se pudo crear el directorio de logs (${dir}):`, e.message);
 }
 
 const logger = createLogger({
-  level: 'info', // Nivel mínimo a registrar
-  format: combine(
-    timestamp(),
-    json() // Formato ideal para producción
-  ),
+  level: 'info',
+  format: combine(timestamp(), json()),
   transports: [
-    // Guardar logs en archivo
-    new transports.File({ filename: path.join(dir, 'error.log'), level: 'error' }),
-    new transports.File({ filename: path.join(dir, 'combined.log') }),
+    new transports.Console({ format: format.simple() }),
   ],
 });
 
-// Si no estamos en producción, mostrar logs en consola también
-if (process.env.NODE_ENV !== 'production') {
-  logger.add(new transports.Console({
-    format: format.simple(),
-  }));
+try {
+  logger.add(new transports.File({ filename: path.join(dir, 'error.log'), level: 'error' }));
+  logger.add(new transports.File({ filename: path.join(dir, 'combined.log') }));
+} catch (e) {
+  console.error('No se pudieron inicializar los transports de archivo:', e.message);
 }
 
 export default logger;

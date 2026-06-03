@@ -9,14 +9,13 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# COPIAMOS EL CÓDIGO Y CAMBIAMOS EL DUEÑO
-# El flag --chown=node:node es la clave aquí
+# Copiamos el código
 COPY --chown=node:node . .
+RUN mkdir -p /app/logs
 
-# Exponer el puerto
 EXPOSE 5100
 
-# Ahora sí, cambiamos al usuario node
 USER node
 
-CMD ["node", "--watch", "server.js"]
+# Si los node_modules del host están incompletos, los instala antes de arrancar
+CMD ["sh", "-c", "if ! node -e \"require('socket.io')\" 2>/dev/null; then npm install --no-audit --no-fund; fi; exec node server.js"]
