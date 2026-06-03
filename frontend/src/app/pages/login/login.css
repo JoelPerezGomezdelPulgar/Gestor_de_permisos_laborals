@@ -8,27 +8,27 @@
   padding: 3rem 1rem;
 }
 
-/* 1. EL CAMBIO: Fondo degradado claro tirando a blanco */
+/* Fondo degradado oscuro */
 .login-page::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 50%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #0b1220 50%, #0a3a66 100%);
   z-index: 0;
 }
 
-/* 2. CÍRCULOS FLOTANTES: Tonos pastel con más opacidad para que se distingan sobre blanco */
+/* CÍRCULOS FLOTANTES: Tonos més intensos sobre fosc */
 .shape {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.3; 
-  filter: blur(40px);
+  opacity: 0.15;
+  filter: blur(60px);
   animation: float 8s ease-in-out infinite;
   z-index: 0;
 }
-.shape.s1 { width: 360px; height: 360px; left: -80px; top: -60px; background: #6b897d; }
-.shape.s2 { width: 240px; height: 240px; right: -60px; bottom: -40px; background: #7a8495; animation-duration: 10s; }
-.shape.s3 { width: 140px; height: 140px; left: 20%; bottom: 10%; background: #69656d; animation-duration: 12s; }
+.shape.s1 { width: 360px; height: 360px; left: -80px; top: -60px; background: #2563eb; }
+.shape.s2 { width: 240px; height: 240px; right: -60px; bottom: -40px; background: #1d4ed8; animation-duration: 10s; }
+.shape.s3 { width: 140px; height: 140px; left: 20%; bottom: 10%; background: #3b82f6; animation-duration: 12s; }
 
 @keyframes float {
   0% { transform: translateY(0) translateX(0); }
